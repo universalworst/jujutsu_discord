@@ -165,5 +165,7 @@ def build_messages(state, player_input):
     for entry in state["logs"]["chat_log"]:
         messages.append({"role": "user", "content": entry["player"]})
         messages.append({"role": "assistant", "content": entry["narration"]})
-        
+
     messages.append({"role": "user", "content": player_input})
+    
+    return messages
