@@ -1,0 +1,332 @@
+{
+    "auspicious_beast_summoning": {
+        "type": "inherited",
+        "core_effects": "user covers their face to become a spirit medium and summons four auspicious beasts to aid in combat",
+        "limitations": "",
+        "power": 50,
+        "domain": "None",
+        "users": "takuma_ino"
+    },
+    "black_bird_manipulation": {
+        "type": "innate",
+        "core_effects": "track the world through the eye of a crow",
+        "limitations": "",
+        "power": 30,
+        "domain": "None",
+        "users": "mei_mei"
+    },
+    "blood_manipulation": {
+        "type": "inherited",
+        "core_effects": "control the flow of blood in and out of the body to create projectiles and harden defenses",
+        "limitations": "limited amount of blood in body",
+        "power": 70,
+        "domain": "None",
+        "users": ["noritoshi_kamo", "choso"]
+    },
+    "boogie_woogie": {
+        "type": "innate",
+        "core_effects": "gain the ability to use another's cursed technique by consuming part of the other sorcerer",
+        "limitations": "",
+        "power": 70,
+        "domain": "None",
+        "users": "aoi_todo"
+    },
+    "brain_transplantation": {
+        "type": "innate",
+        "core_effects": [
+            "transfer the consciousness of the user into a deceased person's body by transplanting the user's brain into the corpse",
+            "allows user to use the techniques of the deceased person",
+            "transfers the memories of the deceased person to the user"
+        ],
+        "limitations": "detectable by stitches on forehead",
+        "power": 85,
+        "domain": "Womb Profusion",
+        "users": "kenjaku"
+    },
+    "construction": {
+        "type": "innate",
+        "core_effects": "user creates something through expenditure of significant cursed energy",
+        "limitations": "high cursed energy cost",
+        "power": 50,
+        "domain": "None",
+        "users": "mai_zenin"
+    },
+    "copy": {
+        "type": "innate",
+        "core_effects": "gain the ability to use another's cursed technique by consuming part of the other sorcerer",
+        "limitations": "requires eating part of the other sorcerer",
+        "power": 90,
+        "domain": "Authentic Mutual Love",
+        "users": "yuta_okkotsu"
+    },
+    "cursed_energy_enhancement": {
+        "type": "innate",
+        "core_effects": "enhance cursed energy output, capacity, and/or efficiency in another being",
+        "limitations": "purely supportive, no direct offensive or defensive applications",
+        "power": 60,
+        "domain": "None",
+        "users": "katsumi_ujihara"
+    },
+    "cursed_speech": {
+        "type": "inherited",
+        "core_effects": "user can speak in a way that curses others",
+        "limitations": [
+            "harms user's throat",
+            "can inadvertently curse self or others"
+        ],
+        "power": 50,
+        "domain": "None",
+        "users": "toge_inumaki"
+    },
+    "cursed_spirit_manipulation": {
+        "type": "innate",
+        "core_effects": "total control over cursed spirits defeated in battle after consuming their essence",
+        "limitations": "requires consuming the essence of a cursed spirit through physical contact after defeating it in battle, and it tastes disgusting",
+        "power": 85,
+        "domain": "",
+        "users": ["suguru_geto", "kenjaku"]
+    },
+    "disaster_flames": {
+        "type": "innate",
+        "core_effects": "control over fire, magma, and meteors",
+        "limitations": "",
+        "power": 85,
+        "domain": "Coffin of the Iron Mountain",
+        "users": "jogo"
+    },
+    "disaster_waves": {
+        "type": "innate",
+        "core_effects": "control over ocean and fish",
+        "limitations": "",
+        "power": 70,
+        "domain": "Horizon of the Captivating Skandha",
+        "users": "dagon"
+    },
+    "divergent_fist": {
+        "type": "learned",
+        "core_effects": "powerful punch followed shortly after by a massive burst of cursed energy",
+        "limitations": "unrefined",
+        "power": 40,
+        "domain": "None",
+        "users": "yuji_itadori"
+    },
+    "fungal_manipulation": {
+        "type": "innate",
+        "core_effects": [
+            "converts cursed energy into cursed spores that produce fast-growing fungi",
+            "species of fungi produced vary based on the user's intent, and can be used for a variety of purposes such as offense, defense, and healing"
+        ],
+        "limitations": "subject to environmental factors such as temperature and humidity",
+        "power": 20,
+        "domain": "None",
+        "users": ""
+    },
+    "glyphic_manipulation": {
+        "type": "innate",
+        "core_effects": [
+            "The user imbues cursed energy into writing or drawing with the ability to detonate the 'cursed glyphs' later.",
+            "This can be effective with conventional or nonstandard writing and drawing utensils, so long as a mark is made.", 
+            "Undetonated glyphs gradually lose power for a day or two before all potency is lost and they are no longer able to be used."
+        ],
+        "limitations": "takes significant strategy, preparation, and access to the area to prepare to its maximum effectiveness.",
+        "power": 65,
+        "domain": "None",
+        "users": ""
+    },
+    "idle_transfiguration": {
+        "type": "innate",
+        "core_effects": "reshape victims' bodies by altering the shape of their souls",
+        "limitations": "requires physical contact with victim",
+        "power": 85,
+        "domain": "Self-Embodiment of Perfection",
+        "users": "mahito"
+    },
+    "imaginary_technique": {
+        "type": "innate",
+        "core_effects": ["creates virtually any effect that both the user and the target believes possible"],
+        "limitations": "effects become useless when the nature of the technique is understood",
+        "power": 85,
+        "domain": "Dreamscape",
+        "users": ""
+    },
+    "inverse": {
+        "type": "innate",
+        "core_effects": "receives blows that are inversely proportional to the power of the attack, so that weaker attacks cause more damage and stronger attacks cause less damage",
+        "limitations": "has minimum and maximum power thresholds that limit its effectiveness",
+        "power": 50,
+        "domain": "",
+        "users": "jiro_awasaka"
+    },
+    "judgeman": {
+        "type": "innate",
+        "core_effects": "user can judge the worth of a person and determine their fate by striking them with a gavel",
+        "limitations": "user must comply with judgeman's verdict",
+        "power": 70,
+        "domain": "Deadly Sentencing",
+        "users": "hiromi_higuruma"
+    },
+    "limitless": {
+        "type": "inherited",
+        "core_effects": "control over cursed energy on a molecular level; allows user to infinitely slow anything approaching them to the point that they appear to stop",
+        "limitations": ["extremely difficult to master", "requires the six eyes to master fully"],
+        "power": 90,
+        "domain": "Unlimited Void",
+        "users": "satoru_gojo"
+    },
+    "little_miracles": {
+        "type": "innate",
+        "core_effects": "for the price of forgetting small graces that happen to them each day, the user gains the opportunity to survive otherwise fatal blows",
+        "limitations": ["limited miracles per day"],
+        "power": 30,
+        "domain": "None",
+        "users": "haruta_shigemo"
+    },
+    "projection_sorcery": {
+        "type": "inherited",
+        "core_effects": [
+            "allows the user to project their own movements forward at 24 frames per second",
+            "forces the opponent to react in 24 fps too, or else their movements are frozen for one second"
+        ],
+        "limitations": [
+            "must obey the laws of physics",
+            "can freeze the user as well if they are not careful"
+        ],
+        "power": 70,
+        "domain": "",
+        "users": ["naobito_zenin", "naoya_zenin"]
+    },
+    "puppet_manipulation": {
+        "type": "innate",
+        "core_effects": "ability to use cursed energy to manipulate puppets from a great range",
+        "limitations": "",
+        "power": 65,
+        "domain": "None",
+        "users": "kokichi_muta"
+    },
+    "purification_flame": {
+        "type": "inherited",
+        "core_effects": "violet conceptual flame burns cursed energy but not physical matter",
+        "limitations": "weak against purely physical threats",
+        "power": 70,
+        "domain": "Burning Exorcism",
+        "users": ""
+    },
+    "ratio_technique": {
+        "type": "innate",
+        "core_effects": "striking an opponent at a specific point on their body, based on its ratio of the length in 7:3, will cause significant damage to the opponent",
+        "limitations": "requires physical striking and precision to be effective",
+        "power": 60,
+        "domain": "None",
+        "users": "kento_nanami"
+    },
+    "shrine": {
+        "type": "innate",
+        "core_effects": [
+            "slashing technique that creates incisions in an instant from a range",
+            "'Cleave' is used against living opponents or curses",
+            "'Dismantle' is used against inanimate objects"
+        ],
+        "limitations": "single method of attack must be supplemented by physical prowess",
+        "power": 90,
+        "domain": "Malevolent Shrine",
+        "users": "sukuna"
+    },
+    "simple_domain": {
+        "type": "learned",
+        "core_effects": "protection from the effects of a domain",
+        "limitations": "defensive",
+        "power": null,
+        "domain": "None",
+        "users": ["atsuya_kusakabe", "kasumi_miwa"]
+    },
+    "six_eyes": {
+        "type": "innate_gift",
+        "core_effects": [
+            "perception of cursed energy and reality on a molecular level",
+            "enables sight even when blindfolded"
+        ],
+        "limitations": "causes fatigue and headaches",
+        "power": null,
+        "domain": "None",
+        "users": "satoru_gojo"
+    },
+    "spatial_transference": {
+        "type": "innate",
+        "core_effects": [],
+        "limitations": "can only be used twice per month on any given person",
+        "power": 60,
+        "domain": "None",
+        "users": "ui_ui"
+    },
+    "star_rage": {
+        "type": "innate",
+        "core_effects": [],
+        "limitations": "",
+        "power": 85,
+        "domain": "",
+        "users": "yuki_tsukumo"
+    },
+    "straw_doll_technique": {
+        "type": "inherited",
+        "core_effects": [
+            "manipulate cursed energy through a hammer, nails, and a straw doll",
+            "enables long-range, resonant damage by using a target's body part as a proxy, and close-combat, explosive, or area-of-effect damage on opponents"
+        ],
+        "limitations": [
+            "requires materials on hand to use",
+            "useless against gaseous or liquid attacks"
+        ],
+        "power": 55,
+        "domain": "None",
+        "users": "nobara_kugisaki"
+    },
+    "ten_shadows": {
+        "type": "inherited",
+        "core_effects": [
+            "summon various shikigami through the medium of shadows",
+            "after being given divine dogs black and white, user must fight and defeat each shikigami in battle to tame and use it",
+            "divine dogs white and black are attuned to cursed energy and have limited offensive use",
+            "nue is an electric bird useful for reconnaissance that can bear its user's weight",
+            "toad can harmlessly carry individuals to safety",
+            "max elephant sprays large quantities of water over opponents",
+            "rabbit escape creates cover for user to escape contact",
+            "mahoraga is an enormous humanoid shikigami with the ability to endlessly adapt to any fighting style",
+            "user can physically enter shadows and use them for storage"
+        ],
+        "limitations": [
+            "taxing to maintain",
+            "mahoraga nearly impossible to tame"
+        ],
+        "power": 75,
+        "domain": "Chimera Shadow Garden",
+        "users": ["megumi_fushiguro"]
+    },
+    "tool_manipulation": {
+        "type": "innate",
+        "core_effects": [
+            "allows the user to freely manipulate a sorcerer's broomstick by levitating it telepathically", 
+            "grants the user the ability to levitate on the tool or create gusts of powerful wind imbued with cursed energy"
+        ],
+        "limitations": [
+            "very limited use",
+            "only affects one broomstick"
+        ],
+        "power": 20,
+        "domain": "None",
+        "users": "momo_nishimiya"
+    },
+    "unblockable_drumming_beat": {
+        "type": "move",
+        "core_effects": [
+            "While in Gorilla Mode, each of the user's strikes will resonate throughout their target's body", 
+            "Even if their opponent blocks, the impact will still damage the target with all the intended force of the attack."
+        ],
+        "limitations": [
+            "requires accessing gorilla core",
+            "easily countered by powerful technique"
+        ],
+        "power": 50,
+        "domain": "None",
+        "users": "panda"
+    }
+}

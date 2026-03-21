@@ -22,7 +22,7 @@ Grade: {state['identity']['grade']}
 Personality: {state['identity']['personality']}
 Backstory: {state['identity']['backstory']}
 Technique: {state['technique']['technique_name']} — {state['technique']['core_effects']}
-Drawbacks: {state['technique']['drawbacks']}
+Limitations: {state['technique']['limitations']}
 
 ===WORLD INFORMATION===
 [Insert lore block here]
@@ -167,5 +167,5 @@ def build_messages(state, player_input):
         messages.append({"role": "assistant", "content": entry["narration"]})
 
     messages.append({"role": "user", "content": player_input})
-    
+
     return messages

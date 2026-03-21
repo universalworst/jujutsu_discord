@@ -1,0 +1,560 @@
+{
+    "shibuya": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "dense commercial and entertainment district in western Tokyo",
+            "famous for Shibuya Crossing, one of the busiest intersections in the world",
+            "heavy foot traffic from tourists, students, and salarymen at all hours",
+            "a node of concentrated human emotion that makes cursed spirit activity a constant threat"
+        ],
+        "curse_density": 7,
+        "atmosphere": "frenetic, neon-lit, overwhelming",
+        "connected_locations": ["shinjuku", "harajuku"],
+        "landmarks": ["shibuya_station", "shibuya_crossing"],
+        "frequented_by": ["tokyo_jujutsu_high"],
+        "mission_site_pool": ["abandoned_building", "love_hotel", "underground_tunnel", "hospital", "grade_school", "high_school", "shopping_mall", "museum"]
+    },
+
+    "shinjuku": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "Tokyo's largest commercial and administrative hub, sprawling across both east and west sides",
+            "Kabukicho on the east side is Japan's largest red-light district, dense with human vice and negative emotion",
+            "the west side hosts towering corporate skyscrapers and government offices",
+            "a district of stark contrasts — wealth and squalor, order and chaos existing within blocks of each other",
+            "one of the highest curse densities in Tokyo due to the concentration of fear, desire, and despair"
+        ],
+        "curse_density": 8,
+        "atmosphere": "oppressive, layered, electric with tension",
+        "connected_locations": ["shibuya", "harajuku"],
+        "landmarks": ["shinjuku_station", "kabukicho", "tokyo_metropolitan_government_building"],
+        "frequented_by": ["tokyo_jujutsu_high", "higher_ups"],
+        "mission_site_pool": ["abandoned_building", "love_hotel", "underground_tunnel", "hospital", "nightclub", "shopping_mall", "burnt_restaurant"]
+    },
+
+    "harajuku": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "youth fashion and subculture district sandwiched between Shibuya and Shinjuku",
+            "Takeshita Street is a narrow pedestrian lane packed with boutiques, crepe stands, and cosplay shops",
+            "Meiji Shrine and its surrounding forest sit at the northern edge, an island of stillness amid the noise",
+            "the contrast between sacred forest and commercial excess creates unusual cursed energy patterns",
+            "cursed spirits here tend toward the bizarre and theatrical, shaped by the district's aesthetic obsessions"
+        ],
+        "curse_density": 5,
+        "atmosphere": "chaotic, colorful, deceptively shallow",
+        "connected_locations": ["shibuya", "shinjuku"],
+        "landmarks": ["takeshita_street", "meiji_shrine", "yoyogi_park"],
+        "frequented_by": ["tokyo_jujutsu_high"],
+        "mission_site_pool": ["abandoned_building", "shrine_grounds", "underground_tunnel"]
+    },
+
+    "roppongi": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "upscale nightlife and arts district in central Tokyo, popular with foreign nationals and Tokyo elite",
+            "hosts some of Tokyo's most prestigious art museums and galleries alongside its nightclub strips",
+            "a district that operates on two schedules — cultured and restrained by day, hedonistic by night",
+            "the presence of old money and clan-adjacent families makes it politically sensitive territory for jujutsu operations",
+            "cursed spirits here are often older and more refined, shaped by decades of accumulated wealth and secrecy"
+        ],
+        "curse_density": 6,
+        "atmosphere": "polished, predatory, deceptively civilized",
+        "connected_locations": ["shibuya", "shinjuku"],
+        "landmarks": ["roppongi_hills", "tokyo_midtown", "national_art_center"],
+        "frequented_by": ["higher_ups", "tokyo_jujutsu_high", "civilians"],
+        "mission_site_pool": ["abandoned_building", "love_hotel", "nightclub", "hospital", "museum"]
+    },
+
+    "nerima": {
+        "tier": "district",
+        "location_type": "city_ward",
+        "description": [
+            "the newest of the 23 wards, located northwest of the urban districts of Tokyo",
+            "primarily residental",
+            "contains vast green spaces, including several walkable parks"
+        ],
+        "curse_density": 5,
+        "atmosphere": "residental, safe, relaxed",
+        "landmarks": ["hikarigaoka_park", "taoe_animation_museum", "botanical_solutions_corporation"],
+        "frequented_by": ["civilians", "garden"],
+        "mission_site_pool": ["grade_school", "high_school", "shopping_mall", "hospital"]
+    },
+
+    "nakano": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "a residential and commercial district west of Shinjuku, quieter and less polished than its neighbors",
+            "Nakano Broadway is a multi-story shopping complex famous for anime, manga, and subculture merchandise",
+            "a district that attracts collectors, otaku, and people who prefer to go unnoticed",
+            "the concentration of obsession and nostalgia creates low-level but persistent cursed energy"
+        ],
+        "curse_density": 4,
+        "atmosphere": "nostalgic, insular, deceptively mundane",
+        "connected_locations": ["shinjuku", "tokyo_jujutsu_high"],
+        "landmarks": ["nakano_broadway"],
+        "frequented_by": [],
+        "keywords": ["nakano", "nakano broadway", "broadway"],
+        "mission_site_pool": ["abandoned_building", "underground_tunnel", "hostel_mission", "shopping_mall"]
+    },
+
+    "sendai": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "the largest city in the Tohoku region, known as the City of Trees for its broad zelkova-lined boulevards",
+            "a regional hub with a distinct identity separate from Tokyo — proud, self-sufficient, and less densely monitored by jujutsu institutions",
+            "Nanami Kento operated out of Sendai for a period, leaving traces of his influence on how cursed spirit activity is managed here",
+            "the distance from Tokyo's institutional oversight makes it a common location for unsanctioned sorcerer activity"
+        ],
+        "curse_density": 5,
+        "atmosphere": "regional, self-contained, quietly tense",
+        "connected_locations": [],
+        "landmarks": ["sendai_station", "kokubuncho"],
+        "frequented_by": ["tokyo_jujutsu_high"],
+        "keywords": ["sendai", "tohoku", "city of trees"],
+        "mission_site_pool": ["abandoned_building", "hostel_mission", "underground_tunnel", "hospital", "grade_school", "high_school", "shopping_mall"]
+    },
+
+    "chiyoda": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "the administrative and imperial heart of Tokyo, home to the Imperial Palace, the National Diet, and the Supreme Court",
+            "one of the most heavily monitored districts in Japan — police presence is constant, and unusual activity is noticed quickly",
+            "the concentration of political power makes it a pressure point for the higher-ups, who maintain strong interests in keeping it stable",
+            "cursed spirits here tend toward the ancient and territorial, having fed on centuries of political ambition and imperial authority"
+        ],
+        "curse_density": 6,
+        "atmosphere": "austere, authoritative, historically loaded",
+        "connected_locations": ["minato", "shinjuku"],
+        "landmarks": ["imperial_palace_grounds", "national_diet_building"],
+        "frequented_by": ["higher_ups"],
+        "keywords": ["chiyoda", "imperial palace", "diet building", "kasumigaseki"],
+        "mission_site_pool": ["abandoned_building", "sewer", "grade_school", "high_school", "museum"]
+    },
+
+    "minato": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "one of Tokyo's most affluent districts, encompassing Roppongi, Azabu, and the waterfront bay area",
+            "embassies, luxury residences, and corporate headquarters sit alongside some of the city's most expensive nightlife",
+            "old clan money has deep roots here — several established sorcerer families maintain properties in Azabu and Hiroo",
+            "the bay area at night is isolated and industrial, a sharp contrast to the manicured streets inland"
+        ],
+        "curse_density": 6,
+        "atmosphere": "wealthy, politically entangled, privately dangerous",
+        "connected_locations": ["roppongi", "chiyoda", "shibuya"],
+        "landmarks": ["roppongi_hills", "tokyo_midtown", "tokyo_bay_waterfront"],
+        "frequented_by": ["higher_ups"],
+        "keywords": ["minato", "azabu", "hiroo", "bay area", "waterfront"],
+        "mission_site_pool": ["abandoned_building", "love_hotel", "nightclub", "shopping_mall", "sewer", "hostel_mission"]
+    },
+
+    "kyoto": {
+        "tier": "district",
+        "location_type": "city",
+        "description": [
+            "ancient capital of Japan from before the Heian era",
+            "historical home of jujutsu",
+            "famous for Buddhist and Shinto shrines"
+        ],
+        "curse_density": 7,
+        "atmosphere": "busy, historic, curated",
+        "connected_locations": [],
+        "landmarks": ["kyoto_jujutsu_high"],
+        "frequented_by": [
+            "kyoto_jujutsu_high",
+            "higher_ups",
+            "civilians"
+        ],
+        "mission_site_pool": ["shrine_grounds", "abandoned_building", "grade_school", "hospital", "alleyway"]
+    },
+
+    "shibuya_station": {
+        "tier": "landmark",
+        "location_type": "transit_hub",
+        "district": "shibuya",
+        "description": [
+            "massive multi-level transit hub beneath Shibuya",
+            "labyrinthine underground passages connecting multiple train lines",
+            "site of significant cursed activity during peak hours"
+        ],
+        "curse_density": 8,
+        "atmosphere": "claustrophobic, echoing, disorienting",
+        "notable_features": [
+            "underground passages ideal for curse ambushes",
+            "large civilian population making collateral damage a constant risk",
+            "multiple entry and exit points complicating containment"
+        ],
+        "connected_locations": ["shibuya", "shibuya_crossing"],
+        "frequented_by": ["civilians"],
+        "mission_site_pool": ["platform", "service_tunnel", "maintenance_room"]
+    },
+
+    "shibuya_crossing": {
+        "tier": "landmark",
+        "location_type": "intersection",
+        "district": "shibuya",
+        "description": [
+            "massive intersection in the heart of shibuya",
+            "one of the busiest intersections in the world",
+            "heavily populated at all hours"
+        ],
+        "curse_density": 5,
+        "atmosphere": "crowded, fast-paced, mixed foot traffic and vehicles",
+        "notable_features": [
+            "open area makes large-scale cursed spirit attacks rare but deadly",
+            "large civilian population making collateral damage a constant risk",
+            "nearby streets and alleyways are most often the sites of cursed spirit attacks"
+        ],
+        "connected_locations": ["shibuya", "shibuya_crossing"],
+        "frequented_by": ["tokyo_jujutsu_high", "civilians"],
+        "mission_site_pool": ["alleyway"]
+    },
+
+    "tokyo_jujutsu_high": {
+        "tier": "landmark",
+        "location_type": "school",
+        "district": null,
+        "description": [
+            "educational facility for young jujutsu sorcerers",
+            "meeting location for field sorcerers receiving missions",
+            "center of jujutsu life even after graduation"
+        ],
+        "frequented_by": [
+            "jujutsu_sorcerer",
+            "tokyo_jujutsu_high"
+        ],
+        "curse_density": 0,
+        "atmosphere": "active in small pockets but isolated overall",
+        "notable_features": [
+            "requires climbing a tall hill to get there",
+            "protected by tengen's barriers",
+            "on a mountain on the outskirts of Tokyo",
+            "surrounded by thick woods"
+        ],
+        "connected_locations": ["tombs_of_the_star_corridor"]
+    },
+
+    "tombs_of_the_star": {
+        "tier": "landmark",
+        "location_type": "underground_habitation",
+        "district": null,
+        "description": [
+            "Tengen's home",
+            "inner sanctum only open to those Tengen invites",
+            "an artificial space entirely controlled by Tengen"
+        ],
+        "curse_density": 0,
+        "atmosphere": "energized, expectant",
+        "notable_features": [
+            "a glittering white matrix"
+        ],
+        "connected_locations": ["tokyo_jujutsu_high", "tombs_of_the_star_corridor"],
+        "frequented_by": [null],
+        "mission_site_pool": [null]
+    },
+    "tombs_of_the_star_corridor": {
+        "tier": "landmark",
+        "location_type": "underground_passage",
+        "district": null,
+        "description": [
+            "underground corridors leading to Tengen's habitation",
+            "corridors made of stone converge in an underground array of traditional houses, all encircling Tengen's inner sanctum"
+        ],
+        "curse_density": 0,
+        "atmosphere": "energized, expectant",
+        "notable_features": [
+            "a faint smell of copper fills the air; blood from events twelve years ago still stains the floor",
+            "tunnels are dimly lit and cool"
+        ],
+        "connected_locations": ["tokyo_jujutsu_high", "tombs_of_the_star"],
+        "frequented_by": [null],
+        "mission_site_pool": [null]
+    },
+
+    "meiji_shrine": {
+        "tier": "landmark",
+        "location_type": "shinto_shrine",
+        "district": "harajuku",
+        "description": [
+            "a major Shinto shrine dedicated to Emperor Meiji and Empress Shoken, completed in 1920",
+            "surrounded by a vast forested park of 70,000 trees, an island of silence in central Tokyo",
+            "the forest creates a natural barrier against cursed energy leakage into the surrounding district",
+            "sacred ground where the concentration of reverence and ritual suppresses weaker cursed spirits",
+            "at night the forest becomes disorienting — paths that were clear in daylight seem to shift"
+        ],
+        "curse_density": 3,
+        "atmosphere": "solemn, ancient, deceptively peaceful",
+        "notable_features": [
+            "the forested approach along the gravel path naturally dampens cursed energy signatures",
+            "sacred architecture creates pockets of spiritual resistance that weaker curses cannot penetrate",
+            "the contrast between sacred suppression and surrounding urban curse density attracts unusual spirit types",
+            "isolated enough at night for contained operations without civilian interference"
+        ],
+        "connected_locations": ["harajuku"],
+        "frequented_by": ["tokyo_jujutsu_high", "civilians"],
+        "mission_site_pool": ["shrine_grounds", "abandoned_building"]
+    },
+
+    "kabukicho": {
+        "tier": "landmark",
+        "location_type": "entertainment_district",
+        "district": "shinjuku",
+        "description": [
+            "Japan's largest red-light district, packed into a dense grid of narrow streets east of Shinjuku Station",
+            "host clubs, hostess bars, pachinko parlors, and yakuza-adjacent businesses operate around the clock",
+            "the concentration of desire, debt, desperation, and violence makes it one of the highest curse density zones in Tokyo",
+            "neon signage creates permanent artificial daylight while the alleys between buildings are pitch black",
+            "a place where people come to disappear — missing persons cases here are rarely investigated thoroughly"
+        ],
+        "curse_density": 9,
+        "atmosphere": "lurid, predatory, intoxicating",
+        "notable_features": [
+            "extremely high civilian density at all hours complicates containment operations significantly",
+            "yakuza presence means non-curse related threats are a genuine operational consideration",
+            "cursed spirits here tend toward the predatory and deceptive, shaped by the district's transactional nature",
+            "multiple underground levels of bars and clubs create complex three-dimensional terrain",
+            "higher-ups have historically avoided sanctioning operations here due to exposure risk"
+        ],
+        "connected_locations": ["shinjuku", "shinjuku_station"],
+        "frequented_by": ["tokyo_jujutsu_high"],
+        "mission_site_pool": ["nightclub", "love_hotel", "abandoned_building", "alleyway"]
+    },
+
+    "shinjuku_station": {
+        "tier": "landmark",
+        "location_type": "transit_hub",
+        "district": "shinjuku",
+        "description": [
+            "the busiest train station in the world by daily passenger volume, handling over 3.5 million people per day",
+            "a subterranean labyrinth of 50 platforms, 200 exits, and multiple underground shopping concourses",
+            "the station has been expanded so many times that sections of the underground are effectively unmapped",
+            "the sheer volume of human movement generates a constant low-level cursed energy current",
+            "during rush hour the crowd pressure is physically overwhelming — ideal cover for curse activity"
+        ],
+        "curse_density": 8,
+        "atmosphere": "relentless, disorienting, anonymous",
+        "notable_features": [
+            "the unmapped underground sections are known to harbor established cursed spirits",
+            "200 exits make perimeter containment effectively impossible during operational hours",
+            "civilian density is so high that any visible technique usage risks mass panic",
+            "the station's complexity means even experienced sorcerers can become turned around",
+            "service tunnels beneath the public concourses are accessible but legally restricted"
+        ],
+        "connected_locations": ["shinjuku", "kabukicho"],
+        "frequented_by": ["tokyo_jujutsu_high", "higher_ups"],
+        "mission_site_pool": ["underground_tunnel", "maintenance_room", "platform"]
+    },
+
+    "kyoto_jujutsu_high": {
+        "tier": "landmark",
+        "location_type": "school",
+        "district": "kyoto",
+        "description": [
+            "isolated school on the outskirts of Kyoto",
+            "outdoor training facilities",
+            "supports more students than it has"
+        ],
+        "curse_density": 0,
+        "atmosphere": "",
+        "frequented_by": ["kyoto_jujutsu_high", "jujutsu_high_staff"],
+        "mission_site_pool": []
+    },
+
+    "roppongi_hills": {
+        "tier": "landmark",
+        "location_type": "urban_complex",
+        "district": "roppongi",
+        "description": [
+            "a vast upscale development combining luxury residences, corporate offices, hotels, and high-end retail",
+            "home to some of Tokyo's wealthiest residents including clan-adjacent families and political figures",
+            "the Mori Tower at its center houses executive offices and an observation deck with panoramic city views",
+            "immaculate public spaces and heavy private security create an illusion of complete safety",
+            "old money has accumulated here long enough that the cursed energy has taken on a particular character — patient, aristocratic, and territorial"
+        ],
+        "curse_density": 6,
+        "atmosphere": "polished, surveilled, quietly hostile to outsiders",
+        "notable_features": [
+            "private security presence complicates covert operations significantly",
+            "several residents have known clan affiliations, making unsanctioned operations politically dangerous",
+            "the complex has its own internal security network that operates independently of police",
+            "cursed spirits here are older and more entrenched, having fed on accumulated wealth and ambition for decades",
+            "the observation deck provides unparalleled sightlines across Tokyo — tactically valuable"
+        ],
+        "connected_locations": ["roppongi"],
+        "frequented_by": ["higher_ups"],
+        "mission_site_pool": ["abandoned_building", "nightclub", "hospital", "alleyway"]
+    },
+
+    "takahashi_estate": {
+        "tier": "landmark",
+        "location_type": "clan_estate",
+        "district": "Chiba",
+        "description": [
+            "a sizeable estate in the countryside in Chiba prefecture",
+            "historic home to the Takahashi clan",
+            "a rural, private location not far from Tokyo"
+        ],
+        "curse_density": 2,
+        "atmosphere": "peaceful, quiet, steeped in tradition",
+        "notable_features": [
+            "a traditional, semi-aristocratic manor with shoji sliding doors and tatami floors",
+            "has typical features like bedrooms, bathrooms, kitchen, dining room, but also has a library with both modern and antique literature and a courtyard for training young sorcerers",
+            "contains a sealed vault for cursed weapons and artifacts, though the clan does not possess many",
+            "on-site, outdoor shrine to honor ancestors"
+        ],
+        "frequented_by": ["tokyo_jujutsu_high"],
+        "mission_site_pool": [null]
+    },
+
+    "gachinko_fight_club": {
+        "tier": "landmark",
+        "location_type": "unregistered_fight_club",
+        "district": "Tochigi",
+        "description": [
+            "multi-story building centering on a fighting ring that can be viewed from three levels",
+            "sorcerer fight club that is primarily frequented by non-sorcerers",
+            "patrolled by guards",
+            "guards are skeptical of outsiders coming to visit"
+        ],
+        "curse_density": 6,
+        "atmosphere": "chaotic, testosterone-heavy, rowdy",
+        "notable_features": [
+            "control tower on top is where Hakari observes fights through a video feed",
+            "fighting ring lit up by fluorescent lights",
+            "multiple stairwells and hallways around the perimeter of the building"
+        ],
+        "frequented_by": ["gachinko_fight_club", "civilians"],
+        "mission_site_pool": [null]
+    },
+
+    "studio_apartment": {
+        "tier": "landmark",
+        "location_type": "residential",
+        "district": null,
+        "description": [
+            "a compact single-room apartment in a mid-rise residential building, functional and impersonal",
+            "the kind of unit that could belong to anyone — a futon, a hotplate, a window overlooking nothing significant",
+            "sparse furnishings and thin walls that carry every sound from neighboring units"
+        ],
+        "curse_density": 2,
+        "atmosphere": "cramped, anonymous, quietly isolating",
+        "notable_features": [
+            "minimal space limits physical confrontation",
+            "thin walls mean any disturbance risks civilian attention",
+            "single entry and exit point"
+        ],
+        "connected_locations": [],
+        "frequented_by": [],
+        "keywords": ["studio", "studio apartment", "my apartment", "the apartment"],
+        "mission_site_pool": []
+    },
+
+    "one_bedroom_apartment": {
+        "tier": "landmark",
+        "location_type": "residential",
+        "district": null,
+        "description": [
+            "a modest one-bedroom unit in a residential high-rise, worn but liveable",
+            "separate living and sleeping spaces give it the feeling of a real home, however temporary",
+            "a balcony overlooking the street below, laundry drying in the wind"
+        ],
+        "curse_density": 2,
+        "atmosphere": "domestic, lived-in, deceptively ordinary",
+        "notable_features": [
+            "separate rooms allow for more complex spatial encounters",
+            "balcony provides an alternative entry and exit point",
+            "residential building means civilians on every floor"
+        ],
+        "connected_locations": [],
+        "frequented_by": [],
+        "keywords": ["apartment", "one bedroom", "my place", "the flat"],
+        "mission_site_pool": []
+    },
+
+    "hostel": {
+        "tier": "landmark",
+        "location_type": "lodging",
+        "district": null,
+        "description": [
+            "a budget lodging facility with shared dormitory rooms and communal bathrooms",
+            "a transient population of travelers, students, and people between places — nobody asks questions",
+            "narrow corridors lined with bunk beds, lockers, and the accumulated exhaustion of strangers"
+        ],
+        "curse_density": 3,
+        "atmosphere": "transient, impersonal, anonymizing",
+        "notable_features": [
+            "high turnover means unusual activity goes unnoticed longer than it should",
+            "shared spaces create constant civilian exposure",
+            "multiple floors and communal areas complicate containment"
+        ],
+        "connected_locations": [],
+        "frequented_by": [],
+        "keywords": ["hostel", "dormitory", "bunk", "shared room"],
+        "mission_site_pool": ["hostel_mission"]
+    },
+    
+    "gojo_estate": {
+        "tier": "landmark",
+        "location_type": "clan_estate",
+        "district": null,
+        "description": [
+            ""
+        ],
+        "curse_density": 1,
+        "atmosphere": "",
+        "notable_features": [
+            ""
+        ],
+        "connected_locations": [],
+        "frequented_by": [],
+        "keywords": ["gojo", "big three"],
+        "mission_site_pool": []
+    },
+
+    "zenin_estate": {
+        "tier": "landmark",
+        "location_type": "clan_estate",
+        "district": null,
+        "description": [
+            "complex of traditional buildings",
+            "deep underground stores of cursed weapons and artifacts",
+            "appears like a daimyo's estate from before the Meiji era"
+        ],
+        "curse_density": 2,
+        "atmosphere": "",
+        "notable_features": [
+            ""
+        ],
+        "connected_locations": [],
+        "frequented_by": ["zenin_clan"],
+        "keywords": ["zenin", "big three"],
+        "mission_site_pool": []
+    },
+    
+    "kamo_estate": {
+        "tier": "landmark",
+        "location_type": "clan_estate",
+        "district": null,
+        "description": [
+            ""
+        ],
+        "curse_density": 1,
+        "atmosphere": "",
+        "notable_features": [
+            ""
+        ],
+        "connected_locations": [],
+        "frequented_by": [],
+        "keywords": [],
+        "mission_site_pool": []
+    }
+}

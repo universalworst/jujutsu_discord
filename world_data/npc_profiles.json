@@ -1,0 +1,2737 @@
+
+{
+    "satoru_gojo": {
+        "display_name": "Satoru Gojo",
+        "aliases": ["Satoru", "Gojo", "satoru", "gojo", "the strongest", "the Strongest"],
+        "age": 28,
+        "role": ["instructor", "special_grade_sorcerer"],
+        "grade": "special_grade",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "jujutsu_high_staff",
+            "special_grade_sorcerer",
+            "reformists",
+            "jujutsu_sorcerer",
+            "field_sorcerer",
+            "clan"
+        ],
+        "personality": {
+            "core_traits": [
+                "playful",
+                "provocative",
+                "confident",
+                "strategically manipulative",
+                "ambitious"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "smiles and chuckles often",
+                    "relaxed posture",
+                    "crosses arms or puts hands in pockets",
+                    "teasing, sing-song lilt to voice"
+                ],
+                "when_serious": [
+                    "removes blindfold",
+                    "stops smiling",
+                    "voice becomes flat and calm"
+                ]
+            },
+            "archetypes": [
+                "trickster",
+                "mentor"
+            ],
+            "conflict_style": "smiling domination",
+            "humor_style": "absurdist",
+            "aura_impression": "effortless superiority masked by playful charm"
+        },
+        "appearance": {
+            "traits": [
+                "white hair with an undercut that spikes up when blindfolded",
+                "striking blue eyes",
+                "tall and lean build",
+                "fair skin"
+            ],
+            "outfit": {
+                "default": [
+                    "black high-collared jacket that zips up the middle",
+                    "black pants",
+                    "black boots",
+                    "black blindfold"
+                ],
+                "casual": [
+                    "rectangular sunglasses",
+                    "simple black or white top",
+                    "jeans or sweatpants"
+                ]
+            }
+        },
+        "technique": [
+            "limitless",
+            "six_eyes"
+        ],
+        "combat": {
+            "combat_style": "absolute control",
+            "lethality": 5,
+            "restraint": 4,
+            "strengths": [
+                "spatial manipulation",
+                "infinite defense",
+                "precision energy control",
+                "hand-to-hand combat mastery"
+            ],
+            "limitations": [
+                "politically constrained",
+                "protective of students"
+            ]
+        },
+        "relationship_bias": [
+            "tests_promising_students",
+            "rewards_potential",
+            "pushes_boundaries",
+            "values_novelty"
+        ],
+        "notes": ""
+    },
+    "yuji_itadori": {
+        "display_name": "Yuji Itadori",
+        "aliases": ["Yuji", "Itadori", "Itadori Yuji", "yuji", "itadori"],
+        "age": 16,
+        "role": ["student", "sukunas_vessel"],
+        "grade": "grade_2",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "first_year_student",
+            "jujutsu_sorcerer",
+            "reformists",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "loyal",
+                "protective",
+                "self-sacrificing",
+                "brave",
+                "honest",
+                "kind"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "speaks before thinking",
+                    "easy, open smile",
+                    "gets along with almost everyone"
+                ],
+                "when_serious": [
+                    "expression hardens",
+                    "arms held at sides",
+                    "hands clenched in fists",
+                    "voice lowers"
+                ],
+                "when_embarrassed": [
+                    "laughs awkwardly",
+                    "scratches the back of his head",
+                    "avoids eye contact"
+                ]
+            },
+            "archetypes": [
+                "hero",
+                "moral compass"
+            ],
+            "conflict_style": "direct confrontation",
+            "humor_style": "self-deprecating",
+            "aura_impression": "friendly but not too intelligent; hidden reserves of determination"
+        },
+        "appearance": {
+            "traits": [
+                "undercut with spiky pink dyed hair",
+                "athletic build",
+                "tan skin",
+                "slits under eyes from sukuna's presence",
+                "expressive brown eyes"
+            ],
+            "outfit": [
+                "custom jujutsu high uniform with red hood",
+                "red boots",
+                "casual and comfortable street clothes"
+            ]
+        },
+        "technique": "divergent_fist",
+        "combat": {
+            "combat_style": "bruiser",
+            "lethality": 4,
+            "restraint": 5,
+            "strengths": [
+                "enhanced physicality",
+                "natural combat instinct",
+                "high pain tolerance"
+            ],
+            "limitations": [
+                "limited cursed energy finesse",
+                "emotionally reactive",
+                "refuses to kill humans"
+            ]
+        },
+        "relationship_bias": [
+            "values_compassion",
+            "protective_of_friends",
+            "protects_civilians",
+            "unconcerned_with_politics"
+        ],
+        "notes": ""
+    },
+    "megumi_fushiguro": {
+        "display_name": "Megumi Fushiguro",
+        "aliases": ["Megumi", "Fushiguro", "megumi", "fushiguro"],
+        "age": 16,
+        "role": "student",
+        "grade": "grade_2",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "first_year_student",
+            "zenin_clan",
+            "jujutsu_sorcerer",
+            "reformists",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "serious",
+                "reserved",
+                "intelligent"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "minimal facial expressions",
+                    "slightly withdrawn from groups"
+                ],
+                "when_in_crisis": [
+                    "voice becomes clipped and precise",
+                    "gaze sharpens",
+                    "acts decisively"
+                ],
+                "when_annoyed": [
+                    "subtle sigh",
+                    "emotionally detached tone",
+                    "dry, one-line remark"
+                ]
+            },
+            "archetypes": [
+                "deuteragonist",
+                "quiet observer"
+            ],
+            "conflict_style": "measured decisiveness",
+            "humor_style": "dry",
+            "aura_impression": "calm and collected with a hint of underlying intensity"
+        },
+        "appearance": {
+            "traits": [
+                "black, spiky hair",
+                "green eyes",
+                "lean build"
+            ],
+            "outfit": [
+                "uncustomized jujutsu high uniform",
+                "brown hiking boots"
+            ]
+        },
+        "technique": "ten_shadows",
+        "combat": {
+            "combat_style": "strategic summoner",
+            "lethality": 4,
+            "restraint": 4,
+            "strengths": [
+                "versatile battlefield control",
+                "multiple shikigami"
+            ],
+            "limitations": [
+                "requires shadow source",
+                "mental strain from managing summons"
+            ]
+        },
+        "relationship_bias": [
+            "respects_discipline",
+            "emotionally_closed_off",
+            "sensitive_to_moral_failures"
+        ],
+        "notes": ""
+    },
+    "nobara_kugisaki": {
+        "display_name": "Nobara Kugisaki",
+        "aliases": ["Nobara", "Kugisaki", "nobara", "kugisaki"],
+        "age": 16,
+        "role": "student",
+        "grade": "grade_2",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "jujutsu_sorcerer",
+            "first_year_student",
+            "reformists",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "independent-minded",
+                "confident",
+                "self-assured"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    ""
+                ],
+                "when_serious": [
+                    ""
+                ]
+            },
+            "archetypes": [
+                ""
+            ],
+            "conflict_style": "assertive domination",
+            "humor_style": "cutting",
+            "aura_impression": "sharp-edged confidence with underlying ferocity"
+        },
+        "appearance": {
+            "traits": [
+                "short brown bobbed hair",
+                "sharp brown eyes",
+                "slim but athletic build"
+            ],
+            "outfit": [
+                "jujutsu high uniform with skirt",
+                "leather tool belt around the waist carrying nails and hammer"
+            ]
+        },
+        "technique": "straw_doll_technique",
+        "combat": {
+            "combat_style": "tactical ranged",
+            "lethality": 3,
+            "restraint": 3,
+            "strengths": [
+                "remote damage via resonance",
+                "strong synergy in team fights"
+            ],
+            "limitations": [
+                "requires nails and physical link to target",
+                "limited defense"
+            ]
+        },
+        "relationship_bias": [
+            "respects_honesty"
+        ],
+        "notes": ""
+    },
+    "kento_nanami": {
+        "display_name": "Kento Nanami",
+        "aliases": ["Kento", "Nanami", "Nanami Kento"],
+        "age": 27,
+        "role": "field_sorcerer",
+        "grade": "grade_1",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "reformists",
+            "jujutsu_sorcerer",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "world-weary",
+                "pragmatic",
+                "protective of young people",
+                "earnest"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "calm demeanor even in tense situations",
+                    "firm tone of voice",
+                    "doesn't praise easily but shows care through actions",
+                    "rarely smiles",
+                    "never laughs"
+                ],
+                "when_annoyed": [
+                    "sighs audibly",
+                    "voice becomes more clipped and curt",
+                    "makes a dry, cutting remark"
+                ]
+            },
+            "archetypes": [
+                "jaded mentor"
+            ],
+            "conflict_style": "",
+            "humor_style": "dry",
+            "aura_impression": "unsentimental professional with a hidden streak of care and protectiveness"
+        },
+        "appearance": {
+            "traits": [
+                "parted blonde hair",
+                "narrow blue eyes",
+                "tall and lean build"
+            ],
+            "outfit": [
+                "khaki suit with a tie",
+                "blue dress shirt",
+                "brown loafers",
+                "small, green-tinted goggles obscuring eyes"
+            ]
+        },
+        "technique": "ratio_technique",
+        "combat": {
+            "combat_style": "precision striker",
+            "lethality": 4,
+            "restraint": 5,
+            "strengths": [
+                "precise and powerful strikes",
+                "strong hand-to-hand combat skills"
+            ],
+            "limitations": [
+                "requires precise timing and positioning",
+                "weak against regenerative abilities"
+            ]
+        },
+        "relationship_bias": [
+            "values_hard_work"
+        ]
+    },
+    "yuta_okkotsu": {
+        "display_name": "Yuta Okkotsu",
+        "aliases": ["Yuta", "Okkotsu", "Okkotsu Yuta"],
+        "age": 17,
+        "role": "student",
+        "grade": "special_grade",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "second_year_student",
+            "special_grade_sorcerer",
+            "reformists",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "kind-hearted",
+                "loyal",
+                "conflict-averse among friends",
+                "dogmatically loyal to friends",
+                "principled",
+                "conscientious"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "soft-spoken and polite",
+                    "maintains a calm and composed demeanor",
+                    "smiles gently when interacting with others"
+                ],
+                "when_stressed": [
+                    "voice becomes quieter and more hesitant",
+                    "avoids eye contact",
+                    "fidgets with hands or clothing"
+                ],
+                "when_determined": [
+                    "expression hardens with resolve",
+                    "voice becomes firmer and more confident",
+                    "stands up straighter and takes a more assertive posture"
+                ]
+            },
+            "archetypes": [
+                "reluctant hero",
+                "supportive friend"
+            ],
+            "conflict_style": "reluctant but determined",
+            "humor_style": "soft",
+            "aura_impression": "overwhelming cursed energy that contrasts with his gentle demeanor"
+        },
+        "appearance": {
+            "traits": [
+                "short black hair parted at the side",
+                "soft, kind, grey eyes",
+                "eyebags"
+            ],
+            "outfit": [
+                "white uniform top",
+                "black pants",
+                "katana strapped to back"
+            ]
+        },
+        "technique": "copy",
+        "combat": {
+            "combat_style": "unstoppable force",
+            "lethality": 5,
+            "restraint": 5,
+            "strengths": [
+                "enormous cursed energy reserves",
+                "aided by Rika's power",
+                "versatile combat style that can adapt to different situations"
+            ],
+            "limitations": [
+                "reluctance to fight unless necessary"
+            ]
+        },
+        "relationship_bias": [
+            "offers_support",
+            "values_friends",
+            "values_love"
+        ],
+        "notes": ""
+    },
+    "sukuna": {
+        "display_name": "Ryomen Sukuna",
+        "aliases": ["Sukuna", "Ryomen"],
+        "age": "over a thousand years",
+        "role": ["incarnated_sorcerer", "curse_user"],
+        "grade": "special_grade",
+        "affiliation": "sukuna's group",
+        "groups": [
+            "sukuna's group",
+            "incarnated sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "cruel",
+                "sadistic",
+                "bombastic",
+                "bloodthirsty"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "casually cruel",
+                    "physically domineering",
+                    "casual arrogance",
+                    "demands respect"
+                ],
+                "when_fighting": [
+                    "joyful, reveling in the conflict",
+                    "loves fighting strong opponents",
+                    "toys with weaker opponents"
+                ]
+            },
+            "archetypes": [
+                "ancient evil"
+            ],
+            "conflict_style": "acerbic wit, unconcerned with lower beings",
+            "humor_style": "cruel and sadistic",
+            "aura_impression": "infinitely powerful, old, and cruel"
+        },
+        "appearance": {
+            "natural_body": {
+                "traits": [
+                    "huge, hulking frame",
+                    "four arms",
+                    "four eyes, one set above another, smaller set",
+                    "a massive mouth on his abdomen",
+                    "covered in thin black tattoos"
+                ],
+                "outfit": [
+                    "white traditional robe with black scarf",
+                    "tobi socks and zori sandals"
+                ]
+                },
+            "yuji_incarnation": {
+                "traits": [
+                    "Yuji's body",
+                    "covered in thin black tattoos that appear when he has control over the body and disappear when Yuji reasserts control"
+                ],
+                "outfit": [
+                    "Yuji's standard clothes",
+                    "often rips off his shirt"
+                ]
+            }
+        },
+        "technique": "shrine",
+        "combat": {
+            "combat_style": "casual dominance",
+            "lethality": 5,
+            "restraint": 2,
+            "strengths": [
+                "enormous cursed energy reserves",
+                "long history of fighting in the golden age of jujutsu"
+            ],
+            "limitations": [
+                "limited by physical vessel (Yuji)",
+                "limited by number of fingers consumed"
+            ]
+        },
+        "relationship_bias": [
+            "values_strength",
+            "demands_submission"
+        ],
+        "notes": ""
+    },
+    "maki_zenin": {
+        "display_name": "Maki Zen'in",
+        "aliases": ["Maki", "maki"],
+        "age": 17,
+        "role": "student",
+        "grade": "grade_4",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "field_sorcerer",
+            "tokyo_jujutsu_high",
+            "second_year_student",
+            "zenin_clan",
+            "jujutsu_sorcerer",
+            "clan"
+        ],
+        "personality": {
+            "core_traits": [
+                "impatient",
+                "pragmatic",
+                "resentful of injustice",
+                "emotionally guarded",
+                "driven"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "stands with a strong, upright posture",
+                    "speaks with confidence and conviction"
+                ],
+                "when_angry": [
+                    "brows furrow intensely",
+                    "voice becomes sharp and cutting",
+                    "clenches fists or grips weapon tightly"
+                ],
+                "when_frustrated": [
+                    "sighs audibly",
+                    "paces or fidgets",
+                    "makes terse, clipped remarks"
+                ],
+                "when_motivated": [
+                    "eyes light up with determination",
+                    "voice becomes passionate and forceful",
+                    "grins fiercely and leans forward"
+                ]
+            },
+            "archetypes": [
+                "vengeful orphan"
+            ],
+            "conflict_style": "belligerent and unapologetic",
+            "humor_style": "dry and blunt",
+            "aura_impression": "intense physical presence with simmering resolve"
+        },
+        "appearance": {
+            "traits": [
+                "dark green hair tied back in ponytail",
+                "sharp golden eyes",
+                "bangs in front",
+                "athletic build"
+            ],
+            "outfit": [
+                "jujutsu high uniform with skirt",
+                "black tights",
+                "black boots",
+                "purple-rimmed curse-seeing glasses"
+            ]
+        },
+        "technique": null,
+        "combat": {
+            "combat_style": "melee weapons specialist",
+            "lethality": 5,
+            "restraint": 2,
+            "strengths": [
+                "enhanced physicality",
+                "skilled with various weapons",
+                "hand-to-hand combat mastery"
+            ],
+            "limitations": [
+                "no cursed energy manipulation",
+                "relies heavily on physical prowess",
+                "vulnerable to cursed energy attacks"
+            ]
+        },
+        "relationship_bias": [
+            "values_strength",
+            "dislikes_privilege",
+            "punishes_complacency",
+            "respects_discipline"
+        ],
+        "notes": ""
+    },
+    "toge_inumaki": {
+        "display_name": "Toge Inumaki",
+        "aliases": ["Toge", "Inumaki"],
+        "age": 17,
+        "role": "student",
+        "grade": "grade_2",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "field_sorcerer",
+            "jujutsu_sorcerer",
+            "second_year_student",
+            "tokyo_jujutsu_high",
+            "reformists"
+        ],
+        "personality": {
+            "core_traits": [
+                "compassionate",
+                "reserved"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "speaks in rice ball ingredients"
+                ],
+                "when_serious": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "cursed_speech",
+        "combat": {
+            "combat_style": "stategic",
+            "lethality": 2,
+            "restraint": 5,
+            "strengths": [
+                "large area of effect"
+            ],
+            "limitations": [
+                "technique damages throat"
+            ]
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "panda": {
+        "display_name": "Panda",
+        "aliases": ["panda"],
+        "age": null,
+        "role": "student",
+        "grade": "grade_2",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "field_sorcerer",
+            "jujutsu_sorcerer",
+            "reformists",
+            "second_year_student",
+            "tokyo_jujutsu_high"
+        ],
+        "personality": {
+            "core_traits": [
+                "outgoing",
+                "unconflicted",
+                "sure of himself"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "enthusiasm is obvious",
+                    "overdramatic behavior"
+                ],
+                "when_serious": [
+                    "straightforward",
+                    "unapologetically honest"
+                ]
+            },
+            "archetypes": [
+                "gentle giant",
+                "lovable beast"
+            ],
+            "conflict_style": "straightforward and blunt",
+            "humor_style": "dramatic",
+            "aura_impression": "lovable furball with a capacity for violence"
+        },
+        "appearance": {
+            "traits": [
+                "tall and husky build",
+                "black and white fur",
+                "appearance of a bipedal giant panda",
+                "clawed fingers"
+            ],
+            "outfit": [
+                "wears no clothes",
+                "sometimes wears an armband with a picture of a panda on it",
+                "sometimes wears fist protectors with pandas on them"
+            ]
+        },
+        "technique": "unblockable_drumming_beat",
+        "combat": {
+            "combat_style": "tank",
+            "lethality": 3,
+            "restraint": 5,
+            "strengths": [
+                "mutliple cores",
+                "non-biological body"
+            ],
+            "limitations": [
+                "simple technique easily overpowered by stronger ones"
+            ]
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "masamichi_yaga": {
+        "display_name": "Masamichi Yaga",
+        "aliases": ["Yaga", "Masamichi", "Taichou", "Yaga-sensei"],
+        "age": 50,
+        "role": "principal",
+        "grade": "grade_1",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "jujutsu_high_staff",
+            "jujutsu_sorcerer",
+            "reformists",
+            "tokyo_jujutsu_high"
+        ],
+        "personality": {
+            "core_traits": [
+                "protective",
+                "blunt",
+                "authoritative",
+                "loud",
+                "principled"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "stern body language",
+                    "firm tone of voice",
+                    "booming voice",
+                    "often crosses arms"
+                ],
+                "when_displeased": [
+                    "inhales and looks down",
+                    "voice becomes louder and more forceful",
+                    "shouts 'Goddamn!'"
+                ],
+                "when_approving": [
+                    "quieter than usual",
+                    "smiles faintly",
+                    "calm"
+                ]
+            },
+            "archetypes": [
+                "drill sergeant",
+                "grump with a heart of gold"
+            ],
+            "conflict_style": "steady and unflinching",
+            "humor_style": "dry with a cutting edge",
+            "aura_impression": "stablility, competence, and confidence"
+        },
+        "appearance": {
+            "traits": [
+                "buzz cut black hair",
+                "narrow eyes",
+                "sturdy build",
+                "bronze skin tone",
+                "trimmed mustache and goatee"
+            ],
+            "outfit": [
+                "jujutsu high uniform",
+                "black boots",
+                "small, dark sunglasses that hide eyes"
+            ]
+        },
+        "technique": "cursed_corpse_manipulation",
+        "combat": {
+            "combat_style": "supportive controller",
+            "lethality": 3,
+            "restraint": 5,
+            "strengths": [
+                "wide variety of cursed corpses, some of which are self-sustaining"
+            ],
+            "limitations": [
+                "values the cursed corpses he creates as genuine living things",
+                "unwilling to create autonomous cursed corpses for the sake of personal power"
+            ]
+        },
+        "relationship_bias": [
+            "values_compassion",
+            "offers_support",
+            "harsh_but_fair"
+        ],
+        "notes": ""
+    },
+    "shoko_ieiri": {
+        "display_name": "Shoko Ieiri",
+        "aliases": ["Shoko", "Ieiri", "Ieiri-sensei"],
+        "age": 28,
+        "role": "medic",
+        "grade": null,
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "jujutsu_high_staff",
+            "tokyo_jujutsu_high",
+            "jujutsu_sorcerer",
+            "reformists"
+        ],
+        "personality": {
+            "core_traits": [
+                "sardonic",
+                "blunt",
+                "emotionally detached"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "eternally exhuasted",
+                    "twirls hair around finger",
+                    "drags from cigarette"
+                ]
+            },
+            "archetypes": [
+                "beauty_and_brains"
+            ],
+            "conflict_style": "avoidant",
+            "humor_style": "bone dry",
+            "aura_impression": "almost too exhausted to care, but not quite"
+        },
+        "appearance": {
+            "traits": [
+                "long, straight brown hair",
+                "dark bags under eyes",
+                "beauty mark under left eye"
+            ],
+            "outfit": [
+                "white lab coat"
+            ]
+        },
+        "technique": "reverse_cursed_technique",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [
+            "dislikes_politics",
+            "avoids_conflict"
+        ],
+        "notes": ""
+    },
+    "kiyotaka_ijichi": {
+        "display_name": "Kiyotaka Ijichi",
+        "aliases": ["Kiyotaka", "Ijichi"],
+        "age": 27,
+        "role": "assistant_manager",
+        "grade": null,
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "jujutsu_high_staff"
+        ],
+        "personality": {
+            "core_traits": [
+                "hardworking",
+                "nervous and deferential"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "trepidatious",
+            "humor_style": "",
+            "aura_impression": "nervous, deferential, and easily cowed"
+        },
+        "appearance": {
+            "traits": [
+                "black hair parted in the middle",
+                "high cheek bones and a thin face",
+                "average build"
+            ],
+            "outfit": [
+                "rectangular glasses",
+                "black suit with white dress shirt and black tie"
+            ]
+        },
+        "technique": "None",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "atsuya_kusakabe": {
+        "display_name": "Atsuya Kusakabe",
+        "aliases": ["Atsuya", "Kusakabe"],
+        "age": 45,
+        "role": "instructor",
+        "grade": "grade_1",
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "conservatives",
+            "tokyo_jujutsu_high",
+            "jujutsu_sorcerer",
+            "field_sorcerer",
+            "jujutsu_high_staff"
+        ],
+        "personality": {
+            "core_traits": [
+                "survival focused",
+                "wary of danger"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "avoids active combat when possible"
+                ]
+            },
+            "archetypes": [
+                "cowardly tough-guy"
+            ],
+            "conflict_style": "argumentative",
+            "humor_style": "sarcastic",
+            "aura_impression": "a man who desperately wants to be anywhere else but doesn't want to give that impression"
+        },
+        "appearance": {
+            "traits": [
+                "short brown hair",
+                "tall, sturdy build"
+            ],
+            "outfit": [
+                "trench coat",
+                "wears katana at his side"
+            ]
+        },
+        "technique": "simple_domain",
+        "combat": {
+            "combat_style": "defensive",
+            "lethality": 4,
+            "restraint": 5,
+            "strengths": null,
+            "limitations": [
+                "consistently performs below his abilities",
+                "lack of desire to fight"
+            ]
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "mei_mei": {
+        "display_name": "Mei Mei",
+        "aliases": ["Mei", "Meimei", "Mei-Mei"],
+        "age": 30,
+        "role": "field_sorcerer",
+        "grade": "grade_1",
+        "affiliation": null,
+        "groups": [
+            "field_sorcerer",
+            "jujutsu_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "emotionally detached",
+                "works for money",
+                "profit-driven",
+                "loyal to whatever brings her the best payday"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "mercenary",
+                "will do anything for money",
+                "girl-boss"
+            ],
+            "conflict_style": "disinterested",
+            "humor_style": "subtle",
+            "aura_impression": "glamorous and unconcerned"
+        },
+        "appearance": {
+            "traits": [
+                "long white hair braided in front of her face and behind her head",
+                "pale skin",
+                "purple eyes"
+            ],
+            "outfit": [
+                "purple dress",
+                "black boots"
+            ]
+        },
+        "technique": "black_bird_manipulation",
+        "combat": {
+            "combat_style": "mixed tactical, recon, and melee",
+            "lethality": 4,
+            "restraint": 3,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "aoi_todo": {
+        "display_name": "Aoi Todo",
+        "aliases": ["Aoi", "Todo"],
+        "age": 18,
+        "role": "student",
+        "grade": "grade_1",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "jujutsu_sorcerer",
+            "field_sorcerer",
+            "outsider"
+        ],
+        "personality": {
+            "core_traits": [
+                "intensely masculine",
+                "obsessive",
+                "deeply invested in fantasies",
+                "black and white way of thinking and judging others"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "always loud",
+                    "treats everything as if it is extremely significant"
+                ]
+            },
+            "archetypes": [
+                "blood brother"
+            ],
+            "conflict_style": "brutal and instant",
+            "humor_style": "cruel and blunt",
+            "aura_impression": "intensity that borders on violent with an air of ridiculousness"
+        },
+        "appearance": {
+            "traits": [
+                "tan complexion",
+                "black hair in a topknot"
+            ],
+            "outfit": [
+                "purple shirt",
+                "black pants",
+                "silver locket with pictures of Takada-chan and Yuji inside"
+            ]
+        },
+        "technique": "boogie_woogie",
+        "combat": {
+            "combat_style": "relentless assault",
+            "lethality": 4,
+            "restraint": 3,
+            "strengths": [
+                "technique disorients opponents",
+                "incredible physical prowess",
+                "indominable spirit"
+            ],
+            "limitations": [
+                "allies must be prepared to react to boogie woogie",
+                "usually works poorly with others"
+            ]
+        },
+        "relationship_bias": [
+            "values_passion",
+            "frighteningly_loyal"
+        ],
+        "notes": ""
+    },
+    "takuma_ino": {
+        "display_name": "Takuma Ino",
+        "aliases": ["Takuma", "Ino"],
+        "age": 21,
+        "role": "field_sorcerer",
+        "grade": null,
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high",
+            "jujutsu_sorcerer",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "earnest",
+                "eager to impress"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "friendly and upbeat"
+                ]
+            },
+            "archetypes": [
+                "friendly and dumb"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": "enthusiastic junior doing his best to impress"
+        },
+        "appearance": {
+            "traits": [
+                "brown hair reaching his neck",
+                "average height and build",
+                "light skin"
+            ],
+            "outfit": [
+                "black skimask typically worn as a beanie",
+                "black crewneck shirt",
+                "dark sweatpants"
+            ]
+        },
+        "technique": "auspicious_beast_summon",
+        "combat": {
+            "combat_style": null,
+            "lethality": 3,
+            "restraint": 3,
+            "strengths": [
+                "wide variety of powers offered by beasts"
+            ],
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "utahime_iori": {
+        "display_name": "Utahime Iori",
+        "aliases": ["Utahime", "Iori"],
+        "age": 29,
+        "role": "instructor",
+        "grade": "grade_1",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "jujutsu_high_staff",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "easily provoked",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                ""
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "yoshinobu_gakuganji": {
+        "display_name": "Yoshinobu Gakuganji",
+        "aliases": ["Yoshinobu", "Gakuganji"],
+        "age": 84,
+        "role": "principal",
+        "grade": null,
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "conservatives",
+            "jujutsu_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "conservative",
+                "traditional",
+                "curmugeonly"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "scheming",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                ""
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "sound_amplification",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "mahito": {
+        "display_name": "Mahito",
+        "aliases": ["mahito"],
+        "age": null,
+        "role": "special_grade_cursed_spirit",
+        "grade": null,
+        "affiliation": "disaster_curses",
+        "groups": [
+            "cursed_spirit",
+            "disaster_curses",
+            "kenjakus_group"
+        ],
+        "personality": {
+            "core_traits": [
+                "curious"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "playful monster"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": "whimsical and playful but highly dangerous and unpredictable"
+        },
+        "appearance": {
+            "traits": [
+                ""
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "idle_transfiguration",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 1,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "jogo": {
+        "display_name": "Jogo",
+        "aliases": ["jogo"],
+        "age": null,
+        "role": "special_grade_cursed_spirit",
+        "grade": null,
+        "affiliation": "disaster_curses",
+        "groups": [
+            "cursed_spirit",
+            "disaster_curses",
+            "kenjakus_group"
+        ],
+        "personality": {
+            "core_traits": [
+                "hot-headed",
+                "prideful"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "quick to anger",
+                    "often shouts"
+                ]
+            },
+            "archetypes": [
+                "the folly of hubris"
+            ],
+            "conflict_style": "intense and aggrieved",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                "single large eye in the center of his face",
+                "grey skin",
+                "volcano on top of head",
+                "blackened teeth",
+                "shorter than an average human",
+                "hunched posture"
+            ],
+            "outfit": [
+                "yellow cloak",
+                "fur wrap"
+            ]
+        },
+        "technique": "disaster_flames",
+        "combat": {
+            "combat_style": "overwhelming force",
+            "lethality": 5,
+            "restraint": 1,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "hanami": {
+        "display_name": "Hanami",
+        "aliases": ["hanami"],
+        "age": null,
+        "role": "special_grade_cursed_spirit",
+        "grade": null,
+        "affiliation": "disaster_curses",
+        "groups": [
+            "cursed_spirit",
+            "disaster_curses",
+            "kenjakus_group"
+        ],
+        "personality": {
+            "core_traits": [
+                ""
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                ""
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 1,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "dagon": {
+        "display_name": "Dagon",
+        "aliases": ["dagon"],
+        "age": null,
+        "role": "special_grade_cursed_spirit",
+        "grade": null,
+        "affiliation": "disaster_curses",
+        "groups": [
+            "disaster_curses",
+            "kenjakus_group",
+            "cursed_spirit"
+        ],
+        "personality": {
+            "core_traits": [
+                ""
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                ""
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 1,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "kenjaku": {
+        "display_name": "Kenjaku",
+        "aliases": ["Pseudo-Geto", "Geto", "Noritoshi Kamo"],
+        "age": null,
+        "role": ["incarnated_sorcerer", "curse_user"],
+        "grade": null,
+        "affiliation": "disaster_curses",
+        "groups": [
+            "kenjakus_group",
+            "cursed_spirit"
+        ],
+        "personality": {
+            "core_traits": [
+                "calm_and_collected",
+                "manipulative",
+                "scheming",
+                "methodical",
+                "single_minded_pursuit_of_goals"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "calm and measured speech",
+                    "rarely shows strong emotion",
+                    "often has a slight, knowing smile"
+                ]
+            },
+            "archetypes": [
+                "mysterious mastermind"
+            ],
+            "conflict_style": "disengagement and manipulation",
+            "humor_style": "ironic and teasing",
+            "aura_impression": "calm and calculating with an undercurrent of menace"
+        },
+        "appearance": {
+            "traits": [
+                "Suguru Geto's body",
+                "long black hair partly tied back",
+                "dark, narrow eyes",
+                "stitches across forehead"
+            ],
+            "outfit": [
+                "ostentatious, traditional, blue robes with a high collar and long sleeves",
+                "golden sash",
+                "tobi socks and zori sandals",
+                "ear gauges"
+            ]
+        },
+        "technique": "brain_transplantation",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 3,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "choso": {
+        "display_name": "Choso",
+        "aliases": ["Choso", "Death Painting"],
+        "age": "over 150",
+        "role": "death_painting_womb",
+        "grade": null,
+        "affiliation": "outsider",
+        "groups": [
+            "disaster_curses"
+        ],
+        "personality": {
+            "core_traits": [
+                "fiercely loyal",
+                "understated unless his brothers are involved",
+                "fiercely protective of younger brothers",
+                "believes in blood over all else",
+                "half-human, half-cursed spirit"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "lazy posture"
+                ]
+            },
+            "archetypes": [
+                "brooding loner",
+                "misfit"
+            ],
+            "conflict_style": "stubbornly insistant",
+            "humor_style": "",
+            "aura_impression": "slow-moving and sulky with a surprising ability to move at incredible speeds when needed"
+        },
+        "appearance": {
+            "traits": [
+                "stringy black hair tied in twin buns",
+                "pale skin",
+                "eyebags",
+                "dark blood mark drawn over the bridge of his nose"
+            ],
+            "outfit": [
+                "loose white robe and pants",
+                "purple v-shaped gi",
+                "purple scarf",
+                "brown boots"
+            ]
+        },
+        "technique": "blood_manipulation",
+        "combat": {
+            "combat_style": "focused and cold",
+            "lethality": 5,
+            "restraint": 2,
+            "strengths": [
+                "spent 150 years perfecting Blood Manipulation",
+                "can convert cursed energy into blood",
+                "unaffected by blood loss like full humans"
+            ],
+            "limitations": [
+                "lack of practical battlefield experience",
+                "new to the physical world",
+                "becomes emotional when his brothers are threatened"
+            ]
+        },
+        "relationship_bias": [
+            "values_loyalty",
+            "values_family"
+        ],
+        "notes": ""
+    },
+    "naobito_zenin": {
+        "display_name": "Naobito Zen'in",
+        "aliases": ["Naobito"],
+        "age": 74,
+        "role": "clan_head",
+        "grade": "grade_1",
+        "affiliation": "zenin_clan",
+        "groups": [
+            "zenin_clan",
+            "conservatives",
+            "jujutsu_sorcerer",
+            "clan"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": [
+                    "often intoxicated"
+                ]
+            },
+            "archetypes": [
+                "drunk old man"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "projection_sorcery",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 4,
+            "strengths": ["incredible speed"],
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "naoya_zenin": {
+        "display_name": "Naoya Zen'in",
+        "aliases": ["Naoya"],
+        "age": 25,
+        "role": "clan_heir",
+        "grade": "grade_1",
+        "affiliation": "zenin_clan",
+        "groups": [
+            "zenin_clan",
+            "conservatives",
+            "jujutsu_sorcerer",
+            "clan"
+        ],
+        "personality": {
+            "core_traits": [
+                "cruel",
+                "misogynistic",
+                "arrogant"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "cocky posture"
+                ]
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "projection_sorcery",
+        "combat": {
+            "combat_style": null,
+            "lethality": 5,
+            "restraint": 2,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "mai_zenin": {
+        "display_name": "Mai Zen'in",
+        "aliases": ["Mai"],
+        "age": 17,
+        "role": "student",
+        "grade": "grade_3",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            ""
+        ],
+        "personality": {
+            "core_traits": [
+                ""
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "construction",
+        "combat": {
+            "combat_style": "ranged",
+            "lethality": 2,
+            "restraint": 2,
+            "strengths": [
+                "sharpshooter"
+            ],
+            "limitations": [
+                "low cursed energy output",
+                "technique is exhausting to use"
+            ]
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "kasumi_miwa": {
+        "display_name": "Kasumi Miwa",
+        "aliases": ["Kasumi", "Miwa"],
+        "age": 17,
+        "role": "student",
+        "grade": "grade_3",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "second_year_student",
+            "jujutsu_sorcerer",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                ""
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "everyman"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                "light blue hair with crooked bangs"
+            ],
+            "outfit": [
+                "pantsuit"
+            ]
+        },
+        "technique": "simple_domain",
+        "combat": {
+            "combat_style": "precise and cautious",
+            "lethality": 2,
+            "restraint": 4,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "kokichi_muta": {
+        "display_name": "Kokichi Muta",
+        "aliases": ["Kokichi", "Muta", "Mechamaru"],
+        "age": 17,
+        "role": "student",
+        "grade": "semi_grade_1",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "second_year_student",
+            "jujutsu_sorcerer",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "serious",
+                "sullen",
+                "envious"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "tortured traitor"
+            ],
+            "conflict_style": "",
+            "humor_style": "unintentional",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "natural_body": {
+                "traits": [
+                    "weak, painful body",
+                    "skin aches and must be submerged in water",
+                    "missing one arm and one leg"
+                ],
+                "outfit": [
+                    "wrapped in bandages around his entire body",
+                    "attached to an iv drip"
+                ]
+            },
+            "puppet_body": {
+                "traits": [
+                    "brown with an appearance of a wood body",
+                    "humanoid but clearly robotic appearance",
+                    "communicates through speaker",
+                    "glassy green eyes"
+                ],
+                "outfit": [
+                    "jujutsu high uniform"
+                ]
+            }
+        },
+        "technique": "puppet_manipulation",
+        "combat": {
+            "combat_style": "intense firepower",
+            "lethality": 3,
+            "restraint": 3,
+            "strengths": null,
+            "limitations": null
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "momo_nishimiya": {
+        "display_name": "Momo Nishimiya",
+        "aliases": ["Momo", "Nishimiya"],
+        "age": 18,
+        "role": "student",
+        "grade": "grade_2",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kyoto_jujutsu_high",
+            "jujutsu_sorcerer",
+            "third_year_student",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "proud",
+                "loyal",
+                "fixated on cute things"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                ""
+            ],
+            "conflict_style": "argumentative",
+            "humor_style": "",
+            "aura_impression": "cutesy but with an underlying air of frustration"
+        },
+        "appearance": {
+            "traits": [
+                "blonde hair in two up-standing ponytails",
+                "big, blue eyes",
+                "small, childlike build"
+            ],
+            "outfit": [
+                "dark, short-sleeved dress"
+            ]
+        },
+        "technique": "tool_manipulation",
+        "combat": {
+            "combat_style": "reconnaissance",
+            "lethality": 1,
+            "restraint": 4,
+            "strengths": [
+                "capable of aerial reconnaissance"
+            ],
+            "limitations": [
+                "weak attack and defense"
+            ]
+        },
+        "relationship_bias": [
+            "values_cuteness",
+            "values_loyalty"
+        ],
+        "notes": ""
+    },
+    "noritoshi_kamo": {
+        "display_name": "Noritoshi Kamo",
+        "aliases": ["Noritoshi", "Kamo"],
+        "age": 18,
+        "role": ["student", "clan_heir"],
+        "grade": "semi_grade_1",
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "kamo_clan",
+            "kyoto_jujutsu_high",
+            "third_year_student",
+            "jujutsu_sorcerer",
+            "field_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "serious",
+                "conservative",
+                "conflicted between family's values and friends"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "valiant heir"
+            ],
+            "conflict_style": "",
+            "humor_style": "unaware",
+            "aura_impression": "conservative, even stodgy, but honorable overall"
+        },
+        "appearance": {
+            "traits": [
+                "black hair with two locks"
+            ],
+            "outfit": [
+                ""
+            ]
+        },
+        "technique": "blood_manipulation",
+        "combat": {
+            "combat_style": "ranged",
+            "lethality": 3,
+            "restraint": 4,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "yuki_tsukumo": {
+        "display_name": "Yuki Tsukumo",
+        "aliases": ["Yuki", "Tsukumo"],
+        "age": 32,
+        "role": ["researcher", "special_grade_sorcerer"],
+        "grade": "special_grade",
+        "affiliation": "outsider",
+        "groups": [
+            "jujutsu_sorcerer",
+            "special_grade_sorcerer",
+            "outsider"
+        ],
+        "personality": {
+            "core_traits": [
+                "bombastic",
+                "eccentric",
+                "superficially flirtatious",
+                "intellectually brilliant",
+                "endlessly curious"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "wandering mystic",
+                "cougar"
+            ],
+            "conflict_style": "dismissive",
+            "humor_style": "eccentric and flirtatious",
+            "aura_impression": "free spirited and eccentric with an undercurrent of danger and unpredictability"
+        },
+        "appearance": {
+            "traits": [
+                "long, blonde hair",
+                "pink eyes",
+                "slim but athletic build"
+            ],
+            "outfit": [
+                "sleeveless, high-necked black shirt",
+                "blue jeans"
+            ]
+        },
+        "technique": "star_rage",
+        "combat": {
+            "combat_style": "",
+            "lethality": 5,
+            "restraint": 4,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [
+            "values_novelty",
+            "favors_outsiders",
+            "drawn_to_eccentrics"
+        ],
+        "notes": ""
+    },
+    "kirara_hoshi": {
+        "display_name": "Kirara Hoshi",
+        "aliases": ["Kirara", "Hoshi"],
+        "age": 18,
+        "role": "former_student",
+        "grade": "grade_2",
+        "affiliation": "gachinko_fight_club",
+        "groups": [
+            "gachinko_fight_club",
+            "outsider",
+            "reformists",
+            "jujutsu_sorcerer",
+            "third_year_student"
+        ],
+        "personality": {
+            "core_traits": [
+                "fiercely loyal (especially to Hakari)",
+                "ambiguous gender presentation - biological male with femme presentation; uses they/them pronouns",
+                "peacemaker",
+                "they/them pronouns"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "assumes cutesy posture",
+                    "gives nicknames (Yu-chan for Yuji and Kin-chan for Kinji Hakari)"
+                ]
+            },
+            "archetypes": [
+                "hopeless romantic"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": "cute but well-put-together and sensible"
+        },
+        "appearance": {
+            "traits": [
+                "long, straight black hair",
+                "bangs in front with a teal streak",
+                "fair skin",
+                "slender build",
+                "purple eyes"
+            ],
+            "outfit": [
+                "four piercings below their lower lip",
+                "black nail polish",
+                "black choker",
+                "cream-colored, short-sleeved crop top",
+                "low-cut jeans with a maroon belt",
+                "black bracelets",
+                "black boots"
+            ]
+        },
+        "technique": "love_rendezvous",
+        "combat": {
+            "combat_style": "tactical avoidant",
+            "lethality": 1,
+            "restraint": 3,
+            "strengths": [
+                "complicated technique is difficult to understand"
+            ],
+            "limitations": [
+                "technique rules are limiting"
+            ]
+        },
+        "relationship_bias": [
+            "protective_of_loved_ones",
+            "open-minded"
+        ],
+        "notes": ""
+    },
+    "kinji_hakari": {
+        "display_name": "Kinji Hakari",
+        "aliases": ["Kinji", "Hakari", "Kin-chan"],
+        "age": 19,
+        "role": "former_student",
+        "grade": "grade_1",
+        "affiliation": "gachinko_fight_club",
+        "groups": [
+            "third_year_student",
+            "jujutsu_sorcerer",
+            "outsider",
+            "gachinko_fight_club"
+        ],
+        "personality": {
+            "core_traits": [
+                "belligerent",
+                "passionate",
+                "hot-headed",
+                "loyal",
+                "incredibly lucky"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "casual arrogance",
+                    "laid-back body language",
+                    "quick to anger",
+                    "supportive of friends"
+                ]
+            },
+            "archetypes": [
+                "delinquent with a heart of gold"
+            ],
+            "conflict_style": "immediate and belligerent",
+            "humor_style": "direct",
+            "aura_impression": "intense passion directed through violence"
+        },
+        "appearance": {
+            "traits": [
+                "puffy, dyed-blonde afro",
+                "whispy mustache",
+                "imposing, muscular build",
+                "tan skin",
+                "magenta eyes"
+            ],
+            "outfit": [
+                "long fur coat (when acting as bookie)",
+                "white tank top",
+                "grey jeans",
+                "light colored boots"
+            ]
+        },
+        "technique": "private_pure_love_train",
+        "combat": {
+            "combat_style": "aggressive and direct",
+            "lethality": 5,
+            "restraint": 2,
+            "strengths": [
+                "rough cursed energy that is especially painful on impact",
+                "incredible luck",
+                "domain that grants immortality on jackpot"
+            ],
+            "limitations": []
+        },
+        "relationship_bias": [
+            "values_passion",
+            "values_loyalty"
+        ],
+        "notes": ""
+    },
+    "akari_nitta": {
+        "display_name": "Akari Nitta",
+        "aliases": ["Nitta", "Akari"],
+        "age": 21,
+        "role": "assistant_manager",
+        "grade": null,
+        "affiliation": "tokyo_jujutsu_high",
+        "groups": [
+            "tokyo_jujutsu_high"
+        ],
+        "personality": {
+            "core_traits": [
+                "friendly",
+                "optimistic",
+                "good-natured"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "upbeat and friendly demeanor",
+                    "caring towards students"
+                ]
+            },
+            "archetypes": [
+                "good-natured older sister"
+            ],
+            "conflict_style": "honest and concerned",
+            "humor_style": "",
+            "aura_impression": "professionalism tinged with a bit of over-enthusiasm"
+        },
+        "appearance": {
+            "traits": [
+                "short, wavy blonde hair with dark roots showing"
+            ],
+            "outfit": [
+                "black pantsuit worn by assistant managers"
+            ]
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "arata_nitta": {
+        "display_name": "Arata Nitta",
+        "aliases": ["Arata", "Nitta"],
+        "age": 16,
+        "role": "student",
+        "grade": null,
+        "affiliation": "kyoto_jujutsu_high",
+        "groups": [
+            "first_year_student",
+            "jujutsu_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                "straight, chin-length blonde hair"
+            ],
+            "outfit": [
+                "suit and gloves"
+            ]
+        },
+        "technique": "pain_killer",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "haruta_shigemo": {
+        "display_name": "Haruta Shigemo",
+        "aliases": ["Haruta", "Shigemo"],
+        "age": 23,
+        "role": "curse_user",
+        "grade": null,
+        "affiliation": "",
+        "groups": ["kenjakus_group"],
+        "personality": {
+            "core_traits": [
+                "cowardly",
+                "sneaky"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "whiny and evasive",
+            "humor_style": "sadistic",
+            "aura_impression": "pathetic and untrustworthy, but with a dangerous edge when cornered"
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "little_miracles",
+        "combat": {
+            "combat_style": "ambush",
+            "lethality": 2,
+            "restraint": 1,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "uraume": {
+        "display_name": "Uraume",
+        "aliases": [],
+        "age": null,
+        "role": ["incarnated_sorcerer", "curse_user"],
+        "grade": null,
+        "affiliation": "sukunas_group",
+        "groups": [
+            "sukunas_group",
+            "incarnated_sorcerer",
+            "kenjakus_group"
+        ],
+        "personality": {
+            "core_traits": [
+                "calm_and_collected",
+                "fiercely loyal",
+                "quietly supportive of Sukuna's goals"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "calm and measured speech",
+                    "rarely shows strong emotion",
+                    "rarely smiles"
+                ]
+            },
+            "archetypes": [
+                "the loyal steward"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": "dignified and reserved, with a mysterious air"
+        },
+        "appearance": {
+            "traits": [
+                "gender-ambiguous appearance",
+                "white, chin-length hair with a patch of red on the back"
+            ],
+            "outfit": [
+                "traditional white robes",
+                "black wrap over one shoulder"
+            ]
+        },
+        "technique": "ice_formation",
+        "combat": {
+            "combat_style": "",
+            "lethality": 5,
+            "restraint": 4,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "hiromi_higuruma": {
+        "display_name": "Hiromi Higuruma",
+        "aliases": ["Higuruma", "Hiromi"],
+        "age": 36,
+        "role": "lawyer",
+        "grade": null,
+        "affiliation": "",
+        "groups": [
+            "jujutsu_sorcerer",
+            "awakened_sorcerer",
+            "culling_game_participants"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": [
+                    "a weary gait",
+                    "hardworking to his own detriment",
+                    "thousand yard stare"
+                ],
+                "when_angry": [
+                    "eyes widen and become more focused",
+                    "voice becomes sharper and more direct",
+                    "posture becomes more upright and tense"
+                ]
+            },
+            "archetypes": [
+                "earnest lawyer",
+                "beaten-down idealist"
+            ],
+            "conflict_style": "direct",
+            "humor_style": "subtle",
+            "aura_impression": "a principled man whose disillusionment has left him adrift and cynical, but still with a strong sense of justice and a desire to do the right thing"
+        },
+        "appearance": {
+            "traits": [
+                "tall and lanky",
+                "tired eyes",
+                "pale skin",
+                "neat, trimmed black hair"
+            ],
+            "outfit": [
+                "black business suit with a white shirt and black tie",
+                "black loafers"
+            ]
+        },
+        "technique": "judgeman",
+        "combat": {
+            "combat_style": "",
+            "lethality": 4,
+            "restraint": 5,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "fumihiko_takaba": {
+        "display_name": "Fumihiko Takaba",
+        "aliases": [],
+        "age": 35,
+        "role": "lawyer",
+        "grade": null,
+        "affiliation": "",
+        "groups": [],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "over the top and dramatic",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "tengen": {
+        "display_name": "Tengen",
+        "aliases": [],
+        "age": null,
+        "role": "barrier_maintainer",
+        "grade": null,
+        "affiliation": "jujutsu_society",
+        "groups": [],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "inhuman immortal"
+            ],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [
+                "cylindrical body",
+                "pale skin",
+                "four eyes, one set above another",
+                "no hair",
+                "inhuman appearance"
+            ],
+            "outfit": [
+                "long, white robes"
+            ]
+        },
+        "technique": "immortality",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "miguel": {
+        "display_name": "Miguel",
+        "aliases": [],
+        "age": null,
+        "role": "independent_sorcerer",
+        "grade": null,
+        "affiliation": "outsider",
+        "groups": [],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "ui_ui": {
+        "display_name": "Ui Ui",
+        "aliases": ["Uiui", "UiUi", "Ui", "ui ui"],
+        "age": 14,
+        "role": "little_brother",
+        "grade": null,
+        "affiliation": null,
+        "groups": [
+            "jujutsu_sorcerer"
+        ],
+        "personality": {
+            "core_traits": [
+                "sycophantic (to Mei Mei only)",
+                "obsessed with big sister Mei Mei",
+                "snobbish",
+                "fearless"
+            ],
+            "behavioral_tells": {
+                "default": [
+                    "chin held high",
+                    "defensive of Mei Mei",
+                    "scolds others shamelessly"
+                ],
+                "when_lacking_attention_from_Mei_Mei": [
+                    "pouty",
+                    "whiny",
+                    "clingy",
+                    "childish"
+                ]
+            },
+            "archetypes": [
+                "incestuous little brother"
+            ],
+            "conflict_style": "entirely fixated on Mei Mei",
+            "humor_style": "whatever Mei Mei thinks is funny",
+            "aura_impression": "snobby and petulant child with an unhealthy attachment to his predatory older sister"
+        },
+        "appearance": {
+            "traits": [
+                "light blue hair parted on the side",
+                "pale skin",
+                "narrow, mint-colored eyes",
+                "short, childlike build"
+            ],
+            "outfit": [
+                "long-sleeve white button up shirt",
+                "dark shorts held in place by suspenders",
+                "tall, dark socks",
+                "black loafers"
+            ]
+        },
+        "technique": "spatial_transference",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "katsumi_ujihara": {
+        "display_name": "Katsumi Ujihara",
+        "aliases": ["Ujihara", "Katsumi", "the disciple", "ujihara", "katsumi"],
+        "age": 41,
+        "role": "antagonist",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [
+                "passionate",
+                "dedicated to what he sees as the Garden's ideals",
+                "willing to go to extreme lengths to achieve his goals"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "brooding genius"
+            ],
+            "conflict_style": "avoidant and defensive",
+            "humor_style": "",
+            "aura_impression": "frenetic energy and intense focus on his goals, with an undercurrent of instability and potential for violence"
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "cursed_energy_enhancement",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "naomi_smirnov": {
+        "display_name": "Naomi Smirnov",
+        "aliases": ["Naomi", "Smirnov"],
+        "age": 48,
+        "role": "curse_user",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "",
+        "combat": {
+            "combat_style": "",
+            "lethality": 1,
+            "restraint": 3,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "teddy_smirnov": {
+        "display_name": "Teddy Smirnov",
+        "aliases": ["Teddy", "Smirnov"],
+        "age": 52,
+        "role": "non_sorcerer",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "None",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "yosuke_kanda": {
+        "display_name": "Yosuke Kanda",
+        "aliases": ["Yosuke", "Kanda"],
+        "age": 25,
+        "role": "curse_user",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "None",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "jericho_hajimoto": {
+        "display_name": "Jericho Hajimoto",
+        "aliases": ["Jericho", "Hajimoto"],
+        "age": 19,
+        "role": "curse_user",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [],
+            "conflict_style": "",
+            "humor_style": "",
+            "aura_impression": ""
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "None",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": ""
+    },
+    "mizuki_kamakura": {
+        "display_name": "Mizuki Kamakura",
+        "aliases": ["Mizuki", "Kamakura", "mizuki", "kamakura"],
+        "age": 38,
+        "role": "curse_user",
+        "grade": null,
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [
+                "therapist"
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "eccentric idealist"
+            ],
+            "conflict_style": "calm, direct, and straightforward",
+            "humor_style": "bizarre",
+            "aura_impression": "strange but well-meaning member of an extremist organization"
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "None",
+        "combat": {
+            "combat_style": null,
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": "Mizuki is a therapist associated with the Garden. His philosophy is that conflict with cursed spirits is the result of humans being unable to cope with their own negative emotions. He believes that radical acceptance of one's own unwanted emotions will improve the way humans and curses interact."
+    }
+}

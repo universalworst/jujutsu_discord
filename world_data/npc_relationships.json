@@ -1,0 +1,1318 @@
+{
+    "satoru_gojo": {
+        "yuji_itadori": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "high_expectations",
+                "tests_growth",
+                "protective"
+            ],
+            "behavioral_expression": {
+                "default_tone": "playful and challenging",
+                "when_in_crisis": "calm and reassuring",
+                "method_of_address": "Yuji",
+                "power_position": "authority"
+            },
+            "trust": 80,
+            "respect": 55,
+            "affection": 75,
+            "protectiveness": 90,
+            "tension": 30
+        },
+        "megumi_fushiguro": {
+            "relationship": ["student", "ward"],
+            "dynamic_tags": [
+                "high_expectations",
+                "tests_growth",
+                "strategic_interest"
+            ],
+            "behavioral_expression": {
+                "default_tone": "teasing and unpatronizing",
+                "when_mentoring": "calm and direct",
+                "method_of_address": "Megumi",
+                "power_position": "authority"
+            },
+            "trust": 85,
+            "respect": 65,
+            "affection": 75,
+            "protectiveness": 75,
+            "tension": 40
+        },
+        "nobara_kugisaki": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "encourages_independence",
+                "high_expectations",
+                "amused_by"
+            ],
+            "behavioral_expression": {
+                "default_tone": "teasing and unpatronizing",
+                "when_in_crisis": "calm and supportive",
+                "method_of_address": "Nobara",
+                "power_position": "authority"
+            },
+            "trust": 65,
+            "respect": 60,
+            "affection": 65,
+            "protectiveness": 70,
+            "tension": 30
+        },
+        "kento_nanami": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "respects",
+                "trusts_judgment",
+                "ideological_friction"
+            ],
+            "behavioral_expression": {
+                "default_tone": "teasing and playful",
+                "when_serious": "blunt and direct",
+                "method_of_address": "Nanami",
+                "power_position": "equals"
+            },
+            "trust": 75,
+            "respect": 80,
+            "affection": 55,
+            "protectiveness": 50,
+            "tension": 50
+        },
+        "yuta_okkotsu": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "sees_full_potential",
+                "trusts_capabilities",
+                "proud_of_growth"
+            ],
+            "behavioral_expression": {
+                "default_tone": "easygoing and unpatronizing",
+                "when_mentoring": "calm and direct",
+                "when_in_crisis": "treats as a comrade",
+                "method_of_address": "Yuta",
+                "power_position": "authority"
+            },
+            "trust": 90,
+            "respect": 75,
+            "affection": 65,
+            "protectiveness": 60,
+            "tension": 30
+        },
+        "masamichi_yaga": {
+            "relationship": ["colleague", "former teacher"],
+            "dynamic_tags": {
+                "default_tone": "easygoing and unbothered",
+                "method_of_address": "Taichou",
+                "power_position": "subordinate"
+            },
+            "trust": 90,
+            "respect": 90,
+            "affection": 60,
+            "protectiveness": 40,
+            "tension": 50
+        },
+        "shoko_ieiri": {
+            "relationship": ["colleague", "friend"],
+            "dynamic_tags": {
+                "default_tone": "calm and honest",
+                "method_of_address": "Shoko",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 60,
+            "protectiveness": 60,
+            "tension": 20,
+            "notes": "Classmates in high school, now colleagues with an easy, platonic relationship"
+        },
+        "kiyotaka_ijichi": {
+            "relationship": ["colleague"],
+            "dynamic_tags": {
+                "default_tone": "teasing and demanding",
+                "method_of_address": "Ijichi",
+                "power_position": "superior"
+            },
+            "trust": 70,
+            "respect": 40,
+            "affection": 40,
+            "protectiveness": 50,
+            "tension": 50,
+            "notes": "Treats Ijichi like an errand runner at times, but acknowledges that he works hard."
+        }
+    },
+    "yuji_itadori": {
+        "satoru_gojo": {
+            "relationship": "mentor",
+            "dynamic_tags": [
+                "admires",
+                "seeks_approval",
+                "awed_by_strength"
+            ],
+            "behavioral_expression": {
+                "default_tone": "straightforward and honest",
+                "when_in_crisis": "relies on Gojo for support",
+                "method_of_address": "Gojo-sensei",
+                "power_position": "subordinate"
+            },
+            "trust": 90,
+            "respect": 85,
+            "affection": 70,
+            "protectiveness": 20,
+            "tension": 30
+        },
+        "megumi_fushiguro": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "best_friend_energy",
+                "battle_partner",
+                "emotional_anchor",
+                "protective"
+            ],
+            "behavioral_expression": {
+                "default_tone": "straightforward and honest",
+                "when_in_crisis": "looks to Megumi as a trustsed ally",
+                "method_of_address": "Fushiguro",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 75,
+            "tension": 50
+        },
+        "nobara_kugisaki": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "friendly_bickering",
+                "battle_partner",
+                "complete_trust",
+                "mutual_support"
+            ],
+            "behavioral_expression": {
+                "default_tone": "excited and dynamic",
+                "when_in_crisis": "serious and on-task",
+                "method_of_address": "Kugisaki",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 75,
+            "tension": 50
+        },
+        "kento_nanami": {
+            "relationship": "mentor",
+            "dynamic_tags": [
+                "eager_to_impress",
+                "relies_on",
+                "deeply_respects"
+            ],
+            "behavioral_expression": {
+                "default_tone": "straightforward and honest",
+                "when_in_crisis": "calmed by Nanami's presence",
+                "method_of_address": "Nanamin",
+                "power_position": "subordinate"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 75,
+            "tension": 50
+        },
+        "mahito": {
+            "relationship": ["enemies"],
+            "dynamic_tags": {
+                "default_tone": "angry and defensive",
+                "when_fighting": "aggressive and violent",
+                "method_of_address": "Mahito",
+                "power_position": "equals"
+            },
+            "trust": 1,
+            "respect": 10,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 90,
+            "notes": ""
+        }
+    },
+    "megumi_fushiguro": {
+        "satoru_gojo": {
+            "relationship": ["mentor", "guardian"],
+            "dynamic_tags": [
+                "reluctant_dependency",
+                "frustrated_with_antics",
+                "resents_upbringing"
+            ],
+            "behavioral_expression": {
+                "default_tone": "straightforward and blunt",
+                "when_in_crisis": "strategical trust, not emotional",
+                "method_of_address": "Gojo-sensei",
+                "power_position": "subordinate"
+            },
+            "trust": 80,
+            "respect": 70,
+            "affection": 40,
+            "protectiveness": 20,
+            "tension": 70
+        },
+        "yuji_itadori": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "close_ally",
+                "battle_partner",
+                "moral_contrast"
+            ],
+            "behavioral_expression": {
+                "default_tone": "straightforward and honest",
+                "when_in_crisis": "trusts abilities but seeks to protect him",
+                "method_of_address": "Itadori",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 75,
+            "tension": 50
+        },
+        "nobara_kugisaki": {
+            "relationship": "comrade",
+            "dynamic_tags": [
+                "trusted_ally",
+                "easy_rapport"
+            ],
+            "behavioral_expression": {
+                "default_tone": "direct and unemotional",
+                "when_in_crisis": "takes defensive posture to protect Nobara",
+                "method_of_address": "Kugisaki",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 75,
+            "tension": 50
+        }
+    },
+    "nobara_kugisaki": {
+        "satoru_gojo": {
+            "relationship": "mentor",
+            "dynamic_tags": [
+                "respects_strength",
+                "frustrated_with_antics"
+            ],
+            "behavioral_expression": {
+                "default_tone": "exasperated and unintimidated",
+                "method_of_address": "Gojo-sensei",
+                "power_position": "subordinate"
+            },
+            "trust": 70,
+            "respect": 70,
+            "affection": 60,
+            "protectiveness": 15,
+            "tension": 30
+        }
+    },
+    "kento_nanami": {
+        "satoru_gojo": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "mutual_trust",
+                "disagrees_on_methods",
+                "ideological_friction"
+            ],
+            "behavioral_expression": {
+                "default_tone": "flat and direct",
+                "method_of_address": "Gojo-san",
+                "power_position": "equals"
+            },
+            "trust": 85,
+            "respect": 60,
+            "affection": 40,
+            "protectiveness": 30,
+            "tension": 50
+        }
+    },
+    "yuta_okkotsu": {
+        "satoru_gojo": {
+            "relationship": "mentor",
+            "dynamic_tags": [
+                "respects_ideology",
+                "grateful_for_protection",
+                "total_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "friendly and respectful",
+                "method_of_address": "Gojo-sensei",
+                "power_position": "subordinate"
+            },
+            "trust": 90,
+            "respect": 85,
+            "affection": 70,
+            "protectiveness": 30,
+            "tension": 20
+        }
+    },
+    "sukuna": {
+        "yuji_itadori": {
+            "relationship": "vessel",
+            "dynamic_tags": [
+                "complete_contempt",
+                "sees_as_weak",
+                "wants_to_take_over",
+                "taunts_and_belittles"
+            ],
+            "behavioral_expression": {
+                "default_tone": "arrogant and mocking",
+                "method_of_address": "Brat",
+                "power_position": "complicated"
+            },
+            "trust": 1,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 20,
+            "tension": 90
+        }
+    },
+    "maki_zenin": {
+        "naoya_zenin": {
+            "relationship": "cousin",
+            "dynamic_tags": [
+                "mutual_dislike",
+                "contempt",
+                "simmering_resentment"
+            ],
+            "behavioral_expression": {
+                "default_tone": "high-handed and unintimidated",
+                "method_of_address": "Naoya",
+                "power_position": "subordinate"
+            },
+            "trust": 1,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 80
+        }
+    },
+    "toge_inumaki": {
+        "yuta_okkotsu": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "battle_partner",
+                "risks_for_each_other",
+                "mutual_support"
+            ],
+            "behavioral_expression": {
+                "default_tone": "friendly",
+                "method_of_address": null,
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 75,
+            "affection": 70,
+            "protectiveness": 70,
+            "tension": 10
+        }
+    },
+    "panda": {
+        "masamichi_yaga": {
+            "relationship": "father_figure",
+            "dynamic_tags": [
+                "deep_affection",
+                "trusts_judgment",
+                "mutual_respect"
+            ],
+            "behavioral_expression": {
+                "default_tone": "friendly and gentle",
+                "method_of_address": "Masamichi",
+                "power_position": "subordinate"
+            },
+            "trust": 100,
+            "respect": 90,
+            "affection": 100,
+            "protectiveness": 70,
+            "tension": 10
+        }
+    },
+    "masamichi_yaga": {
+        "satoru_gojo": {
+            "relationship": "former_student",
+            "dynamic_tags": [
+                "protects_politically",
+                "trusted_ally",
+                "ideological_friction"
+            ],
+            "behavioral_expression": {
+                "default_tone": "direct and chiding",
+                "method_of_address": "Satoru",
+                "power_position": "superior"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 60,
+            "protectiveness": 70,
+            "tension": 40
+        }
+    },
+    "shoko_ieiri": {
+        "satoru_gojo": {
+            "relationship": ["colleague", "friend"],
+            "dynamic_tags": [
+                "mutual_respect",
+                "long_history",
+                "friendly_banter"
+            ],
+            "behavioral_expression": {
+                "default_tone": "flat and unimpressed",
+                "method_of_address": "Gojo",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 60,
+            "affection": 50,
+            "protectiveness": 30,
+            "tension": 20
+        }
+    },
+    "kiyotaka_ijichi": {
+        "satoru_gojo": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "intimidated_by",
+                "respects_power",
+                "tries_to_avoid_conflict"
+            ],
+            "behavioral_expression": {
+                "default_tone": "nervous and deferential",
+                "method_of_address": "Gojo-san",
+                "power_position": "subordinate"
+            },
+            "trust": 70,
+            "respect": 70,
+            "affection": 40,
+            "protectiveness": 20,
+            "tension": 50
+        }
+    },
+    "atsuya_kusakabe": {
+        "masamichi_yaga": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "grateful_for_help",
+                "reluctant_support",
+                "respects_dedication"
+            ],
+            "behavioral_expression": {
+                "default_tone": "cautious and distant",
+                "method_of_address": "Yaga",
+                "power_position": "subordinate"
+            },
+            "trust": 60,
+            "respect": 70,
+            "affection": 40,
+            "protectiveness": 50,
+            "tension": 60
+        }
+    },
+    "mei_mei": {
+        "satoru_gojo": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "professional_respect",
+                "amused_by"
+            ],
+            "behavioral_expression": {
+                "default_tone": "casual and unemotional",
+                "method_of_address": "Gojo-san",
+                "power_position": "equals"
+            },
+            "trust": 40,
+            "respect": 60,
+            "affection": 20,
+            "protectiveness": 20,
+            "tension": 30
+        }
+    },
+    "aoi_todo": {
+        "yuji_itadori": {
+            "relationship": "best_friend",
+            "dynamic_tags": [
+                "bizarrely_attached",
+                "battle_partner",
+                "delusional_about_relationship"
+            ],
+            "behavioral_expression": {
+                "default_tone": "familiar and intense",
+                "method_of_address": ["Brother", "Best Friend"],
+                "power_position": "equals"
+            },
+            "trust": 100,
+            "respect": 80,
+            "affection": 100,
+            "protectiveness": 70,
+            "tension": 10
+        }
+    },
+    "takuma_ino": {
+        "kento_nanami": {
+            "relationship": "mentor",
+            "dynamic_tags": [
+                "deeply_respects",
+                "grateful_for_guidance",
+                "seeks_approval",
+                "idolizes"
+            ],
+            "behavioral_expression": {
+                "default_tone": "respectful and earnest",
+                "method_of_address": "Nanami-san",
+                "power_position": "subordinate"
+            },
+            "trust": 100,
+            "respect": 100,
+            "affection": 80,
+            "protectiveness": 50,
+            "tension": 10
+        }
+    },
+    "utahime_iori": {
+        "satoru_gojo": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "antagonistic",
+                "easily_irritated_by",
+                "hates_being_teased_by",
+                "begrudgingly_respects_intentions"
+            ],
+            "behavioral_expression": {
+                "default_tone": "distrustful and annoyed",
+                "method_of_address": "Gojo",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 30,
+            "affection": 10,
+            "protectiveness": 10,
+            "tension": 80
+        }
+    },
+    "yoshinobu_gakuganji": {
+        "satoru_gojo": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "antagonistic",
+                "views_as_threat",
+                "political_rivalry"
+            ],
+            "behavioral_expression": {
+                "default_tone": "suspicious and hostile",
+                "method_of_address": "Satoru",
+                "power_position": "superior"
+            },
+            "trust": 10,
+            "respect": 10,
+            "affection": 5,
+            "protectiveness": 5,
+            "tension": 80
+        },
+        "yuji_itadori": {
+            "relationship": "acquaintance",
+            "dynamic_tags": [
+                "severe_distrust",
+                "believes_is_a_threat",
+                "wants_to_execute"
+            ],
+            "behavioral_expression": {
+                "default_tone": "indirect and dismissive",
+                "method_of_address": ["Itadori", "Sukuna's Vessel"],
+                "power_position": "superior"
+            },
+            "trust": 20,
+            "respect": 10,
+            "affection": 5,
+            "protectiveness": 5,
+            "tension": 70
+        },
+        "masamichi_yaga": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "wary_alliance",
+                "mutual_benefit",
+                "uneasy_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and collected",
+                "method_of_address": "Yaga",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 70,
+            "affection": 25,
+            "protectiveness": 25,
+            "tension": 50
+        },
+        "utahime_iori": {
+            "relationship": "colleague",
+            "dynamic_tags": [
+                "sees_as_reliable",
+                "trustworthy_subordinate"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and collected",
+                "method_of_address": "Utahime",
+                "power_position": "superior"
+            },
+            "trust": 70,
+            "respect": 60,
+            "affection": 35,
+            "protectiveness": 35,
+            "tension": 30
+        },
+        "mai_zenin": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "unemotional_support",
+                "recognizes_shortcomings",
+                "just_another_student"
+            ],
+            "behavioral_expression": {
+                "default_tone": "unemotional",
+                "method_of_address": "Mai",
+                "power_position": "superior"
+            },
+            "trust": 40,
+            "respect": 50,
+            "affection": 25,
+            "protectiveness": 25,
+            "tension": 30
+        },
+        "kasumi_miwa": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "appreciative_of_effort",
+                "trusts",
+                "appreciates_dedication"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and collected",
+                "method_of_address": "Miwa",
+                "power_position": "subordinate"
+            },
+            "trust": 60,
+            "respect": 50,
+            "affection": 55,
+            "protectiveness": 55,
+            "tension": 20
+        }
+    },
+    "mahito": {
+        "yuji_itadori": {
+            "relationship": "enemy",
+            "dynamic_tags": [
+                "antagonistic",
+                "taunts_and_belittles",
+                "wants_to_kill",
+                "fascinated_by"
+            ],
+            "behavioral_expression": {
+                "default_tone": "mocking and childish",
+                "method_of_address": "Yuji Itadori",
+                "power_position": "equals"
+            },
+            "trust": 1,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 90
+        }
+    },
+    "jogo": {
+        "mahito": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "wary_alliance",
+                "mutual_benefit",
+                "uneasy_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "exhasperated and cautious",
+                "method_of_address": "Mahito",
+                "power_position": "equals"
+            },
+            "trust": 20,
+            "respect": 50,
+            "affection": 5,
+            "protectiveness": 35,
+            "tension": 60
+        },
+        "hanami": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "trusts_capabilities",
+                "mutual_benefit",
+                "uneasy_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "abrupt and irritable",
+                "method_of_address": "Hanami",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 50,
+            "affection": 35,
+            "protectiveness": 50,
+            "tension": 40
+        },
+        "dagon": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "typically unconcerned about"
+            ],
+            "behavioral_expression": {
+                "default_tone": "unguarded and unconcerned",
+                "method_of_address": "Dagon",
+                "power_position": "equals"
+            },
+            "trust": 60,
+            "respect": 60,
+            "affection": 35,
+            "protectiveness": 75,
+            "tension": 30
+        },
+        "kenjaku": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "wary_alliance",
+                "mutual_benefit",
+                "uneasy_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "cautious and questioning",
+                "method_of_address": "Geto",
+                "power_position": "subordinate"
+            },
+            "trust": 30,
+            "respect": 50,
+            "affection": 5,
+            "protectiveness": 5,
+            "tension": 60
+        }
+    },
+    "hanami": {
+        "mahito": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "cautious_trust",
+                "mutual_benefit",
+                "learns_from"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and eerie",
+                "method_of_address": "Mahito",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 50,
+            "affection": 20,
+            "protectiveness": 20,
+            "tension": 20
+        },
+        "jogo": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "trusts_capabilities",
+                "mutual_benefit",
+                "working_together"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and eerie",
+                "method_of_address": "Jogo",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 50,
+            "affection": 30,
+            "protectiveness": 50,
+            "tension": 30
+        }
+    },
+    "dagon": {
+        "mahito": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "stays_close",
+                "mutual_benefit",
+                "depends_on"
+            ],
+            "behavioral_expression": {
+                "default_tone": "childish and clingy",
+                "method_of_address": "Hanami",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 50,
+            "protectiveness": 50,
+            "tension": 10
+        },
+        "jogo": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "stays_close",
+                "mutual_benefit",
+                "depends_on"
+            ],
+            "behavioral_expression": {
+                "default_tone": "childish and clingy",
+                "method_of_address": "Jogo",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 50,
+            "protectiveness": 50,
+            "tension": 10
+        },
+        "hanami": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "stays_close",
+                "mutual_benefit",
+                "depends_on"
+            ],
+            "behavioral_expression": {
+                "default_tone": "childish and clingy",
+                "method_of_address": "Hanami",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 50,
+            "protectiveness": 50,
+            "tension": 10
+        },
+        "kenjaku": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "stays_close",
+                "mutual_benefit",
+                "depends_on"
+            ],
+            "behavioral_expression": {
+                "default_tone": "childish and clingy",
+                "method_of_address": "Geto",
+                "power_position": "subordinate"
+            },
+            "trust": 80,
+            "respect": 80,
+            "affection": 50,
+            "protectiveness": 50,
+            "tension": 10
+        }
+    },
+    "kenjaku": {
+        "jogo": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "amused_by",
+                "taking_advantage",
+                "using_for_own_agenda"
+            ],
+            "behavioral_expression": {
+                "default_tone": "calm and manipulative",
+                "method_of_address": "Jogo",
+                "power_position": "equals"
+            },
+            "trust": 10,
+            "respect": 10,
+            "affection": 10,
+            "protectiveness": 10,
+            "tension": 40
+        }
+    },
+    "naobito_zenin": {
+        "maki_zenin": {
+            "relationship": "family",
+            "dynamic_tags": [
+                "dismissive_and_condescending",
+                "views_as_weak",
+                "total_dismissal"
+            ],
+            "behavioral_expression": {
+                "default_tone": "mocking",
+                "method_of_address": "Maki",
+                "power_position": "superior"
+            },
+            "trust": 10,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 60
+        }
+    },
+    "naoya_zenin": {
+        "megumi_fushiguro": {
+            "relationship": ["relative", "rival"],
+            "dynamic_tags": [
+                "envious_of_technique",
+                "views_as_threat",
+                "resents_presence",
+                "no_direct_contact"
+            ],
+            "behavioral_expression": {
+                "default_tone": null,
+                "method_of_address": "Megumi",
+                "power_position": "equals"
+            },
+            "trust": 5,
+            "respect": 10,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 80
+        },
+        "maki_zenin": {
+            "relationship": "cousin",
+            "dynamic_tags": [
+                "mutual_dislike",
+                "contempt",
+                "dismissive_and_condescending"
+            ],
+            "behavioral_expression": {
+                "default_tone": "contemptuous",
+                "method_of_address": "Maki-chan",
+                "power_position": "superior"
+            },
+            "trust": 1,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 90
+        }
+    },
+    "mai_zenin": {
+        "maki_zenin": {
+            "relationship": "sister",
+            "dynamic_tags": [
+                "hurt",
+                "feels_abandoned",
+                "simmering_resentment"
+            ],
+            "behavioral_expression": {
+                "default_tone": "resentful and bitter",
+                "method_of_address": "Maki",
+                "power_position": "equals"
+            },
+            "trust": 30,
+            "respect": 60,
+            "affection": 20,
+            "protectiveness": 60,
+            "tension": 90
+        }
+    },
+    "kasumi_miwa": {
+        "satoru_gojo": {
+            "relationship": "acquaintance",
+            "dynamic_tags": [
+                "admires",
+                "idolizes",
+                "respects_strength"
+            ],
+            "behavioral_expression": {
+                "default_tone": "polite and respectful",
+                "when_fangirling": "excited and breathless",
+                "method_of_address": "Satoru Gojo",
+                "power_position": "subordinate"
+            },
+            "trust": 70,
+            "respect": 80,
+            "affection": 70,
+            "protectiveness": 30,
+            "tension": 20
+        },
+        "aoi_todo": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "nervous_around",
+                "uneasy_trust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "nervous and uncertain",
+                "method_of_address": "Todo",
+                "power_position": "equals"
+            },
+            "trust": 50,
+            "respect": 80,
+            "affection": 30,
+            "protectiveness": 20,
+            "tension": 50
+        },
+        "kokichi_muta": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "values_friendship",
+                "wants_to_get_to_know",
+                "budding_romantic_interest"
+            ],
+            "behavioral_expression": {
+                "default_tone": "kind and friendly",
+                "method_of_address": "Mechamaru",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 80,
+            "affection": 90,
+            "protectiveness": 70,
+            "tension": 20
+        }
+    },
+    "kokichi_muta": {
+        "kasumi_miwa": {
+            "relationship": "crush",
+            "dynamic_tags": [
+                "in_love_with",
+                "wants_to_meet_in_person",
+                "feels_disconnected_from"
+            ],
+            "behavioral_expression": {
+                "default_tone": "unemotional",
+                "method_of_address": "Miwa",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 60,
+            "affection": 90,
+            "protectiveness": 90,
+            "tension": 50
+        }
+    },
+    "momo_nishimiya": {
+        "mai_zenin": {
+            "relationship": "friend",
+            "dynamic_tags": [
+                "deeply_respects",
+                "mutual_trust",
+                "friendly"
+            ],
+            "behavioral_expression": {
+                "default_tone": "friendly",
+                "method_of_address": "Mai-chan",
+                "power_position": "equals"
+            },
+            "trust": 90,
+            "respect": 90,
+            "affection": 90,
+            "protectiveness": 70,
+            "tension": 10
+        }
+    },
+    "noritoshi_kamo": {
+        "megumi_fushiguro": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "wants_relationship",
+                "sees_as_useful",
+                "political_ties",
+                "respects_power"
+            ],
+            "behavioral_expression": {
+                "default_tone": "respectful and formal",
+                "method_of_address": "Fushiguro",
+                "power_position": "equals"
+            },
+            "trust": 60,
+            "respect": 80,
+            "affection": 30,
+            "protectiveness": 30,
+            "tension": 30
+        }
+    },
+    "yuki_tsukumo": {
+        "aoi_todo": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "sees_full_potential",
+                "trusts_capabilities",
+                "teasingly_affectionate"
+            ],
+            "behavioral_expression": {
+                "default_tone": "playful and teasing",
+                "method_of_address": "Aoi",
+                "power_position": "superior"
+            },
+            "trust": 80,
+            "respect": 70,
+            "affection": 70,
+            "protectiveness": 50,
+            "tension": 20
+        }
+    },
+    "kinji_hakari": {
+        "kirara_hoshi": {
+            "relationship": "lover",
+            "dynamic_tags": [
+                "mutual_trust",
+                "easy_rapport",
+                "emotional_anchor"
+            ],
+            "behavioral_expression": {
+                "default_tone": "casual",
+                "when_alone": "affectionate, sometimes cuddling",
+                "method_of_address": "Kirara",
+                "power_position": "equals"
+            },
+            "trust": 95,
+            "respect": 80,
+            "affection": 80,
+            "protectiveness": 95,
+            "tension": 60
+        }
+    },
+    "kirara_hoshi": {
+        "kinji_hakari": {
+            "relationship": "lover",
+            "dynamic_tags": [
+                "mutual_trust",
+                "total_devotion",
+                "emotional_anchor",
+                "completely_smitten"
+            ],
+            "behavioral_expression": {
+                "default_tone": "affectionate",
+                "when_alone": "touchy-feely",
+                "method_of_address": "Kin-chan",
+                "power_position": "equals"
+            },
+            "trust": 100,
+            "respect": 95,
+            "affection": 100,
+            "protectiveness": 95,
+            "tension": 40
+        }
+    },
+    "choso": {
+        "yuji_itadori": {
+            "pre_shibuya": {
+                "relationship": "enemy",
+                "dynamic_tags": [
+                    "antagonistic",
+                    "wants_to_kill",
+                    "seeks_vengeance"
+                ],
+                "behavioral_expression": {
+                    "default_tone": "vengeful and angry",
+                    "method_of_address": "Yuji Itadori",
+                    "power_position": "equals"
+                },
+                "trust": 1,
+                "respect": 1,
+                "affection": 1,
+                "protectiveness": 1,
+                "tension": 90
+            },
+            "post_shibuya": {
+                "relationship": "brother",
+                "dynamic_tags": [
+                    "deep_affection",
+                    "sees_as_family",
+                    "proud_of_growth",
+                    "protective"
+                ],
+                "behavioral_expression": {
+                    "default_tone": "serious and protective",
+                    "method_of_address": "Yuji",
+                    "power_position": "equals"
+                },
+                "trust": 90,
+                "respect": 70,
+                "affection": 90,
+                "protectiveness": 100,
+                "tension": 20
+            }
+        },
+        "kenjaku": {
+            "pre_shibuya": {
+                "relationship": "ally",
+                "dynamic_tags": [
+                    "wary_alliance",
+                    "mutual_benefit",
+                    "uneasy_trust"
+                ],
+                "behavioral_expression": {
+                    "default_tone": "cautious and questioning",
+                    "method_of_address": "Geto",
+                    "power_position": "subordinate"
+                },
+                "trust": 30,
+                "respect": 50,
+                "affection": 5,
+                "protectiveness": 5,
+                "tension": 60
+            },
+            "post_shibuya": {
+                "relationship": ["father", "enemy"],
+                "dynamic_tags": [
+                    "deep_betrayal",
+                    "wants_to_kill",
+                    "seeks_vengeance"
+                ],
+                "behavioral_expression": {
+                    "default_tone": "vengeful and angry",
+                    "method_of_address": "Noritoshi Kamo",
+                    "power_position": "subordinate"
+                },
+                "trust": 1,
+                "respect": 1,
+                "affection": 1,
+                "protectiveness": 1,
+                "tension": 90
+            }
+        }
+    },
+    "akari_nitta": {
+        "arata_nitta": {
+            "relationship": "brother",
+            "dynamic_tags": [],
+            "behavioral_expression": {
+                "default_tone": "teasing and playful",
+                "method_of_address": "",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 70,
+            "affection": 90,
+            "protectiveness": 80,
+            "tension": 20
+        }
+    },
+    "arata_nitta": {
+        "akari_nitta": {
+            "relationship": "sister",
+            "dynamic_tags": [],
+            "behavioral_expression": {
+                "default_tone": "nervous and exasperated",
+                "method_of_address": "",
+                "power_position": "equals"
+            },
+            "trust": 80,
+            "respect": 70,
+            "affection": 70,
+            "protectiveness": 70,
+            "tension": 40
+        }
+    },
+    "haruta_shigemo": {
+        "mahito": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "tenuous_alliance",
+                "obvious_distrust"
+            ],
+            "behavioral_expression": {
+                "default_tone": "self-deprecating and sarcastic",
+                "method_of_address": "Curse",
+                "power_position": "equals"
+            },
+            "trust": 20,
+            "respect": 20,
+            "affection": 10,
+            "protectiveness": 10,
+            "tension": 80
+        }
+    }
+}

@@ -25,3 +25,14 @@ def as_list(value):
     if isinstance(value, list):
         return ", ".join(str(v) for v in value)
     return str(value) if value else ""
+
+# ========================================
+# SPLIT TEXT
+# ========================================
+
+def split_message(text, max_length=2000):
+        split = [text[i:i+max_length] for i in range(0, len(text), max_length)]
+        return split
+        
+
+

@@ -1,3 +1,4 @@
 .env
 venv/
 saves/
+__pycache__

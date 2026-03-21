@@ -1,0 +1,326 @@
+{
+    "abandoned_building": {
+        "location_type": "mission_site",
+        "tags": ["urban", "indoor", "dark"],
+        "description_templates": [
+            "a derelict structure on the edge of the district, windows long since shattered",
+            "floors warped with moisture, walls stained with something that predates the abandonment",
+            "the kind of place that attracts curses the way rot attracts flies"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "low",
+        "containment_difficulty": "low",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "minato"],
+        "tactical_notes": [
+            "the curse has likely been here for a while and may have established a territory",
+            "the building's instability creates environmental hazards but also opportunities for creative technique usage",
+            "civilians are unlikely to enter the building, but nearby residents may call the authorities if they hear disturbances"
+        ]
+    },
+
+    "alleyway": {
+        "location_type": "mission_site",
+        "tags": ["urban", "outdoor", "high_civilian", "semi-public"],
+        "description_templates": [
+            "an alleyway tucked between two massive buildings in a crowded Tokyo district",
+            "dumpsters sit a respectable distance from the sidewalk, accessible through both ends of the alleys and doors to adjoining buildings",
+            "broken glass and wooden crates line the sides of the alley at its deepest points"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "medium",
+        "containment_difficulty": "high",
+        "compatible_districts": ["shibuya", "harajuku", "roppongi", "shinjuku"],
+        "tactical_notes": [
+            "civilians are unlikely to enter the alleyway to investigate sounds, but may call in the authorities",
+            "multiple entry points make containment difficult",
+            "open air offers vertical means of escape for errant curses"
+        ]
+    },
+
+    "cursed_artifact_vault": {
+        "location_type": "mission_site",
+        "tags": ["dark", "underground", "private"],
+        "description_templates": [
+            "a cellar below the estate of a now-diminished clan, containing a variety of cursed weapons, tools, and artifacts from across the centuries",
+            "a set of thick wooden doors in the estate basement lead into a veritable museum of artifacts, each carrying its own unique cursed energy signature",
+            "a store-room in the back of the house has been converted into a cursed artifact repository, leading family members to avoid this part of the house"
+        ],
+        "curse_density_modifier": 4,
+        "civilian_risk": "low",
+        "containment_difficulty": "low",
+        "compatible_districts": ["kyoto"],
+        "tactical_notes": [
+            "collateral damage to other cursed items can easily occur; care must be taken to avoid this",
+            "the remaining clan members who own this property may be protective of the artifacts here; do not anger them",
+            "virtually no risk of civilian interference"
+        ]
+    },
+
+    "grade_school": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "institutional", "high_civilian", "daytime"],
+        "description_templates": [
+            "a public elementary school gone quiet after hours, small desks and crayon drawings an uncomfortable contrast to what's taken up residence in the building",
+            "a three-story school building in a residential neighborhood, the kind of place that parents pass every day without sensing what's been growing inside it",
+            "classrooms locked for the weekend, corridors lit only by emergency lighting — the curse has been feeding on the residual fear of children for weeks"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["nakano", "sendai", "chiyoda", "shibuya", "shinjuku"],
+        "tactical_notes": [
+            "small furniture and low ceilings restrict movement during physical confrontations",
+            "proximity to residential areas means any visible technique usage risks witness exposure",
+            "cursed spirits here often take forms shaped by childhood fear — unpredictable and emotionally charged",
+            "daytime operations are effectively impossible due to civilian presence"
+        ]
+    },
+
+    "greenhouse": {
+        "location_type": "mission_site",
+        "tags": ["indoor"],
+        "description_templates": [],
+        "curse_density_modifier": 1,
+        "civilian_risk": "low",
+        "containment_difficulty": "medium",
+        "compatible_districts": [],
+        "tactical_notes": []
+    },
+
+    "high_school": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "institutional", "high_civilian", "daytime"],
+        "description_templates": [
+            "a large public high school on the edge of the district, its gymnasium and rooftop accessible after hours through a broken fire exit",
+            "a school building that has been reporting incidents for months — staff attribute it to stress, students know better",
+            "three floors of classrooms, a basement gym, and a rooftop with a clear sightline across the surrounding neighborhood"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["nakano", "sendai", "chiyoda", "shibuya", "shinjuku", "harajuku"],
+        "tactical_notes": [
+            "rooftop access provides elevated terrain advantage",
+            "gymnasium offers the most open space for technique usage",
+            "student population is partially curse-aware due to proximity — risk of exposure higher than a grade school",
+            "school records may contain clues about the curse's origin and feeding patterns"
+        ]
+    },
+
+    "hospital": {
+        "location_type": "mission_site",
+        "tags": ["urban", "indoor", "high_civilian"],
+        "description_templates": [
+            "a mid-size general hospital operating at capacity, staff stretched thin on the night shift",
+            "sterile corridors that feel anything but safe once you sense what's moving through the walls",
+            "the concentration of fear and grief makes it a natural incubator for cursed spirits"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["shibuya", "shinjuku", "sendai", "kyoto"],
+        "tactical_notes": [
+            "civilians are unlikely to enter the hospital to investigate sounds, but may call in the authorities",
+            "multiple entry points make containment difficult",
+            "the curse has likely been feeding on the fear and grief of patients and staff — expect emotionally charged confrontations with any survivors"
+        ]
+    },
+
+    "hostel_mission": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "lodging", "medium_civilian", "transient"],
+        "description_templates": [
+            "a budget hostel where three guests have gone missing in two weeks — management filed a noise complaint with the wrong authorities",
+            "a six-floor hostel in a tourist district, its communal kitchen and rooftop lounge now abandoned by guests who sense something is wrong without being able to name it",
+            "a hostel operating at half capacity after online reviews began mentioning nightmares, sleepwalking, and guests who checked out without collecting their deposits"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "medium",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["nakano", "sendai", "shinjuku", "shibuya", "harajuku"],
+        "tactical_notes": [
+            "transient civilian population is harder to evacuate cleanly than a fixed residential building",
+            "shared bathrooms and dormitory rooms create ambush-friendly terrain",
+            "international guests may not respond appropriately to evacuation instructions",
+            "the curse has likely been feeding on sleep — guests may be weakened or disoriented"
+        ]
+    },
+
+    "love_hotel": {
+        "location_type": "mission_site",
+        "tags": ["urban", "indoor", "isolated", "seedy"],
+        "description_templates": [
+            "a garish establishment tucked between two larger buildings, its vacancy sign flickering",
+            "narrow corridors and mirrored walls create a disorienting maze of identical rooms",
+            "guests have been reporting disturbances for weeks — management assumed noise complaints"
+        ],
+        "curse_density_modifier": 1,
+        "civilian_risk": "medium",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "minato"],
+        "tactical_notes": [
+            "cursed spirits here sometimes have a sexual aspect that can be psychologically destabilizing for victims",
+            "the layout creates ample opportunity for ambushes and traps",
+            "the curse has likely been feeding on sexual energy — victims may be disoriented or emotionally compromised"
+        ]
+    },
+
+    "maintenance_room": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "confined", "isolated", "industrial"],
+        "description_templates": [
+            "a utility room buried inside the station's service infrastructure, its walls lined with fuse boxes and pipe junctions — access requires a key that facilities management reported missing three months ago",
+            "a cramped mechanical room beneath a commercial building, its floor vibrating with the hum of industrial equipment that hasn't been serviced in years",
+            "a former security monitoring room, its screens still active but showing only static — whatever is in here has been interfering with the electronics long enough that management stopped sending technicians"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "low",
+        "containment_difficulty": "low",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "harajuku"],
+        "tactical_notes": [
+            "industrial equipment creates unpredictable interference with cursed energy sensing",
+            "extremely confined space heavily disadvantages technique-reliant sorcerers",
+            "single entry point makes the room easy to seal but difficult to escape",
+            "electrical infrastructure is a hazard if compromised during combat"
+        ]
+    },
+
+    "museum": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "classy", "public"],
+        "description_templates": [
+            "a modern art museum filled with displays, both sculpture and two dimensional; the white marble walls and floor offer plentiful opportunity to take noticeable damage, and the artwork here is valuable",
+            "a history museum full of artifacts from across the centuries, including displays showcasing a variety of cultures, both Japanese and foreign; these are priceless artifacts in some cases",
+            "a museum celebrating Japan's past, full of colorful depictions of life from the Heian through the Edo periods; the museum is renowned for hosting concerts showcasing traditional Japanese music and theater. It is closed for the day, supposedly to fix a plumbing issue"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["roppongi", "kyoto"],
+        "tactical_notes": [
+            "valuable artifacts are everywhere, making precision invaluable when dealing with any curses here",
+            "rooms are separated by large partitions and many-doored corridors, making it a veritable maze. Curses can easily hide here"
+        ]
+    },
+
+    "nightclub": {
+        "location_type": "mission_site",
+        "tags": ["urban", "indoor", "dark", "loud", "high_civilian"],
+        "description_templates": [
+            "a mid-size club wedged into a basement level, its entrance marked only by a bouncer and a velvet rope — the music is loud enough to mask screaming",
+            "three floors of darkness, strobing light, and bodies pressed together — the kind of place where someone could disappear between one song and the next",
+            "an upscale lounge operating on two levels, the upper floor reserved for private booths where the city's wealthy conduct business they'd rather not document"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "minato"],
+        "tactical_notes": [
+            "bass and crowd noise mask technique activation sounds",
+            "strobing lights interfere with visual tracking of fast-moving curses",
+            "multiple emergency exits complicate perimeter control",
+            "intoxicated civilians are slower to evacuate and more likely to panic"
+        ]
+    },
+
+    "platform": {
+        "location_type": "mission_site",
+        "tags": ["underground", "semi-public", "transit", "high_civilian"],
+        "description_templates": [
+            "a late-night platform reduced to a handful of waiting commuters, the train board counting down in silence — whatever is here has been feeding on stragglers for weeks",
+            "a disused platform sealed off from the public network, accessible only through a rusted service door — the tracks still run through it but no train has stopped here in years",
+            "an active platform during off-peak hours, its fluorescent lighting casting everything in a flat white that makes shadows look wrong"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "medium",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["shibuya", "shinjuku"],
+        "tactical_notes": [
+            "live rail lines present a constant environmental hazard",
+            "platform edges create dangerous terrain during physical confrontations",
+            "disused platforms offer better containment but attract stronger entrenched spirits",
+            "train schedules create windows of civilian absence that can be tactically exploited"
+        ]
+    },
+
+    "sewer": {
+        "location_type": "mission_site",
+        "tags": ["underground", "confined", "isolated", "dark"],
+        "description_templates": [
+            "a section of Tokyo's drainage network accessible through a maintenance hatch in a quiet side street — the smell hits before the darkness does",
+            "a decommissioned overflow tunnel running beneath the district, wide enough to stand in but low enough to feel the ceiling at every turn",
+            "a branching network of drainage channels beneath a residential ward, dry in most sections but flooded in others — the curse has been using the water to move"
+        ],
+        "curse_density_modifier": 5,
+        "civilian_risk": "low",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["sendai", "nakano", "chiyoda", "shibuya", "shinjuku", "minato"],
+        "tactical_notes": [
+            "standing water interferes with cursed energy tracking and technique precision",
+            "the enclosed geometry amplifies sound — a curse can be heard approaching long before it arrives",
+            "branching tunnels create disorientation risk even for experienced sorcerers",
+            "the absence of civilians allows for unrestricted technique usage",
+            "cursed spirits here tend toward the aquatic and the ancient — long-established and territorial"
+        ]
+    },
+
+    "shopping_mall": {
+        "location_type": "mission_site",
+        "tags": ["indoor", "commercial", "high_civilian", "multi-level"],
+        "description_templates": [
+            "a mid-size shopping mall closed for the evening, its atrium lit only by emergency strips and the glow of darkened storefronts",
+            "a four-floor retail complex with an underground food court and a rooftop parking structure — after hours, the space becomes something else entirely",
+            "a mall that has been reporting equipment malfunctions, escalator accidents, and one incident that security cameras somehow failed to capture"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "high",
+        "containment_difficulty": "high",
+        "compatible_districts": ["nakano", "sendai", "minato", "shibuya", "shinjuku"],
+        "tactical_notes": [
+            "multi-level atrium offers vertical combat terrain but risks structural damage",
+            "store interiors provide cover but limit sightlines significantly",
+            "after hours operations reduce civilian risk substantially",
+            "the curse has likely established a central territory — locating it first is tactically essential"
+        ]
+    },
+
+    "skyscraper_construction_site": {
+        "location_type": "mission_site",
+        "tags": ["urban", "outdoor", "high_civilian", "construction"],
+        "description_templates": [
+            "a skyscraper construction site in the heart of the district, its skeletal frame looming over the streets below — workers have been reporting tools disappearing and strange noises at night",
+            "a high-rise under construction, surrounded by a fence but otherwise open to the city — the curse has been feeding on the fear of workers who stay late into the night to finish their shifts",
+            "a construction site with a half-finished building, its exposed steel beams and concrete floors creating a maze of cover and elevation"
+        ],
+        "curse_density_modifier": 2,
+        "civilian_risk": "medium",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "minato"],
+        "tactical_notes": [
+            "the open structure allows for vertical combat but risks collateral damage to the building framework",
+            "construction equipment can be both a hazard and an opportunity during combat",
+            "the stairs are constructed, but the elevator shaft is not — this creates a dangerous vertical drop that can be exploited by curses or unwary sorcerers",
+            "civilians are unlikely to enter the site after hours, but nearby pedestrians may call in disturbances"
+        ]
+    },
+
+    "underground_tunnel": {
+        "location_type": "mission_site",
+        "tags": ["underground", "confined", "dark", "isolated"],
+        "description_templates": [
+            "a maintenance corridor running beneath the district, unlisted on any public map — the walls sweat with moisture and the air tastes of rust and stagnant water",
+            "a decommissioned utility tunnel, its original purpose long forgotten, now home to whatever finds its way down from the streets above",
+            "a stretch of unmapped passage beneath the station network, narrow enough that two people cannot pass each other without turning sideways"
+        ],
+        "curse_density_modifier": 4,
+        "civilian_risk": "low",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "harajuku"],
+        "tactical_notes": [
+            "total darkness beyond flashlight range — cursed energy perception becomes the primary sense",
+            "confined geometry makes large-scale technique usage dangerous to the user",
+            "sound carries unpredictably — a curse can be heard long before it is located",
+            "single entry and exit points are tactically advantageous but create escape risks"
+        ]
+    }
+}

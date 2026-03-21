@@ -1,0 +1,166 @@
+{
+    "cursed_spirit_hospital": {
+        "mission_objective": "Exorcise the cursed spirit haunting the third floor of Nerima General Hospital before the night shift begins.",
+        "mission_site": "hospital",
+        "mission_grade": "grade_3",
+        "mission_type": ["field_mission", "student_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Staff have reported a figure moving through walls on the night shift for the past two weeks",
+            "Two patients have gone missing from the third floor — administration filed noise complaints with the wrong department"
+        ],
+        "description_templates": [
+            "The hospital is eerily quiet as you enter, with only the distant hum of machines and the occasional creak of the building breaking the silence. As you make your way to the third floor, you feel a growing sense of unease, as if something is watching you from the shadows. Suddenly, you see a figure dart across the hallway, disappearing through a wall before your eyes.",
+            "As you investigate the third floor, you find signs of a struggle — overturned beds, broken medical equipment, and bloodstains on the walls. The air grows colder, and you sense a malevolent presence lurking in the shadows. Suddenly, a figure emerges from the darkness, its form shifting and contorting as it lets out a chilling scream."
+        ],
+        "danger_level": "low",
+        "success_conditions": "Cursed spirit exorcised, civilian casualties avoided",
+        "failure_conditions": "Player incapacitated, civilians killed, or curse escapes the building"
+    },
+
+    "mall_curse": {
+        "mission_objective": "Exorcise the cursed spirit haunting a shopping mall set to open in a week, ensuring the safety of the construction workers and preventing any delays to the opening.",
+        "mission_site": "shopping_mall",
+        "mission_grade": "grade_2",
+        "mission_type": ["field_mission", "student_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "A few teenagers broke into the construction site and have been missing for two days",
+            "Windows report fluctuating cursed energy readings around the site, with spikes at night"
+        ],
+        "description_templates": [
+            "The shopping mall is a sprawling construction site, with steel beams and scaffolding stretching up into the sky. As you navigate the maze of construction materials and equipment, you feel a growing sense of dread, as if something is lurking just out of sight. Suddenly, you hear a whispering voice that seems to come from all around you, growing louder and more insistent as you move deeper into the site.",
+            "The shopping mall is almost complete, with only a few finishing touches left before the grand opening. The site is empty after the disappearance of the teenagers, and the silence is broken only by the occasional creak of the building settling. As you investigate, you find signs of a struggle — scuff marks on the walls, broken equipment, and a trail of blood leading deeper into the site. The air grows colder, and you sense a malevolent presence lurking in the shadows. Suddenly, a figure emerges from the darkness, its form shifting and contorting."
+        ],
+        "danger_level": "medium",
+        "success_conditions": "Cursed spirit exorcised, civilian casualties avoided",
+        "failure_conditions": "Player incapacitated, civilians killed, or curse escapes the building"
+    },
+
+    "disturbance_underground": {
+        "mission_objective": "Investigate and neutralise the source of cursed energy disturbances reported in the maintenance tunnels beneath Shibuya Station.",
+        "mission_site": "underground_tunnel",
+        "mission_grade": "grade_2",
+        "mission_type": ["field_mission", "student_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Three maintenance workers reported hearing voices in a sealed tunnel section that has been locked for six months",
+            "Cursed energy readings in the area have been spiking every night between 2 and 4am"
+        ],
+        "description_templates": [
+            "The tunnels beneath Shibuya Station are a labyrinth of narrow passageways and dimly lit corridors, with the constant sound of dripping water echoing through the space. As you navigate the tunnels, you feel a growing sense of dread, as if something is lurking just out of sight. Suddenly, you hear a whispering voice that seems to come from all around you, growing louder and more insistent as you move deeper into the tunnels.",
+            "As you investigate the source of the disturbance, you find signs of a struggle — scuff marks on the walls, broken equipment, and a trail of blood leading deeper into the tunnels. The air grows colder, and you sense a malevolent presence lurking in the shadows. Suddenly, a figure emerges from the darkness, its form shifting and contorting as it lets out a chilling scream."
+        ],
+        "danger_level": "medium",
+        "success_conditions": "Source of disturbance identified and neutralised",
+        "failure_conditions": "Curse escapes to the public station area or player is incapacitated"
+    },
+
+    "nightlight_haunting": {
+        "mission_objective": "Clear a grade 3 cursed spirit that has taken up residence in a derelict building on the edge of Kabukicho.",
+        "mission_site": "abandoned_building",
+        "mission_grade": "grade_3",
+        "mission_type": ["student_mission", "field_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Local yakuza reported two of their men went missing after entering the building on a debt collection",
+            "The building has been condemned for three years but someone — or something — has been leaving lights on"
+        ],
+        "danger_level": "medium",
+        "success_conditions": "Cursed spirit exorcised, building cleared",
+        "failure_conditions": "Player incapacitated or curse escapes into Kabukicho's civilian population"
+    },
+
+    "sewer_curses": {
+        "mission_objective": "Exorcise the curse infestation with minimal collateral damage",
+        "mission_site": "sewer",
+        "mission_grade": "grade_3",
+        "mission_type": ["student_mission", "field_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Sanitation workers report frequent illnesses and growing sense of dread around certain areas of the sewer",
+            "Windows report stronger than usual cursed energy escaping from manholes in a busy urban area"
+        ],
+        "description_templates": [
+            "Hundreds of beady eyes stare at you from every corner of the sewer, flashing in the low light. After a skittering, you see a small curse, no larger than a cat, but shaped like a deformed, multi-tailed rat with human feet. Then you see another.",
+            "The dirty water on either side of the sewer splashes, and you spot tiny wet hands gripping the concrete side. An ungainly creature with a hunched back, lizard-like scales, and tiny, vicious spines sticking out from every side of its dripping body as it hisses at you.",
+            "You hear the wet slapping of bare palms on concrete, and suddenly, what appears to be a small human with a horse-like head, walking on its hands, charges toward you, dripping dirty water onto the concrete below it as it lets out a wavering shriek."
+        ],
+        "danger_level": "low",
+        "success_conditions": "Curse infestation exorcised, area cleared",
+        "failure_conditions": "Curses escape through a manhole above or player is incapacitated"
+    },
+
+    "school_days": {
+        "mission_objective": "locate and rescue missing high school students",
+        "mission_site": "high_school",
+        "mission_grade": "grade_2",
+        "mission_type": ["student_mission", "field_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Two students have gone missing in the past month, both last seen near the school's old gymnasium",
+            "Other students report hearing strange noises and seeing shadowy figures around the gym at night"
+        ],
+        "description_templates": [
+            "The gymnasium is dimly lit and covered in dust, with old sports equipment scattered around. As you enter, you feel a chill run down your spine and hear faint whispers echoing through the space. Suddenly, you see a shadowy figure dart across the room, disappearing behind a stack of old mats.",
+            "As you search the gymnasium, you find signs of a struggle — overturned chairs, scuff marks on the floor, and a torn piece of clothing that matches one of the missing students. The air grows colder, and you sense a malevolent presence lurking in the shadows. Suddenly, a figure emerges from the darkness, its form shifting and contorting as it lets out a chilling scream."
+        ],
+        "danger_level": "medium",
+        "success_conditions": "Missing students located, curse exorcised",
+        "failure_conditions": "Player incapacitated, students die under player's watch"
+    },
+
+    "museum_heist": {
+        "mission_objective": "intervene to stop a planned robbery of a cursed artifact reported to be happening tonight",
+        "mission_site": "museum",
+        "mission_grade": "grade_1",
+        "mission_type": ["field_mission"],
+        "enemy_type": "curse_user",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Sanitation workers report frequent illnesses and growing sense of dread around certain areas of the sewer",
+            "Windows report stronger than usual cursed energy escaping from manholes in a busy urban area"
+        ],
+        "description_templates": [
+            "The museum is hosting a special exhibit on ancient curses, and one of the artifacts on display is rumored to be cursed itself. The artifact, a small statue of a demon, has been attracting a lot of attention from collectors and curse users alike. Tonight, a group of thieves plans to break into the museum and steal the artifact for their own purposes.",
+            "As you stake out the museum, you see a group of shadowy figures approaching the entrance. They are dressed in dark clothing and carrying bags that look like they could hold valuable items. You recognize one of them as a known curse user who has been involved in several high-profile thefts in the past. As they break into the museum, you must intervene to stop them and protect the cursed artifact from falling into the wrong hands."
+        ],
+        "danger_level": "high",
+        "success_conditions": "Curse user(s) apprehended with minimal collateral damage; stolen artifacts returned",
+        "failure_conditions": "Player incapacitated, curse user(s) escape with the artifact, or artifact is damaged/destroyed during the confrontation"
+    },
+
+    "skyscraper_construction_curse": {
+        "mission_objective": "Investigate reports of a curse causing accidents and injuries at a skyscraper construction site and neutralise the threat to ensure the safety of the workers.",
+        "mission_site": "skyscraper_construction_site",
+        "mission_grade": "grade_1",
+        "mission_type": ["field_mission"],
+        "enemy_type": "cursed_spirit",
+        "comrades": [],
+        "prereqs": null,
+        "narrative_hooks": [
+            "Several workers have been injured in accidents that seem to be caused by an unseen force, and some have reported seeing shadowy figures around the site at night.",
+            "The construction company has received multiple complaints from workers about strange noises and feelings of being watched, and there have been reports of tools and equipment moving on their own."
+        ],
+        "description_templates": [
+            "The museum is hosting a special exhibit on ancient curses, and one of the artifacts on display is rumored to be cursed itself. The artifact, a small statue of a demon, has been attracting a lot of attention from collectors and curse users alike. Tonight, a group of thieves plans to break into the museum and steal the artifact for their own purposes.",
+            "As you stake out the museum, you see a group of shadowy figures approaching the entrance. They are dressed in dark clothing and carrying bags that look like they could hold valuable items. You recognize one of them as a known curse user who has been involved in several high-profile thefts in the past. As they break into the museum, you must intervene to stop them and protect the cursed artifact from falling into the wrong hands."
+        ],
+        "danger_level": "high",
+        "success_conditions": "Cursed spirit neutralized with minimal collateral damage; workers safe",
+        "failure_conditions": "Player incapacitated or workers are harmed during the confrontation"
+    }
+}
