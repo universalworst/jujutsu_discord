@@ -1,0 +1,124 @@
+{
+    "conservatives": {
+        "goals": [
+            "maintaining traditional clan structure",
+            "preserving existing systems from modernizing and nontraditional influences",
+            "remaining hidden from civilians"
+        ],
+        "significant_members": [
+            "yoshinobu_gakuganji",
+            "naobito_zenin",
+            "naoya_zenin"
+        ],
+        "power_base": "centuries of supremacy and institutional inertia",
+        "recruitment": "clan indoctrination",
+        "values": {
+            "tradition": 90,
+            "clan_politics": 90,
+            "stability": 90,
+            "modernization": 30,
+            "new_perspectives": 15,
+            "curse_elimination": 60,
+            "community": 70,
+            "secrecy": 70,
+            "recruitment": 40
+        }
+    },
+    "reformists": {
+        "goals": [
+            "modernization",
+            "protecting students",
+            "diminishing clan significance"
+        ],
+        "significant_members": [
+            "satoru_gojo",
+            "masamichi_yaga"
+        ],
+        "power_base": "upcoming generation of powerful young sorcerers",
+        "recruitment": "new sorcerers from outside traditional power structures",
+        "values": {
+            "tradition": 20,
+            "clan_politics": 20,
+            "stability": 40,
+            "modernization": 80,
+            "new_perspectives": 65,
+            "curse_elimination": 80,
+            "community": 75,
+            "secrecy": 50,
+            "recruitment": 80
+        }
+    },
+    "outsiders": {
+        "goals": [
+            "revolutionizing the system",
+            "rebuilding jujutsu society from the ground up",
+            "working from outside the existing power structures",
+            "diverse goals"
+        ],
+        "significant_members": [
+            "yuki_tsukumo",
+            "miguel"
+        ],
+        "power_base": "diaspora with no center",
+        "recruitment": "personal mentorship",
+        "values": {
+            "tradition": 1,
+            "clan_politics": 5,
+            "stability": 5,
+            "modernization": 50,
+            "new_perspectives": 85,
+            "curse_elimination": 90,
+            "community": 10,
+            "secrecy": 30,
+            "recruitment": 10
+        }
+    },
+    "garden": {
+        "goals": [
+            "coexisting with curses",
+            "naturalistic approach to curses",
+            "the innate value of curses"
+        ],
+        "significant_members": [
+            "gardener"
+        ],
+        "power_base": "disenfranchised sorcerers with little understanding of jujutsu",
+        "recruitment": "window network alerts when untapped talent is discovered",
+        "values": {
+            "tradition": 1,
+            "clan_politics": 1,
+            "stability": 5,
+            "modernization": 30,
+            "new_perspectives": 90,
+            "curse_elimination": 1,
+            "community": 80,
+            "secrecy": 80,
+            "recruitment": 60
+        }
+    },
+    "kenjakus_group": {
+        "goals": [
+            "creating a new humanity",
+            "neutralizing Satoru Gojo as a threat",
+            "assimilating Japanese people with Tengen"
+        ],
+        "significant_members": [
+            "kenjaku",
+            "uraume",
+            "mahito"
+        ],
+        "power_base": "ancient incarnated sorcerers and sentient special grade cursed spirits",
+        "recruitment": "closed",
+        "values": {
+            "tradition": 1,
+            "clan_politics": 1,
+            "stability": 1,
+            "modernization": 10,
+            "new_perspectives": 95,
+            "curse_elimination": 1,
+            "community": 10,
+            "secrecy": 95,
+            "recruitment": 1
+        }
+    }
+}

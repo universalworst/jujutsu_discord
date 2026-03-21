@@ -1,6 +1,7 @@
 import json
 import os
 from config import Config
+import random
 
 
 def default_state(name, discord_id):
@@ -72,3 +73,31 @@ def ensure_state_defaults(state):
         if key not in state:
             state[key] = value
     return state
+
+def calculate_base_stats(grade, personality_type):
+    """Calculate starting stats from grade and personality"""
+    
+    grade_band = Config.GRADE_BANDS.get(grade, Config.GRADE_BANDS)
+    personality = Config.PERSONALITY_TYPES.get(personality_type, {})
+
+    # CE — grade band + modifiers
+    graded_ce = random.randint(grade_band['ce'][0], grade_band['ce'][1])
+    ce = graded_ce + personality.get('ce_mod', 0)
+
+    # Control — midpoint of grade band + modifiers
+    graded_control = random.randint(grade_band['control'][0], grade_band['control'][1])
+    control = graded_control + personality.get("control_mod", 0)
+    control = max(1, min(100, control))
+
+    # Stability — baseline from grade + personality modifier
+    stability = grade_band["stability_base"] + personality.get("stability_mod", 0)
+    stability = max(1, min(10, stability))
+
+    return {
+        "max_cursed_energy": ce,
+        "cursed_energy": ce,
+        "control": control,
+        "max_control": 100,
+        "stability": stability,
+        "max_stability": 10
+    }

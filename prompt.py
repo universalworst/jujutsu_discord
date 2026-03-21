@@ -1,5 +1,7 @@
 from openai import OpenAI
 from utils import as_list
+from data import load_all_lore
+from lore import build_lore_block
 
 def build_prompt(state):
     system_prompt = f"""
@@ -25,7 +27,7 @@ Technique: {state['technique']['technique_name']} — {state['technique']['core_
 Limitations: {state['technique']['limitations']}
 
 ===WORLD INFORMATION===
-[Insert lore block here]
+{build_lore_block(state)}
 
 ===CURRENT SCENE===
 Health: {state['stats']['health']} / {state['stats']['max_health']}
@@ -159,6 +161,7 @@ If a character's actions feel unclear, default to the choices most consistent wi
 
 def build_messages(state, player_input):
     system_prompt = build_prompt(state)
+    print(f"Active NPCs: {state['world_state']['active_npcs']} | Chat Log: {state['logs']['chat_log']}")
     messages = [{"role": "system", "content": system_prompt}]
     #if summary_block:
     #    messages.append({"role": "system", "content": summary_block})

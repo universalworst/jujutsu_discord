@@ -110,6 +110,16 @@
         "domain": "None",
         "users": "yuji_itadori"
     },
+    "enlightened_scripture": {
+        "type": "innate",
+        "core_effects": "Summon shikigami spirits drawn into being through ink on paper, or through origami via folding inked paper into autonomous projectiles.",
+        "limitations": [
+            "shikigami are flammable and easily destroyed through use of fire attacks", 
+            "the creation and summoning of shikigami takes valuable time early in a fight if not prepared in advance"],
+        "power": 55,
+        "domain": "None",
+        "users": ""
+    },
     "fungal_manipulation": {
         "type": "innate",
         "core_effects": [
@@ -252,7 +262,10 @@
     },
     "spatial_transference": {
         "type": "innate",
-        "core_effects": [],
+        "core_effects": [
+            "by concealing himself and others with a sheet, the user can teleport himself and others to another location",
+            "can spatially transfer himself or others across vast distances within a short time"
+        ],
         "limitations": "can only be used twice per month on any given person",
         "power": 60,
         "domain": "None",
