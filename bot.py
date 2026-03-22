@@ -7,11 +7,9 @@ import discord
 from discord.ext import commands
 from config import Config
 from state import default_state, save_state, load_state, get_all_players, calculate_base_stats
-from narration import generate_narration
+from narration import process_turn
 from utils import split_message
 from relationships import seed_relationships
-from data import load_all_lore
-from scene_tracker import detect_scene, update_scene
 from help import move_help, play_help, register_help
 
 intents = discord.Intents.default()
@@ -111,17 +109,9 @@ async def play(ctx, *, player_input):
     discord_id = ctx.author.id
     state = load_state(discord_id)
     waiting = await ctx.channel.send("Thinking...")
-    response = await generate_narration(state, player_input)
-    state["logs"]["chat_log"].append({
-        "player": player_input,
-        "narration": response
-    })
-    lore = load_all_lore()
-    result = detect_scene(state, response, lore)
-    if result:
-        update_scene(state, result)
-    save_state(state)
-    split = split_message(response, 2000)
+    print("Processing turn...")
+    narration = await process_turn(state, player_input)
+    split = split_message(narration, 2000)
     await ctx.message.delete()
     await waiting.edit(content=f"> {player_input}")
     for chunk in split:

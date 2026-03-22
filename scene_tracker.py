@@ -23,6 +23,12 @@ def detect_scene(state, narration, lore):
     absent_npcs = state["world_state"].get("absent_npcs", [])
     active_npcs = state["world_state"].get("active_npcs", [])
     known_npcs = state["world_state"].get("known_npcs", [])
+    current_location = state["world_state"]["current_location"]
+    known_locations = state["world_state"]["known_locations"]
+    if current_location not in known_locations:
+        state["world_state"]["known_locations"].append(current_location)
+        save_state(state)
+
     prompt = f"""
 Given the following narration, extract the current scene state.
 
@@ -65,6 +71,6 @@ Rules:
         return None
     
 def update_scene(state, result):
-    state["world_state"]["active_npcs"] = result["active_npcs"]
-    state["world_state"]["absent_npcs"] = result["absent_npcs"]
-    state["world_state"]["known_npcs"] = result["known_npcs"]
+    state["world_state"]["active_npcs"] = result.get("active_npcs", state["world_state"]["active_npcs"])
+    state["world_state"]["absent_npcs"] = result.get("absent_npcs", state["world_state"]["absent_npcs"])
+    state["world_state"]["known_npcs"] = result.get("known_npcs", state["world_state"]["known_npcs"])

@@ -124,13 +124,15 @@ def apply_relationship_updates(state, updates):
 
     valid_types = set(Config.RELATIONSHIP_TYPES)
     relationships = state["world_state"].get("relationships", {})
-    npc_ids = list(load_all_lore().get("npc_profiles", {}).keys())
 
     for npc_id, update in updates.items():
         if npc_id not in relationships:
-            relationships[npc_id] = default_relationship_entry().get(npc_id, default_relationship_entry())
+            relationships[npc_id] = default_relationship_entry()
 
         rel = relationships[npc_id]
+
+        if npc_id not in state["world_state"]["known_npcs"]:
+            state["world_state"]["known_npcs"].append(npc_id)
 
         if update.get("type"):
             validated_types = [t for t in update["type"] if t in valid_types]
