@@ -322,5 +322,24 @@
             "sound carries unpredictably — a curse can be heard long before it is located",
             "single entry and exit points are tactically advantageous but create escape risks"
         ]
+    },
+
+    "warehouse": {
+        "location_type": "mission_site",
+        "tags": ["indoor"],
+        "description_templates": [
+            "a large, industrial warehouse that sees little use at night; it smells faintly of petroleum and rust",
+            "a small, abandoned warehouse tucked between a larger warehouse and a factory; it feels out of place between the behemoths beside it",
+            "a newly renovated warehouse with clean concrete floors and whitewashed walls; it's mostly unused at the moment, offering improved mobility and vision"
+        ],
+        "curse_density_modifier": 3,
+        "civilian_risk": "medium",
+        "containment_difficulty": "medium",
+        "compatible_districts": ["shibuya", "shinjuku", "roppongi", "harajuku"],
+        "tactical_notes": [
+            "echoing area can be disorienting, which some curses use to their advantage",
+            "in cramped quarters like these, collateral damage to property is almost unavoidable",
+            "it's not well lit, meaning there are many dark corners for curses to hide in"
+        ]
     }
 }

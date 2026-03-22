@@ -85,7 +85,7 @@ class Config:
     # ====================================
     # STAT BUILDING CONSTANTS
     # ====================================
-    
+
     GRADES = [
         "grade_4",
         "grade_3",
@@ -237,7 +237,8 @@ class Config:
         "sewer": 1483838566571184308,
         "shopping_mall": 1483839383932239933,
         "skyscraper_construction_site": 1483838719436783707,
-        "underground_tunnel": 1483838587186184232
+        "underground_tunnel": 1483838587186184232,
+        "warehouse": 1485094071767797840
     }
 
     LOG_CHANNELS = {

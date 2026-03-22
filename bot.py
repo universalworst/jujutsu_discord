@@ -64,7 +64,8 @@ async def move_player(guild, member, old_location, location):
     await show_channel(guild, Config.LOCATION_CHANNELS[location], member)
 
 async def post_to_log(discord_id, guild, message):
-    log_channel = guild.get_channel(Config.LOG_CHANNELS[discord_id])
+    log_channel = await guild.fetch_channel(Config.LOG_CHANNELS[discord_id])
+    print(f"Log channel: {log_channel}")
     if log_channel:
         await log_channel.send(message)
 
@@ -109,7 +110,7 @@ async def play(ctx, *, player_input):
         return
     discord_id = ctx.author.id
     state = load_state(discord_id)
-    waiting = await ctx.channel.send("...")
+    waiting = await ctx.channel.send("Thinking...")
     response = await generate_narration(state, player_input)
     state["logs"]["chat_log"].append({
         "player": player_input,
@@ -126,8 +127,12 @@ async def play(ctx, *, player_input):
     for chunk in split:
         await ctx.channel.send(chunk)
     current_channel_name = ctx.channel.name.replace('-', '_')
+    print(f"Channel name: {current_channel_name}")
+    players = get_players_in_channel(current_channel_name)
+    print(f"Players in channel: {players}")
     guild = await bot.fetch_guild(Config.GUILD_ID)
-    for discord_id in get_players_in_channel(current_channel_name):
+    for discord_id in players:
+        print(f"Posting to log for: {discord_id}")
         await post_to_log(int(discord_id), guild, f"> {player_input}")
         for chunk in split:
             await post_to_log(int(discord_id), guild, chunk)

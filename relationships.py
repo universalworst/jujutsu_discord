@@ -123,7 +123,8 @@ def update_relationship_types(existing_types, new_types):
 def apply_relationship_updates(state, updates):
 
     valid_types = set(Config.RELATIONSHIP_TYPES)
-    relationships = state.get("relationships", {})
+    relationships = state["world_state"].get("relationships", {})
+    npc_ids = list(load_all_lore().get("npc_profiles", {}).keys())
 
     for npc_id, update in updates.items():
         if npc_id not in relationships:
@@ -176,7 +177,7 @@ def summarize_and_update_relationships(state):
         if entry.get("npcs_present"):
             log_text += f"NPCs Present: {entry['npcs_present']}\n"
 
-    relationships = state.get("relationships", {})
+    relationships = state["world_state"].get("relationships", {})
     active_npc_ids = list(set(
         npc
         for entry in logs_to_summarize
