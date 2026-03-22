@@ -6,7 +6,7 @@ import os
 import discord
 from discord.ext import commands
 from config import Config
-from state import default_state, save_state, load_state, calculate_base_stats
+from state import default_state, save_state, load_state, get_all_players, calculate_base_stats
 from narration import generate_narration
 from utils import split_message
 from relationships import seed_relationships
@@ -63,12 +63,18 @@ async def move_player(guild, member, old_location, location):
     print(f"Showing: {location}, channel ID: {Config.LOCATION_CHANNELS.get(location)}")
     await show_channel(guild, Config.LOCATION_CHANNELS[location], member)
 
-async def print_log(guild, member, message, narration):
-    character_name = Config.PLAYERS.get(member.id)
-    log_channel_id = Config.LOG_CHANNELS.get(member.id)
-    channel = guild.get_channel(log_channel_id)
-    await channel.send(f"> {character_name}: {message}")
-    await channel.send(narration)
+async def post_to_log(discord_id, guild, message):
+    log_channel = guild.get_channel(Config.LOG_CHANNELS[discord_id])
+    if log_channel:
+        await log_channel.send(message)
+
+def get_players_in_channel(channel_name):
+    players = []
+    for discord_id in get_all_players():
+        state = load_state(discord_id)
+        if state["world_state"]["current_location"] == channel_name:
+            players.append(discord_id)
+    return players
 
 # ====================================
 # EVENTS
@@ -84,9 +90,10 @@ async def on_ready():
     print("Bot is now online.")
 
 # ====================================
-# SIMPLE COMMANDS
+# COMMANDS
 # ====================================
 
+# ======== PLAY =========
 @bot.command()
 async def play(ctx, *, player_input):
     if player_input.lower() == "help":
@@ -118,6 +125,14 @@ async def play(ctx, *, player_input):
     await waiting.edit(content=f"> {player_input}")
     for chunk in split:
         await ctx.channel.send(chunk)
+    current_channel_name = ctx.channel.name.replace('-', '_')
+    guild = await bot.fetch_guild(Config.GUILD_ID)
+    for discord_id in get_players_in_channel(current_channel_name):
+        await post_to_log(int(discord_id), guild, f"> {player_input}")
+        for chunk in split:
+            await post_to_log(int(discord_id), guild, chunk)
+
+# ======== MOVE =========
 
 @bot.command()
 async def move(ctx, *, player_input):
@@ -150,10 +165,8 @@ async def move(ctx, *, player_input):
         await new_channel.send(f"{name} arrives at {location.replace('_', ' ').replace('-', ' ').title()}.")
         state["world_state"]["current_location"] = location
         save_state(state)
- 
-# ====================================
-# LONG-FORM COMMANDS
-# ====================================
+
+# ======== REGISTER =========
 
 @bot.command()
 async def register(ctx, *, player_input):

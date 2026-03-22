@@ -75,6 +75,10 @@ def ensure_state_defaults(state):
             state[key] = value
     return state
 
+def get_all_players():
+    files = os.listdir(Config.SAVE_DIR)
+    return [f.replace(".json", "") for f in files if f.endswith(".json")]
+
 def calculate_base_stats(grade, personality_type, origin):
     """Calculate starting stats from grade and personality"""
     
