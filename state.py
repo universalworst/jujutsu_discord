@@ -12,6 +12,7 @@ def default_state(name, discord_id):
             "log_channel_id": "",
             "grade": None,
             "age": 25,
+            "origin": "",
             "personality_type": "",
             "personality": "",
             "appearance": "",
@@ -74,11 +75,12 @@ def ensure_state_defaults(state):
             state[key] = value
     return state
 
-def calculate_base_stats(grade, personality_type):
+def calculate_base_stats(grade, personality_type, origin):
     """Calculate starting stats from grade and personality"""
     
     grade_band = Config.GRADE_BANDS.get(grade, Config.GRADE_BANDS)
     personality = Config.PERSONALITY_TYPES.get(personality_type, {})
+    origin_mod = Config.ORIGIN_MODIFIERS.get(origin, {})
 
     # CE — grade band + modifiers
     graded_ce = random.randint(grade_band['ce'][0], grade_band['ce'][1])
@@ -86,7 +88,7 @@ def calculate_base_stats(grade, personality_type):
 
     # Control — midpoint of grade band + modifiers
     graded_control = random.randint(grade_band['control'][0], grade_band['control'][1])
-    control = graded_control + personality.get("control_mod", 0)
+    control = graded_control + personality.get("control_mod", 0) + origin_mod.get("control_mod", 0)
     control = max(1, min(100, control))
 
     # Stability — baseline from grade + personality modifier

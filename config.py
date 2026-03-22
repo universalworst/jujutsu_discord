@@ -28,10 +28,64 @@ class Config:
     SAVE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
     os.makedirs(SAVE_DIR, exist_ok=True)
 
+
+    ROLES = [
+        "student",
+        "field_sorcerer",
+        "special_grade_sorcerer",
+        "clan_head",
+        "clan_heir",
+        "assistant_manager",
+        "window"
+    ]
+
+    RELATIONSHIP_TYPES = [
+        "unknown",
+        "acquaintance",
+        "ally",
+        "rival",
+        "enemy",
+        "mentor",
+        "student",
+        "ward",
+        "guardian",
+        "superior",
+        "subordinate",
+        "senior",
+        "junior",
+        "colleague",
+        "friend",
+        "close_friend",
+        "partner",
+        "family",
+        "complicated"
+    ]
+
+    RELATIONSHIP_TYPE_SUPERSEDES = {
+        "acquaintance":     ["unknown"],
+        "ally":             ["unknown", "acquaintance"],
+        "friend":           ["unknown", "acquaintance", "ally"],
+        "close_friend":     ["unknown", "acquaintance", "ally", "friend"],
+        "rival":            ["unknown", "acquaintance"],
+        "enemy":            ["unknown", "acquaintance", "rival"],
+        "mentor":           ["unknown", "acquaintance"],
+        "student":          ["unknown", "acquaintance"],
+        "colleague":        ["unknown", "acquaintance"],
+        "complicated":      ["unknown"],  # complicated coexists with everything
+        "family":           [],  # family coexists with everything
+        "ward":             ["unknown", "acquaintance"],
+        "guardian":         ["unknown", "acquaintance"],
+        "superior":         ["unknown", "acquaintance"],
+        "subordinate":      ["unknown", "acquaintance"],
+        "senior":           ["unknown", "acquaintance"],
+        "junior":           ["unknown", "acquaintance"],
+        "partner":          ["unknown", "acquaintance", "ally", "friend", "close_friend"]
+    }
+
     # ====================================
     # STAT BUILDING CONSTANTS
     # ====================================
-
+    
     GRADES = [
         "grade_4",
         "grade_3",
@@ -73,6 +127,16 @@ class Config:
         "semi_grade_1":  {"ce": (90, 120),  "control": (55, 75), "stability_base": 6},
         "grade_1":       {"ce": (100, 130), "control": (65, 90), "stability_base": 7},
         "special_grade": {"ce": (125, 160), "control": (80, 100),"stability_base": 8},
+    }
+    GRADE_CONVERSION = {
+        "none": 0,
+        "grade_4": 1,
+        "grade_3": 2,
+        "semi_grade_2": 3,
+        "grade_2": 4,
+        "semi_grade_1": 5,
+        "grade_1": 6,
+        "special_grade": 7
     }
 
     ORIGIN_MODIFIERS = {
@@ -119,69 +183,71 @@ class Config:
     # DISCORD IDS
     # ====================================
 
-CATEGORIES = {
-    "🔴 Tokyo": 1483680290181480468,
-    "🟠 Tokyo Landmarks": 1483836792951144650,
-    "🟡 Other Locales": 1483834622033789018,
-    "🟢 Jujutsu Society": 1483832496612442202,
-    "🔵 Mission Sites": 1483837326319947839,
-    "🟣 The Garden": 1483827015667945544,
-    "Logs": 1483841311864918121
-}
+    GUILD_ID = 1483657481115926660
 
-LOCATION_CHANNELS = {
-    "shibuya": 1483680342140387349,
-    "shinjuku": 1483832539641806919,
-    "harajuku": 1483833996336037932,
-    "roppongi": 1483834014900027495,
-    "chiyoda": 1483834112296091738,
-    "nerima": 1483834192528937192,
-    "nakano": 1483834272791007314,
-    "minato": 1483836027998048488,
-    "shibuya_crossing": 1483833955097772143,
-    "shibuya_station": 1483833974294839429,
-    "shinjuku_station": 1483836262170492949,
-    "kabuchiko": 1483835827053138010,
-    "roppongi_hills": 1483836084592054364,
-    "meiji_shrine": 1483834776854200493,
-    "kyoto": 1483834661036757156,
-    "sendai": 1483834688844988489,
-    "gachinko_fight_club": 1483835864567120102,
-    "tokyo_jujutsu_high": 1483832589650235493,
-    "kyoto_jujutsu_high": 1483832615336284343,
-    "tombs_of_the_star": 1483832644948201483,
-    "tombs_of_the_star_corridor": 1483835542314553474,
-    "gojo_estate": 1483835655917277234,
-    "zenin_estate": 1483835673227038880,
-    "kamo_estate": 1483835686778835044,
-    "takahashi_estate": 1483835703728017409,
-    "abandoned_building": 1483837617278812331,
-    "alleyway": 1483839077139742910, 
-    "cursed_artifact_vault": 1483838884940087297,
-    "grade_school": 1483838628667981905,
-    "greenhouse": 1483838553229230222,
-    "high_school": 1483838642576294100,
-    "hospital": 1483838996735066244,
-    "hostel": 1483838676839698455,
-    "love_hotel": 1483838610376491080,
-    "maintenance-room": 1483839234078019684,
-    "museum": 1483838656534937713,
-    "nightclub": 1483839305456685177,
-    "platform": 1483839324788359179,
-    "sewer": 1483838566571184308,
-    "shopping_mall": 1483839383932239933,
-    "skyscraper_construction_site": 1483838719436783707,
-    "underground_tunnel": 1483838587186184232
-}
+    CATEGORIES = {
+        "🔴 Tokyo": 1483680290181480468,
+        "🟠 Tokyo Landmarks": 1483836792951144650,
+        "🟡 Other Locales": 1483834622033789018,
+        "🟢 Jujutsu Society": 1483832496612442202,
+        "🔵 Mission Sites": 1483837326319947839,
+        "🟣 The Garden": 1483827015667945544,
+        "Logs": 1483841311864918121
+    }
 
-LOG_CHANNELS = {
-    605781662390943745: 1483841404038942760,
-    683029047672176711: 1483841425647866038
-}
+    LOCATION_CHANNELS = {
+        "shibuya": 1483680342140387349,
+        "shinjuku": 1483832539641806919,
+        "harajuku": 1483833996336037932,
+        "roppongi": 1483834014900027495,
+        "chiyoda": 1483834112296091738,
+        "nerima": 1483834192528937192,
+        "nakano": 1483834272791007314,
+        "minato": 1483836027998048488,
+        "shibuya_crossing": 1483833955097772143,
+        "shibuya_station": 1483833974294839429,
+        "shinjuku_station": 1483836262170492949,
+        "kabuchiko": 1483835827053138010,
+        "roppongi_hills": 1483836084592054364,
+        "meiji_shrine": 1483834776854200493,
+        "kyoto": 1483834661036757156,
+        "sendai": 1483834688844988489,
+        "gachinko_fight_club": 1483835864567120102,
+        "tokyo_jujutsu_high": 1483832589650235493,
+        "kyoto_jujutsu_high": 1483832615336284343,
+        "tombs_of_the_star": 1483832644948201483,
+        "tombs_of_the_star_corridor": 1483835542314553474,
+        "gojo_estate": 1483835655917277234,
+        "zenin_estate": 1483835673227038880,
+        "kamo_estate": 1483835686778835044,
+        "takahashi_estate": 1483835703728017409,
+        "abandoned_building": 1483837617278812331,
+        "alleyway": 1483839077139742910, 
+        "cursed_artifact_vault": 1483838884940087297,
+        "grade_school": 1483838628667981905,
+        "greenhouse": 1483838553229230222,
+        "high_school": 1483838642576294100,
+        "hospital": 1483838996735066244,
+        "hostel": 1483838676839698455,
+        "love_hotel": 1483838610376491080,
+        "maintenance_room": 1483839234078019684,
+        "museum": 1483838656534937713,
+        "nightclub": 1483839305456685177,
+        "platform": 1483839324788359179,
+        "sewer": 1483838566571184308,
+        "shopping_mall": 1483839383932239933,
+        "skyscraper_construction_site": 1483838719436783707,
+        "underground_tunnel": 1483838587186184232
+    }
 
-LOBBY_CHANNEL = 1483657482105651202
+    LOG_CHANNELS = {
+        605781662390943745: 1483841404038942760,
+        683029047672176711: 1483841425647866038
+    }
 
-PLAYERS = {
-    605781662390943745: "Mitsuki",
-    683029047672176711: "Xiomara"
-}
+    LOBBY_CHANNEL = 1483657482105651202
+
+    PLAYERS = {
+        605781662390943745: "Mitsuki",
+        683029047672176711: "Xiomara"
+    }

@@ -18,7 +18,7 @@ You are not the opponent or protector of the Player.
 
 Build your responses based on the following data:
 
-===PLAYER CHARACTER INFORMATION===
+=== PLAYER CHARACTER INFORMATION ===
 Name: {state['identity']['name']}
 Grade: {state['identity']['grade']}
 Personality: {state['identity']['personality']}
@@ -26,10 +26,10 @@ Backstory: {state['identity']['backstory']}
 Technique: {state['technique']['technique_name']} — {state['technique']['core_effects']}
 Limitations: {state['technique']['limitations']}
 
-===WORLD INFORMATION===
+=== WORLD INFORMATION ===
 {build_lore_block(state)}
 
-===CURRENT SCENE===
+=== CURRENT SCENE ===
 Health: {state['stats']['health']} / {state['stats']['max_health']}
 Cursed Energy: {state['stats']['cursed_energy']} / {state['stats']['max_cursed_energy']}
 Injuries: {as_list(state['stats']['injuries'])}
@@ -38,7 +38,7 @@ NPCs Confirmed Absent: {as_list([npc.replace('_', ' ').title() for npc in state[
 Current Location: {state['world_state']['current_location'].replace('_', ' ').title()}
 Ongoing Mission: {state['world_state']['missions']['current_mission'].replace('_', ' ').title() if state['world_state']['missions']['current_mission'] else "None"}
 
-==SCENE RULES==
+== SCENE RULES ==
 - When starting a mission, open with: site, grade, assigning sorcerer, participants, and details.
 - Introduce new NPCs explicitly when they enter. Describe NPCs leaving the scene.
 - Only introduce NPCs with a narrative reason to be present.
@@ -161,7 +161,6 @@ If a character's actions feel unclear, default to the choices most consistent wi
 
 def build_messages(state, player_input):
     system_prompt = build_prompt(state)
-    print(f"Active NPCs: {state['world_state']['active_npcs']} | Chat Log: {state['logs']['chat_log']}")
     messages = [{"role": "system", "content": system_prompt}]
     #if summary_block:
     #    messages.append({"role": "system", "content": summary_block})
