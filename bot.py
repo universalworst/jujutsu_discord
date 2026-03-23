@@ -10,7 +10,7 @@ from state import default_state, save_state, load_state, get_all_players, calcul
 from narration import process_turn
 from utils import split_message
 from relationships import seed_relationships
-from help import move_help, play_help, register_help
+from help import move_help, play_help, register_help, stats_help, stat
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -164,8 +164,8 @@ async def move(ctx, *, player_input):
 # ======== REGISTER =========
 
 @bot.command()
-async def register(ctx, *, player_input):
-    if player_input.lower() == "help":
+async def register(ctx, *, player_input=None):
+    if player_input and player_input.lower() == "help":
         print("Help has been sought.")
         try:
             await register_help(ctx)
@@ -218,13 +218,37 @@ async def register(ctx, *, player_input):
             state["technique"]["limitations"] = limitations
             state["technique"]["power"] = power
             state["stats"].update(calculate_base_stats(grade, personality_type, origin))
-            seed_relationships(state, seed_info)
+            await seed_relationships(state, seed_info)
             print(f"{state['world_state']['relationships']}")
         except Exception as e:
             print(f"Error: {e}")
         save_state(state)
         await show_channel(guild, Config.LOCATION_CHANNELS['tokyo_jujutsu_high'].replace("_", "-"), member)
 
+# ========= STATS ==========
+
+@bot.command()
+async def stats(ctx, *, player_input=None):
+    print("Command received.")
+    state = load_state(ctx.author.id)
+    print("State loaded.")
+    if not isinstance(ctx.channel, discord.DMChannel):
+        await ctx.message.delete()
+        print("Message deleted.")
+    if player_input and player_input.lower() == "help":
+        print("Help has been sought.")
+        try:
+            await stats_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        return
+    else:
+        print("Creating DM...")
+        dm = await ctx.author.create_dm()
+        print("DMing author...")
+        message = await stat(state)
+        print(f"Message: {message}")
+        await dm.send(message)
 
 # ====================================
 # DEBUG COMMANDS

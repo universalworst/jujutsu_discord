@@ -24,22 +24,17 @@ async def generate_narration(state, player_input):
     return response.choices[0].message.content
 
 async def process_turn(state, player_input):
-    print("Generating narration...")
     lore = load_all_lore()
     narration = await generate_narration(state, player_input)
-    print("Narration generated")
-    result = detect_scene(state, narration, lore)
-    print(f"Scene detected: {result}")
+    result = await detect_scene(state, narration, lore)
     if result:
         update_scene(state, result)
-    print("Appending to chat log")
     state["logs"]["chat_log"].append({
         "player": player_input,
-        "narration": narration
+        "narration": narration,
+        "npcs_present": state["world_state"]["active_npcs"].copy()
     })
-    print(f"Log length: {len(state["logs"]["chat_log"])}")
     if len(state["logs"]["chat_log"]) % 5 == 0:
-        summarize_and_update_relationships(state)
-    print("Saving state")
+        await summarize_and_update_relationships(state)
     save_state(state)
     return narration

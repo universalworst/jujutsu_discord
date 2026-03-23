@@ -68,17 +68,17 @@ class Config:
         "close_friend":     ["unknown", "acquaintance", "ally", "friend"],
         "rival":            ["unknown", "acquaintance"],
         "enemy":            ["unknown", "acquaintance", "rival"],
-        "mentor":           ["unknown", "acquaintance"],
-        "student":          ["unknown", "acquaintance"],
+        "mentor":           ["unknown", "acquaintance", "student"],
+        "student":          ["unknown", "acquaintance", "mentor"],
         "colleague":        ["unknown", "acquaintance"],
         "complicated":      ["unknown"],  # complicated coexists with everything
-        "family":           [],  # family coexists with everything
-        "ward":             ["unknown", "acquaintance"],
-        "guardian":         ["unknown", "acquaintance"],
-        "superior":         ["unknown", "acquaintance"],
-        "subordinate":      ["unknown", "acquaintance"],
-        "senior":           ["unknown", "acquaintance"],
-        "junior":           ["unknown", "acquaintance"],
+        "family":           ["unknown"],  # family coexists with everything
+        "ward":             ["unknown", "acquaintance", "guardian"],
+        "guardian":         ["unknown", "acquaintance", "ward"],
+        "superior":         ["unknown", "acquaintance", "subordinate"],
+        "subordinate":      ["unknown", "acquaintance", "superior"],
+        "senior":           ["unknown", "acquaintance", "junior"],
+        "junior":           ["unknown", "acquaintance", "senior"],
         "partner":          ["unknown", "acquaintance", "ally", "friend", "close_friend"]
     }
 
@@ -243,12 +243,14 @@ class Config:
 
     LOG_CHANNELS = {
         605781662390943745: 1483841404038942760,
-        683029047672176711: 1483841425647866038
+        683029047672176711: 1483841425647866038,
+        747569767325630506: 1485346940362428647
     }
 
     LOBBY_CHANNEL = 1483657482105651202
 
     PLAYERS = {
         605781662390943745: "Mitsuki",
-        683029047672176711: "Xiomara"
+        683029047672176711: "Xiomara",
+        747569767325630506: "Day"
     }

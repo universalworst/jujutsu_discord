@@ -4,11 +4,11 @@
 
 import json
 from config import Config
-from openai import OpenAI
+from openai import AsyncOpenAI
 from utils import parse_llm_json
 from data import load_all_lore
 
-client = OpenAI(
+client = AsyncOpenAI(
     api_key=Config.DEEPSEEK_API_KEY,
     base_url=Config.BASE_URL
 )
@@ -34,7 +34,7 @@ def default_relationship_entry():
 # RELATIONSHIP SEEDING
 # ========================================
 
-def seed_relationships(state, seed):
+async def seed_relationships(state, seed):
     backstory = state["identity"].get("backstory", "")
     personality = state["identity"].get("personality", "")
     if not backstory:
@@ -82,11 +82,11 @@ Only use types from the above list for the "type" field.
 If no relationships are present, return {{"relationships": {{}}}}
 """
 
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model=Config.MODEL_NAME,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
-        max_tokens=2000
+        max_tokens=5000
     )
 
     try:
@@ -166,16 +166,16 @@ def apply_relationship_updates(state, updates):
 # RELATIONSHIP SUMMARIZATION
 # ========================================
 
-def summarize_and_update_relationships(state):
+async def summarize_and_update_relationships(state):
 
-    logs_to_summarize = state["chat_log"][:-Config.RECENT_TURNS_TO_KEEP]
+    logs_to_summarize = state["logs"]["chat_log"][-5:]
     if not logs_to_summarize:
         return
 
     log_text = ""
     for entry in logs_to_summarize:
-        log_text += f"\nTurn {entry['turn']} — Player: {entry['player']}\n"
-        log_text += f"Narration: {entry['narration_raw']}\n"
+        log_text += f"Player: {entry['player']}\n"
+        log_text += f"Narration: {entry['narration']}\n"
         if entry.get("npcs_present"):
             log_text += f"NPCs Present: {entry['npcs_present']}\n"
 
@@ -206,9 +206,7 @@ VALID RELATIONSHIP TYPES: {Config.RELATIONSHIP_TYPES}
 Return ONLY a JSON object with no explanation or markdown:
 {{
     "summary": {{
-        "turns_covered": [first_turn, last_turn],
         "location": "primary location",
-        "mission": "mission summary or null",
         "narrative_summary": "2-3 sentence summary of events",
         "decisions": ["significant player character decisions"],
         "npc_interactions": {{
@@ -239,7 +237,7 @@ Rules:
 - resolved_threads should contain exact strings from the existing unresolved_threads list
 """
 
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model=Config.MODEL_NAME,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
@@ -251,12 +249,10 @@ Rules:
         data = parse_llm_json(content)
 
         summary = data.get("summary", {})
-        state["summaries"].append(summary)
+        state["logs"]["summaries"].append(summary)
 
         updates = data.get("relationship_updates", {})
         apply_relationship_updates(state, updates)
-
-        state["chat_log"] = state["chat_log"][-Config.RECENT_TURNS_TO_KEEP:]
 
     except json.JSONDecodeError:
         print("Warning: summarizer returned malformed JSON")

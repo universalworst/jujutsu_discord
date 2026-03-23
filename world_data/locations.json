@@ -30,7 +30,7 @@
         "atmosphere": "oppressive, layered, electric with tension",
         "connected_locations": ["shibuya", "harajuku"],
         "landmarks": ["shinjuku_station", "kabukicho", "tokyo_metropolitan_government_building"],
-        "frequented_by": ["tokyo_jujutsu_high", "higher_ups"],
+        "frequented_by": ["tokyo_jujutsu_high", "civilians"],
         "mission_site_pool": ["abandoned_building", "love_hotel", "underground_tunnel", "hospital", "nightclub", "shopping_mall", "burnt_restaurant"]
     },
 
@@ -80,6 +80,7 @@
         ],
         "curse_density": 5,
         "atmosphere": "residental, safe, relaxed",
+        "connected_locations": ["nakano"],
         "landmarks": ["hikarigaoka_park", "taoe_animation_museum", "botanical_solutions_corporation"],
         "frequented_by": ["civilians", "garden"],
         "mission_site_pool": ["grade_school", "high_school", "shopping_mall", "hospital"]
@@ -96,7 +97,7 @@
         ],
         "curse_density": 4,
         "atmosphere": "nostalgic, insular, deceptively mundane",
-        "connected_locations": ["shinjuku", "tokyo_jujutsu_high"],
+        "connected_locations": ["shinjuku", "nerima"],
         "landmarks": ["nakano_broadway"],
         "frequented_by": [],
         "keywords": ["nakano", "nakano broadway", "broadway"],
@@ -109,7 +110,6 @@
         "description": [
             "the largest city in the Tohoku region, known as the City of Trees for its broad zelkova-lined boulevards",
             "a regional hub with a distinct identity separate from Tokyo — proud, self-sufficient, and less densely monitored by jujutsu institutions",
-            "Nanami Kento operated out of Sendai for a period, leaving traces of his influence on how cursed spirit activity is managed here",
             "the distance from Tokyo's institutional oversight makes it a common location for unsanctioned sorcerer activity"
         ],
         "curse_density": 5,
@@ -155,6 +155,22 @@
         "frequented_by": ["higher_ups"],
         "keywords": ["minato", "azabu", "hiroo", "bay area", "waterfront"],
         "mission_site_pool": ["abandoned_building", "love_hotel", "nightclub", "shopping_mall", "sewer", "hostel_mission"]
+    },
+
+    "sumida": {
+        "tier": "district",
+        "location_type": "urban_district",
+        "description": [
+            "known for its sword museum and festivals",
+            "traditional, old-downtown feel reminiscent of the Edo-era",
+            "slower-paced than the more urban parts of Tokyo"
+        ],
+        "curse_density": 6,
+        "atmosphere": "traditional melding seamlessly into the modern",
+        "connected_locations": [],
+        "landmarks": ["tokyo_skytree"],
+        "frequented_by": [],
+        "mission_site_pool": ["skyscraper-construction-site"]
     },
 
     "kyoto": {
@@ -369,6 +385,25 @@
         "mission_site_pool": []
     },
 
+    "botanical_solutions_corporation": {
+        "tier": "landmark",
+        "location_type": "corporate_headquarters",
+        "district": "nerima",
+        "description": [
+            "a clean, unconspicuous office building with a single sign above the door reading 'BOTANICAL SOLUTIONS CORPORATION'",
+            "entering, the building appears deserted, with a plain, unlit hallway leading to another set of double doors, unlabelled",
+            "beyond the doors, a set of stairs lead downwards into darkness with only a set of electric lights at the top",
+            "fumbling blindly at the base of the stairs, you find a door that can only be opened with a particular application of cursed energy. You'll have to figure that out to open the door.",
+            "on the other side of the door is a humid, warm, well-lit, spacioius area reminiscent of a greenhouse or indoor botanical center"
+        ],
+        "curse_density": 4,
+        "atmosphere": "warm, calm, quiet",
+        "notable_features": [],
+        "connected_locations": [],
+        "frequented_by": ["garden"],
+        "mission_site_pool": []
+    },
+
     "roppongi_hills": {
         "tier": "landmark",
         "location_type": "urban_complex",
@@ -397,7 +432,7 @@
     "takahashi_estate": {
         "tier": "landmark",
         "location_type": "clan_estate",
-        "district": "Chiba",
+        "district": "chiba",
         "description": [
             "a sizeable estate in the countryside in Chiba prefecture",
             "historic home to the Takahashi clan",
@@ -507,12 +542,10 @@
         "location_type": "clan_estate",
         "district": null,
         "description": [
-            ""
         ],
         "curse_density": 1,
         "atmosphere": "",
         "notable_features": [
-            ""
         ],
         "connected_locations": [],
         "frequented_by": [],
@@ -530,7 +563,7 @@
             "appears like a daimyo's estate from before the Meiji era"
         ],
         "curse_density": 2,
-        "atmosphere": "",
+        "atmosphere": "oppressive, severe, violent, tense",
         "notable_features": [
             ""
         ],
@@ -554,7 +587,7 @@
         ],
         "connected_locations": [],
         "frequented_by": [],
-        "keywords": [],
+        "keywords": ["kamo", "big three"],
         "mission_site_pool": []
     }
 }

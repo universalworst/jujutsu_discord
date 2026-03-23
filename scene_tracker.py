@@ -5,11 +5,11 @@
 import json
 from config import Config
 from data import load_all_lore
-from openai import OpenAI
+from openai import AsyncOpenAI
 from utils import parse_llm_json
 from state import save_state
 
-client = OpenAI(
+client = AsyncOpenAI(
     api_key=Config.DEEPSEEK_API_KEY,
     base_url=Config.BASE_URL
 )
@@ -18,7 +18,7 @@ client = OpenAI(
 # SCENE TRACKER
 # ================================
 
-def detect_scene(state, narration, lore):
+async def detect_scene(state, narration, lore):
     npc_ids = list(lore.get("npc_profiles", {}).keys())
     absent_npcs = state["world_state"].get("absent_npcs", [])
     active_npcs = state["world_state"].get("active_npcs", [])
@@ -53,7 +53,7 @@ Rules:
 - If an NPC is established as absent or unavailable, include them in absent_npcs
 - Only use IDs from the provided lists
 """
-    response = client.chat.completions.create(
+    response = await client.chat.completions.create(
         model=Config.MODEL_NAME,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.0,

@@ -3,10 +3,12 @@
     "satoru_gojo": {
         "display_name": "Satoru Gojo",
         "aliases": ["Satoru", "Gojo", "satoru", "gojo", "the strongest", "the Strongest"],
+        "pronouns": "he/him",
         "age": 28,
         "role": ["instructor", "special_grade_sorcerer"],
         "grade": "special_grade",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "tokyo_jujutsu_high",
             "jujutsu_high_staff",
@@ -43,7 +45,19 @@
             ],
             "conflict_style": "smiling domination",
             "humor_style": "absurdist",
-            "aura_impression": "effortless superiority masked by playful charm"
+            "aura_impression": "effortless superiority masked by playful charm",
+            "philosophy": {
+                "beliefs": [
+                    "teenagers must be put through field tests to grow, but they should sometimes be allowed to be kids",
+                    "being the strongest without strong allies is meaningless",
+                    "being a sorcerer means dying alone"
+                ],
+                "goals": [
+                    "to raise up the next generation of sorcerers to be powerful allies",
+                    "to overthrow the existing system ruling jujutsu society"
+                ],
+                "red_line": "directly killing non-sorcerers"
+            }
         },
         "appearance": {
             "traits": [
@@ -91,15 +105,21 @@
             "pushes_boundaries",
             "values_novelty"
         ],
-        "notes": ""
+        "notes": [
+            "the strongest sorcerer of modern times",
+            "the first person born with both the Six Eyes and Limitless technique in 400 years",
+            "awakened full powers at age 17 after a near death experience fighting Toji Fushiguro"
+        ]
     },
     "yuji_itadori": {
         "display_name": "Yuji Itadori",
         "aliases": ["Yuji", "Itadori", "Itadori Yuji", "yuji", "itadori"],
+        "pronouns": "he/him",
         "age": 16,
         "role": ["student", "sukunas_vessel"],
         "grade": "grade_2",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "tokyo_jujutsu_high",
             "first_year_student",
@@ -140,18 +160,29 @@
             ],
             "conflict_style": "direct confrontation",
             "humor_style": "self-deprecating",
-            "aura_impression": "friendly but not too intelligent; hidden reserves of determination"
+            "aura_impression": "friendly but not too intelligent; hidden reserves of determination",
+            "philosophy": {
+                "beliefs": [
+                    "there are 'right' deaths and 'wrong' deaths",
+                    "as a jujutsu sorcerer, it's his purpose to exorcise curses and prevent improper deaths"
+                ],
+                "goals": [
+                    "to prevent others from suffering 'wrong' or 'improper' deaths",
+                    "to consume all 20 of Sukuna's fingers"
+                ],
+                "red_line": "killing humans"
+            }
         },
         "appearance": {
             "traits": [
                 "undercut with spiky pink dyed hair",
                 "athletic build",
                 "tan skin",
-                "slits under eyes from sukuna's presence",
+                "slits under eyes from Sukuna's presence",
                 "expressive brown eyes"
             ],
             "outfit": [
-                "custom jujutsu high uniform with red hood",
+                "custom jujutsu high uniform with red hoodie",
                 "red boots",
                 "casual and comfortable street clothes"
             ]
@@ -178,21 +209,22 @@
             "protects_civilians",
             "unconcerned_with_politics"
         ],
-        "notes": ""
+        "notes": ["sukuna's vessel", "raised by grandfather"]
     },
     "megumi_fushiguro": {
         "display_name": "Megumi Fushiguro",
         "aliases": ["Megumi", "Fushiguro", "megumi", "fushiguro"],
+        "pronouns": "he/him",
         "age": 16,
         "role": "student",
         "grade": "grade_2",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "tokyo_jujutsu_high",
             "first_year_student",
             "zenin_clan",
             "jujutsu_sorcerer",
-            "reformists",
             "field_sorcerer"
         ],
         "personality": {
@@ -223,7 +255,19 @@
             ],
             "conflict_style": "measured decisiveness",
             "humor_style": "dry",
-            "aura_impression": "calm and collected with a hint of underlying intensity"
+            "aura_impression": "calm and collected with a hint of underlying intensity",
+            "philosophy": {
+                "beliefs": [
+                    "most people are not worth dying for",
+                    "when someone worthwhile enters his life, he must protect them",
+                    "the world is fundamentally unjust, but his job as a sorcerer is to balance things as much as he can"
+                ],
+                "goals": [
+                    "to keep the people he cares about safe",
+                    "to be strong enough to take care of himself without help from others"
+                ],
+                "red_line": "allowing those he cares about to be harmed"
+            }
         },
         "appearance": {
             "traits": [
@@ -255,20 +299,21 @@
             "emotionally_closed_off",
             "sensitive_to_moral_failures"
         ],
-        "notes": ""
+        "notes": ["has an older step-sister named Tsumiki", "abandoned by father at a young age"]
     },
     "nobara_kugisaki": {
         "display_name": "Nobara Kugisaki",
         "aliases": ["Nobara", "Kugisaki", "nobara", "kugisaki"],
+        "pronouns": "she/her",
         "age": 16,
         "role": "student",
         "grade": "grade_2",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "tokyo_jujutsu_high",
             "jujutsu_sorcerer",
             "first_year_student",
-            "reformists",
             "field_sorcerer"
         ],
         "personality": {
@@ -279,18 +324,31 @@
             ],
             "behavioral_tells": {
                 "default": [
-                    ""
+                    "haughty posture",
+                    "chin held high"
                 ],
-                "when_serious": [
-                    ""
+                "when_in_crisis": [
+                    "gaze sharpens",
+                    "reaches for hammer and nails",
+                    "ready for action"
                 ]
             },
             "archetypes": [
-                ""
+                "girl-boss"
             ],
             "conflict_style": "assertive domination",
             "humor_style": "cutting",
-            "aura_impression": "sharp-edged confidence with underlying ferocity"
+            "aura_impression": "sharp-edged confidence with underlying ferocity",
+            "philosophy": {
+                "beliefs": [
+                    "being beautiful and being strong are not mutually exclusive",
+                    "she only has enough room in her heart to care for some people"
+                ],
+                "goals": [
+                    "to live her best life in the city"
+                ],
+                "red_line": "failure to be true to herself"
+            }
         },
         "appearance": {
             "traits": [
@@ -318,17 +376,20 @@
             ]
         },
         "relationship_bias": [
-            "respects_honesty"
+            "respects_honesty",
+            "loathes_hypocrisy"
         ],
-        "notes": ""
+        "notes": ["from the countryside", "raised by her grandmother"]
     },
     "kento_nanami": {
         "display_name": "Kento Nanami",
-        "aliases": ["Kento", "Nanami", "Nanami Kento"],
+        "aliases": ["Kento", "Nanami", "Nanami Kento", "nanami", "kento"],
+        "pronouns": "he/him",
         "age": 27,
         "role": "field_sorcerer",
         "grade": "grade_1",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "tokyo_jujutsu_high",
             "reformists",
@@ -361,7 +422,20 @@
             ],
             "conflict_style": "",
             "humor_style": "dry",
-            "aura_impression": "unsentimental professional with a hidden streak of care and protectiveness"
+            "aura_impression": "unsentimental professional with a hidden streak of care and protectiveness",
+            "philosophy": {
+                "beliefs": [
+                    "the daily grind can feel unbearable, but learning to suffer through it is part of growing up",
+                    "it's the responsibility of adults to protect youth",
+                    "jujutsu society is fundamentally corrupt, but exorcising curses is a worthwhile task",
+                    "the pursuit of money is a draining and futile activity"
+                ],
+                "goals": [
+                    "to honor the memory of his deceased friend, Yu Haibara",
+                    "to someday move away and live a peaceful, relaxing life"
+                ],
+                "red_line": "standing by while children and teenagers are harmed"
+            }
         },
         "appearance": {
             "traits": [
@@ -392,15 +466,18 @@
         },
         "relationship_bias": [
             "values_hard_work"
-        ]
+        ],
+        "notes": ["after graduating high school, he became a salaryman and left jujutsu behind", "found life as an office worker just as miserable as life as a sorcerer but without anything fulfilling or useful to compensate", "deeply scarred by Yu Haibara's death and the failure of the system to protect young people"]
     },
     "yuta_okkotsu": {
         "display_name": "Yuta Okkotsu",
         "aliases": ["Yuta", "Okkotsu", "Okkotsu Yuta"],
+        "pronouns": "he/him",
         "age": 17,
         "role": "student",
         "grade": "special_grade",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "tokyo_jujutsu_high",
             "second_year_student",
@@ -436,11 +513,22 @@
             },
             "archetypes": [
                 "reluctant hero",
-                "supportive friend"
+                "supportive friend",
+                "speak softly and carry a big stick"
             ],
             "conflict_style": "reluctant but determined",
             "humor_style": "soft",
-            "aura_impression": "overwhelming cursed energy that contrasts with his gentle demeanor"
+            "aura_impression": "overwhelming cursed energy that contrasts with his gentle demeanor",
+            "philosophy": {
+                "beliefs": [
+                    "love can be powerful, literally"
+                ],
+                "goals": [
+                    "to live in a way that honors himself and his friends",
+                    "to protect and care for those who protected and cared for him"
+                ],
+                "red_line": "allowing personal weakness to endanger others"
+            }
         },
         "appearance": {
             "traits": [
@@ -473,15 +561,17 @@
             "values_friends",
             "values_love"
         ],
-        "notes": ""
+        "notes": ["possesses insane levels of cursed energy"]
     },
     "sukuna": {
         "display_name": "Ryomen Sukuna",
         "aliases": ["Sukuna", "Ryomen"],
+        "pronouns": "he/him",
         "age": "over a thousand years",
         "role": ["incarnated_sorcerer", "curse_user"],
         "grade": "special_grade",
         "affiliation": "sukuna's group",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "sukuna's group",
             "incarnated sorcerer"
@@ -511,7 +601,19 @@
             ],
             "conflict_style": "acerbic wit, unconcerned with lower beings",
             "humor_style": "cruel and sadistic",
-            "aura_impression": "infinitely powerful, old, and cruel"
+            "aura_impression": "infinitely powerful, old, and cruel",
+            "philosophy": {
+                "beliefs": [
+                    "strength is the only reasonable basis of power",
+                    "humans are fundamentally weak and cowardly"
+                ],
+                "goals": [
+                    "to overower Yuji emotionally and cause him to fall into despair",
+                    "to obtain control over Megumi Fushiguro's body",
+                    "to rule over the jujutsu world"
+                ],
+                "red_line": "allowing his personal honor to come into question"
+            }
         },
         "appearance": {
             "natural_body": {
@@ -556,15 +658,17 @@
             "values_strength",
             "demands_submission"
         ],
-        "notes": ""
+        "notes": []
     },
     "maki_zenin": {
         "display_name": "Maki Zen'in",
         "aliases": ["Maki", "maki"],
+        "pronouns": "she/her",
         "age": 17,
         "role": "student",
         "grade": "grade_4",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "field_sorcerer",
             "tokyo_jujutsu_high",
@@ -607,7 +711,18 @@
             ],
             "conflict_style": "belligerent and unapologetic",
             "humor_style": "dry and blunt",
-            "aura_impression": "intense physical presence with simmering resolve"
+            "aura_impression": "intense physical presence with simmering resolve",
+            "philosophy": {
+                "beliefs": [
+                    "nepotism and inherited strength are pathetic and corrupt concepts",
+                    "she needs to prove her worth through demonstrations of raw strength"
+                ],
+                "goals": [
+                    "to become the head of the Zen'in family despite being a non-sorcerer",
+                    "to prove to herself and others that she is as powerful as any sorcerer"
+                ],
+                "red_line": "admissions of weakness"
+            }
         },
         "appearance": {
             "traits": [
@@ -625,7 +740,7 @@
         },
         "technique": null,
         "combat": {
-            "combat_style": "melee weapons specialist",
+            "combat_style": "cursed weapons specialist",
             "lethality": 5,
             "restraint": 2,
             "strengths": [
@@ -645,15 +760,17 @@
             "punishes_complacency",
             "respects_discipline"
         ],
-        "notes": ""
+        "notes": []
     },
     "toge_inumaki": {
         "display_name": "Toge Inumaki",
         "aliases": ["Toge", "Inumaki"],
+        "pronouns": "he/him",
         "age": 17,
         "role": "student",
         "grade": "grade_2",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "field_sorcerer",
             "jujutsu_sorcerer",
@@ -670,20 +787,38 @@
                 "default": [
                     "speaks in rice ball ingredients"
                 ],
-                "when_serious": []
+                "when_in_crisis": [
+                    "commands spoken in Japanese"
+                ]
             },
-            "archetypes": [],
-            "conflict_style": "",
-            "humor_style": "",
-            "aura_impression": ""
+            "archetypes": [
+                "the mute"
+            ],
+            "conflict_style": "dismissive",
+            "humor_style": "incidental",
+            "aura_impression": "",
+            "philosophy": {
+                "beliefs": [
+                ],
+                "goals": [
+                ],
+                "red_line": "thoughtlessly harming others with his cursed speech"
+            }
         },
         "appearance": {
-            "traits": [],
-            "outfit": []
+            "traits": [
+                "light blonde hair in bowl cut",
+                "purple, half-moon eyes",
+                "short and slender but physically fit",
+                "family cursed speech symbols printed on mouth and tongue"
+            ],
+            "outfit": [
+                "short-sleeved zip-up uniform with a high collar that covers his mouth"
+            ]
         },
         "technique": "cursed_speech",
         "combat": {
-            "combat_style": "stategic",
+            "combat_style": "stategically applied area of effect",
             "lethality": 2,
             "restraint": 5,
             "strengths": [
@@ -693,16 +828,20 @@
                 "technique damages throat"
             ]
         },
-        "relationship_bias": [],
+        "relationship_bias": [
+
+        ],
         "notes": ""
     },
     "panda": {
         "display_name": "Panda",
         "aliases": ["panda"],
+        "pronouns": "he/him",
         "age": null,
         "role": "student",
         "grade": "grade_2",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "field_sorcerer",
             "jujutsu_sorcerer",
@@ -765,11 +904,13 @@
     },
     "masamichi_yaga": {
         "display_name": "Masamichi Yaga",
-        "aliases": ["Yaga", "Masamichi", "Taichou", "Yaga-sensei"],
+        "aliases": ["Yaga", "Masamichi", "Taichou", "Yaga-sensei", "Gakucho", "Principal", "yaga", "masamichi"],
+        "pronouns": "he/him",
         "age": 50,
         "role": "principal",
         "grade": "grade_1",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "reformists",
         "groups": [
             "jujutsu_high_staff",
             "jujutsu_sorcerer",
@@ -846,11 +987,13 @@
     },
     "shoko_ieiri": {
         "display_name": "Shoko Ieiri",
-        "aliases": ["Shoko", "Ieiri", "Ieiri-sensei"],
+        "aliases": ["Shoko", "Ieiri", "Ieiri-sensei", "shoko", "ieiri"],
+        "pronouns": "she/her",
         "age": 28,
         "role": "medic",
         "grade": null,
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "jujutsu_high_staff",
             "tokyo_jujutsu_high",
@@ -871,7 +1014,7 @@
                 ]
             },
             "archetypes": [
-                "beauty_and_brains"
+                "beauty and brains"
             ],
             "conflict_style": "avoidant",
             "humor_style": "bone dry",
@@ -904,10 +1047,12 @@
     "kiyotaka_ijichi": {
         "display_name": "Kiyotaka Ijichi",
         "aliases": ["Kiyotaka", "Ijichi"],
+        "pronouns": "he/him",
         "age": 27,
         "role": "assistant_manager",
         "grade": null,
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "tokyo_jujutsu_high",
             "jujutsu_high_staff"
@@ -950,10 +1095,12 @@
     "atsuya_kusakabe": {
         "display_name": "Atsuya Kusakabe",
         "aliases": ["Atsuya", "Kusakabe"],
+        "pronouns": "he/him",
         "age": 45,
         "role": "instructor",
         "grade": "grade_1",
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "conservatives",
         "groups": [
             "conservatives",
             "tokyo_jujutsu_high",
@@ -1004,11 +1151,13 @@
     },
     "mei_mei": {
         "display_name": "Mei Mei",
-        "aliases": ["Mei", "Meimei", "Mei-Mei"],
+        "aliases": ["Mei", "Meimei", "Mei-Mei", "mei mei", "mei"],
+        "pronouns": "she/her",
         "age": 30,
         "role": "field_sorcerer",
         "grade": "grade_1",
         "affiliation": null,
+        "political_alignment": "neutral",
         "groups": [
             "field_sorcerer",
             "jujutsu_sorcerer"
@@ -1057,10 +1206,12 @@
     "aoi_todo": {
         "display_name": "Aoi Todo",
         "aliases": ["Aoi", "Todo"],
+        "pronouns": "he/him",
         "age": 18,
         "role": "student",
         "grade": "grade_1",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "kyoto_jujutsu_high",
             "jujutsu_sorcerer",
@@ -1122,10 +1273,12 @@
     "takuma_ino": {
         "display_name": "Takuma Ino",
         "aliases": ["Takuma", "Ino"],
+        "pronouns": "he/him",
         "age": 21,
         "role": "field_sorcerer",
         "grade": null,
         "affiliation": "tokyo_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "tokyo_jujutsu_high",
             "jujutsu_sorcerer",
@@ -1176,10 +1329,12 @@
     "utahime_iori": {
         "display_name": "Utahime Iori",
         "aliases": ["Utahime", "Iori"],
+        "pronouns": "she/her",
         "age": 29,
         "role": "instructor",
         "grade": "grade_1",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "conservatives",
         "groups": [
             "kyoto_jujutsu_high",
             "jujutsu_high_staff",
@@ -1216,10 +1371,12 @@
     "yoshinobu_gakuganji": {
         "display_name": "Yoshinobu Gakuganji",
         "aliases": ["Yoshinobu", "Gakuganji"],
+        "pronouns": "he/him",
         "age": 84,
         "role": "principal",
         "grade": null,
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "conservatives",
         "groups": [
             "kyoto_jujutsu_high",
             "conservatives",
@@ -1261,10 +1418,12 @@
     "mahito": {
         "display_name": "Mahito",
         "aliases": ["mahito"],
+        "pronouns": "he/him",
         "age": null,
         "role": "special_grade_cursed_spirit",
         "grade": null,
         "affiliation": "disaster_curses",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "cursed_spirit",
             "disaster_curses",
@@ -1306,10 +1465,12 @@
     "jogo": {
         "display_name": "Jogo",
         "aliases": ["jogo"],
+        "pronouns": "he/him",
         "age": null,
         "role": "special_grade_cursed_spirit",
         "grade": null,
         "affiliation": "disaster_curses",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "cursed_spirit",
             "disaster_curses",
@@ -1361,10 +1522,12 @@
     "hanami": {
         "display_name": "Hanami",
         "aliases": ["hanami"],
+        "pronouns": "they/them",
         "age": null,
         "role": "special_grade_cursed_spirit",
         "grade": null,
         "affiliation": "disaster_curses",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "cursed_spirit",
             "disaster_curses",
@@ -1404,10 +1567,12 @@
     "dagon": {
         "display_name": "Dagon",
         "aliases": ["dagon"],
+        "pronouns": "he/him",
         "age": null,
         "role": "special_grade_cursed_spirit",
         "grade": null,
         "affiliation": "disaster_curses",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "disaster_curses",
             "kenjakus_group",
@@ -1447,10 +1612,12 @@
     "kenjaku": {
         "display_name": "Kenjaku",
         "aliases": ["Pseudo-Geto", "Geto", "Noritoshi Kamo"],
+        "pronouns": "he/him",
         "age": null,
         "role": ["incarnated_sorcerer", "curse_user"],
         "grade": null,
         "affiliation": "disaster_curses",
+        "political_alignment": "chaos_and_strength",
         "groups": [
             "kenjakus_group",
             "cursed_spirit"
@@ -1505,10 +1672,12 @@
     "choso": {
         "display_name": "Choso",
         "aliases": ["Choso", "Death Painting"],
+        "pronouns": "he/him",
         "age": "over 150",
         "role": "death_painting_womb",
         "grade": null,
         "affiliation": "outsider",
+        "political_alignment": "neutral",
         "groups": [
             "disaster_curses"
         ],
@@ -1571,11 +1740,13 @@
     },
     "naobito_zenin": {
         "display_name": "Naobito Zen'in",
-        "aliases": ["Naobito"],
+        "aliases": ["Naobito", "naobito"],
+        "pronouns": "he/him",
         "age": 74,
         "role": "clan_head",
         "grade": "grade_1",
         "affiliation": "zenin_clan",
+        "political_alignment": "conservatives",
         "groups": [
             "zenin_clan",
             "conservatives",
@@ -1613,7 +1784,8 @@
     },
     "naoya_zenin": {
         "display_name": "Naoya Zen'in",
-        "aliases": ["Naoya"],
+        "aliases": ["Naoya", "naoya"],
+        "pronouns": "he/him",
         "age": 25,
         "role": "clan_heir",
         "grade": "grade_1",
@@ -1636,50 +1808,75 @@
                 ]
             },
             "archetypes": [],
-            "conflict_style": "",
-            "humor_style": "",
+            "conflict_style": "condescending",
+            "humor_style": "cynical and rude",
             "aura_impression": ""
         },
         "appearance": {
-            "traits": [],
-            "outfit": []
+            "traits": [
+                "grey hair and mustache",
+                "elderly and wrinkled",
+                "still in surprisingly good shape",
+                "tall and thin"
+            ],
+            "outfit": [
+                "traditional haori",
+                "hakama",
+                "tobi socks and zori sandals",
+                "often carries a wineskin"
+            ]
         },
         "technique": "projection_sorcery",
         "combat": {
-            "combat_style": null,
+            "combat_style": "rapid and aggressive",
             "lethality": 5,
             "restraint": 2,
-            "strengths": null,
-            "limitations": null
+            "strengths": ["intense speed"],
+            "limitations": ["aging body", "alcoholism"]
         },
         "relationship_bias": [],
-        "notes": ""
+        "notes": ["head of the Zen'in clan"]
     },
     "mai_zenin": {
         "display_name": "Mai Zen'in",
-        "aliases": ["Mai"],
+        "aliases": ["Mai", "mai"],
+        "pronouns": "she/her",
         "age": 17,
         "role": "student",
         "grade": "grade_3",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
-            ""
         ],
         "personality": {
             "core_traits": [
-                ""
+                "bitter and resentful",
+                "would rather exist peacefully at the bottom than fight her way to the top",
+                "resents Maki for her treatment at the hands of their family"
             ],
             "behavioral_tells": {
                 "default": []
             },
-            "archetypes": [],
+            "archetypes": [
+                "dark reflection",
+                "resentful twin"
+            ],
             "conflict_style": "",
-            "humor_style": "",
+            "humor_style": "cutting",
             "aura_impression": ""
         },
         "appearance": {
-            "traits": [],
-            "outfit": []
+            "traits": [
+                "short green hair",
+                "golden eyes",
+                "curvy figure",
+                "somewhat tall"
+            ],
+            "outfit": [
+                "sleeveless jujutsu uniform",
+                "long black skirt",
+                "black boots"
+            ]
         },
         "technique": "construction",
         "combat": {
@@ -1695,15 +1892,17 @@
             ]
         },
         "relationship_bias": [],
-        "notes": ""
+        "notes": ["younger twin sister of Maki"]
     },
     "kasumi_miwa": {
         "display_name": "Kasumi Miwa",
-        "aliases": ["Kasumi", "Miwa"],
+        "aliases": ["Kasumi", "Miwa", "kasumi", "miwa"],
+        "pronouns": "she/her",
         "age": 17,
         "role": "student",
         "grade": "grade_3",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "conservatives",
         "groups": [
             "kyoto_jujutsu_high",
             "second_year_student",
@@ -1712,24 +1911,26 @@
         ],
         "personality": {
             "core_traits": [
-                ""
+                "caring and sensible"
             ],
             "behavioral_tells": {
-                "default": []
+                "default": [
+                    "nervous laughter"
+                ]
             },
             "archetypes": [
                 "everyman"
             ],
-            "conflict_style": "",
-            "humor_style": "",
-            "aura_impression": ""
+            "conflict_style": "placater",
+            "humor_style": "self-deprecating",
+            "aura_impression": "someone who knows she's in over her head"
         },
         "appearance": {
             "traits": [
                 "light blue hair with crooked bangs"
             ],
             "outfit": [
-                "pantsuit"
+                "dark pantsuit"
             ]
         },
         "technique": "simple_domain",
@@ -1746,10 +1947,12 @@
     "kokichi_muta": {
         "display_name": "Kokichi Muta",
         "aliases": ["Kokichi", "Muta", "Mechamaru"],
+        "pronouns": "he/him",
         "age": 17,
         "role": "student",
         "grade": "semi_grade_1",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "opportunists",
         "groups": [
             "kyoto_jujutsu_high",
             "second_year_student",
@@ -1799,21 +2002,31 @@
         "technique": "puppet_manipulation",
         "combat": {
             "combat_style": "intense firepower",
-            "lethality": 3,
+            "lethality": 4,
             "restraint": 3,
-            "strengths": null,
-            "limitations": null
+            "strengths": [
+                "heavenly restriction grants power over puppets in a large range",
+                "puppets he controls vary greatly in size and type",
+                "puppet being damaged does not impact his physical body"
+            ],
+            "limitations": [
+                "physical body is weak and in pain",
+                "overly emotional in fights",
+                "wants to trade abilities for a normal life with a normal body"
+            ]
         },
         "relationship_bias": [],
-        "notes": ""
+        "notes": ["deeply resentful of his body and lot in life", "cares for his fellow students at Kyoto Jujutsu High"]
     },
     "momo_nishimiya": {
         "display_name": "Momo Nishimiya",
         "aliases": ["Momo", "Nishimiya"],
+        "pronouns": "she/her",
         "age": 18,
         "role": "student",
         "grade": "grade_2",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "neutral",
         "groups": [
             "kyoto_jujutsu_high",
             "jujutsu_sorcerer",
@@ -1862,15 +2075,17 @@
             "values_cuteness",
             "values_loyalty"
         ],
-        "notes": ""
+        "notes": []
     },
     "noritoshi_kamo": {
         "display_name": "Noritoshi Kamo",
-        "aliases": ["Noritoshi", "Kamo"],
+        "aliases": ["Noritoshi", "Kamo", "noritoshi", "kamo"],
+        "pronouns": "he/him",
         "age": 18,
         "role": ["student", "clan_heir"],
         "grade": "semi_grade_1",
         "affiliation": "kyoto_jujutsu_high",
+        "political_alignment": "conservatives",
         "groups": [
             "kamo_clan",
             "kyoto_jujutsu_high",
@@ -1882,7 +2097,8 @@
             "core_traits": [
                 "serious",
                 "conservative",
-                "conflicted between family's values and friends"
+                "conflicted between family's values and friends",
+                "pragmatic"
             ],
             "behavioral_tells": {
                 "default": []
@@ -1916,6 +2132,7 @@
     "yuki_tsukumo": {
         "display_name": "Yuki Tsukumo",
         "aliases": ["Yuki", "Tsukumo"],
+        "pronouns": "she/her",
         "age": 32,
         "role": ["researcher", "special_grade_sorcerer"],
         "grade": "special_grade",
@@ -1973,6 +2190,7 @@
     "kirara_hoshi": {
         "display_name": "Kirara Hoshi",
         "aliases": ["Kirara", "Hoshi"],
+        "pronouns": "they/them",
         "age": 18,
         "role": "former_student",
         "grade": "grade_2",
@@ -2042,7 +2260,8 @@
     },
     "kinji_hakari": {
         "display_name": "Kinji Hakari",
-        "aliases": ["Kinji", "Hakari", "Kin-chan"],
+        "aliases": ["Kinji", "Hakari", "Kin-chan", "kinji", "hakari"],
+        "pronouns": "he/him",
         "age": 19,
         "role": "former_student",
         "grade": "grade_1",
@@ -2112,6 +2331,7 @@
     "akari_nitta": {
         "display_name": "Akari Nitta",
         "aliases": ["Nitta", "Akari"],
+        "pronouns": "she/her",
         "age": 21,
         "role": "assistant_manager",
         "grade": null,
@@ -2160,6 +2380,7 @@
     "arata_nitta": {
         "display_name": "Arata Nitta",
         "aliases": ["Arata", "Nitta"],
+        "pronouns": "he/him",
         "age": 16,
         "role": "student",
         "grade": null,
@@ -2200,6 +2421,7 @@
     "haruta_shigemo": {
         "display_name": "Haruta Shigemo",
         "aliases": ["Haruta", "Shigemo"],
+        "pronouns": "he/him",
         "age": 23,
         "role": "curse_user",
         "grade": null,
@@ -2236,6 +2458,7 @@
     "uraume": {
         "display_name": "Uraume",
         "aliases": [],
+        "pronouns": "they/them",
         "age": null,
         "role": ["incarnated_sorcerer", "curse_user"],
         "grade": null,
@@ -2288,11 +2511,13 @@
     },
     "hiromi_higuruma": {
         "display_name": "Hiromi Higuruma",
-        "aliases": ["Higuruma", "Hiromi"],
+        "aliases": ["Higuruma", "Hiromi", "higuruma", "hiromi"],
+        "pronouns": "he/him",
         "age": 36,
         "role": "lawyer",
         "grade": null,
         "affiliation": "",
+        "political_alignment": "",
         "groups": [
             "jujutsu_sorcerer",
             "awakened_sorcerer",
@@ -2335,7 +2560,7 @@
         "technique": "judgeman",
         "combat": {
             "combat_style": "",
-            "lethality": 4,
+            "lethality": 5,
             "restraint": 5,
             "strengths": [],
             "limitations": []
@@ -2345,7 +2570,8 @@
     },
     "fumihiko_takaba": {
         "display_name": "Fumihiko Takaba",
-        "aliases": [],
+        "aliases": ["Fumihiko", "Takaba", "fumihiko", "takaba"],
+        "pronouns": "he/him",
         "age": 35,
         "role": "lawyer",
         "grade": null,
@@ -2379,6 +2605,7 @@
     "tengen": {
         "display_name": "Tengen",
         "aliases": [],
+        "pronouns": "they/them",
         "age": null,
         "role": "barrier_maintainer",
         "grade": null,
@@ -2422,6 +2649,7 @@
     "miguel": {
         "display_name": "Miguel",
         "aliases": [],
+        "pronouns": "he/him",
         "age": null,
         "role": "independent_sorcerer",
         "grade": null,
@@ -2455,6 +2683,7 @@
     "ui_ui": {
         "display_name": "Ui Ui",
         "aliases": ["Uiui", "UiUi", "Ui", "ui ui"],
+        "pronouns":"he/him",
         "age": 14,
         "role": "little_brother",
         "grade": null,
@@ -2514,9 +2743,51 @@
         "relationship_bias": [],
         "notes": ""
     },
+
+    "aiko_hoshi": {
+        "display_name": "Aiko Hoshi",
+        "aliases": ["Aiko", "Hoshi", "the founder", "aiko", "hoshi"],
+        "pronouns": "she/her",
+        "age": 52,
+        "role": "political prisoner",
+        "grade": "grade_1",
+        "affiliation": "garden",
+        "groups": [
+            "garden"
+        ],
+        "personality": {
+            "core_traits": [
+            ],
+            "behavioral_tells": {
+                "default": []
+            },
+            "archetypes": [
+                "martyred idealist"
+            ],
+            "conflict_style": "open and honest",
+            "humor_style": "smirking",
+            "aura_impression": "dimming passion after ten years of life as a political prisoner"
+        },
+        "appearance": {
+            "traits": [],
+            "outfit": []
+        },
+        "technique": "solar_flare",
+        "combat": {
+            "combat_style": "",
+            "lethality": 0,
+            "restraint": 0,
+            "strengths": [],
+            "limitations": []
+        },
+        "relationship_bias": [],
+        "notes": []
+    },
+
     "katsumi_ujihara": {
         "display_name": "Katsumi Ujihara",
         "aliases": ["Ujihara", "Katsumi", "the disciple", "ujihara", "katsumi"],
+        "pronouns": "he/him",
         "age": 41,
         "role": "antagonist",
         "grade": null,
@@ -2558,6 +2829,7 @@
     "naomi_smirnov": {
         "display_name": "Naomi Smirnov",
         "aliases": ["Naomi", "Smirnov"],
+        "pronouns": "she/her",
         "age": 48,
         "role": "curse_user",
         "grade": null,
@@ -2593,6 +2865,7 @@
     "teddy_smirnov": {
         "display_name": "Teddy Smirnov",
         "aliases": ["Teddy", "Smirnov"],
+        "pronouns": "he/him",
         "age": 52,
         "role": "non_sorcerer",
         "grade": null,
@@ -2628,6 +2901,7 @@
     "yosuke_kanda": {
         "display_name": "Yosuke Kanda",
         "aliases": ["Yosuke", "Kanda"],
+        "pronouns": "he/him",
         "age": 25,
         "role": "curse_user",
         "grade": null,
@@ -2663,6 +2937,7 @@
     "jericho_hajimoto": {
         "display_name": "Jericho Hajimoto",
         "aliases": ["Jericho", "Hajimoto"],
+        "pronouns": "they/them",
         "age": 19,
         "role": "curse_user",
         "grade": null,
@@ -2671,33 +2946,54 @@
             "garden"
         ],
         "personality": {
-            "core_traits": [],
+            "core_traits": [
+                "confident and loud",
+                "ideologically driven"
+            ],
             "behavioral_tells": {
                 "default": []
             },
-            "archetypes": [],
-            "conflict_style": "",
+            "archetypes": [
+                "young extremist"
+            ],
+            "conflict_style": "brash and unapologetic",
             "humor_style": "",
-            "aura_impression": ""
+            "aura_impression": "radical believer who wants converts",
+            "philosophy": {
+                "beliefs": [
+                    "systemic overhaul is not just possible but inevitable",
+                    "humanity's war on cursed spirits is as doomed and self-defeating as its war on nature",
+                    "others will agree if they can just be made to see reality",
+                    "violence may be necessary for the greater good"
+                ],
+                "goals": [
+                    "the destruction of jujutsu society as it currently exists",
+                    "the dawning of a new era where non-sorcerers, sorcerers, and curses coexist in peace"
+                ],
+                "red_line": "submitting to unjust power"
+            }
         },
         "appearance": {
             "traits": [],
             "outfit": []
         },
-        "technique": "None",
+        "technique": "telekinesis",
         "combat": {
-            "combat_style": null,
-            "lethality": 0,
-            "restraint": 0,
-            "strengths": [],
+            "combat_style": "unrestrained and aggressive",
+            "lethality": 3,
+            "restraint": 1,
+            "strengths": [
+                "raw determination and a willingness to push themself to the very edge"
+            ],
             "limitations": []
         },
         "relationship_bias": [],
-        "notes": ""
+        "notes": ["enthusiastic and aggressive believer in the Garden", "urgently attempts to convert young sorcerers to their point of view"]
     },
     "mizuki_kamakura": {
         "display_name": "Mizuki Kamakura",
         "aliases": ["Mizuki", "Kamakura", "mizuki", "kamakura"],
+        "pronouns": "he/him",
         "age": 38,
         "role": "curse_user",
         "grade": null,
@@ -2707,7 +3003,7 @@
         ],
         "personality": {
             "core_traits": [
-                "therapist"
+                "open-minded"
             ],
             "behavioral_tells": {
                 "default": []

@@ -66,6 +66,50 @@ These questions include:
 You can cancel the registration process at any time using the command `.cancel` in your DM conversation with the Narrator.
 """
 
+statser = """Send `.stats` in any server channel or in a DM with the Narrator for your character's stats.
+These include:
+`Grade`
+`Age`
+`Health`
+`Injuries`
+`Cursed Energy`
+`Control`
+`Stability`
+"""
+
+async def stat(state):
+    name = state["identity"]["name"]
+    grade = state["identity"]["grade"]
+    if not grade:
+        grade_display = "None"
+    else:
+        grade_display = grade.replace('_', ' ').title()
+    age = state["identity"]["age"]
+    health = state["stats"]["health"]
+    injuries = state["stats"]["injuries"]
+    if not injuries:
+        injuries_display = "None"
+    else:
+        injuries_display = ", ".join(injuries).replace('_', ' ').title()
+    ce = state["stats"]["cursed_energy"]
+    max_ce = state["stats"]["max_cursed_energy"]
+    control = state["stats"]["control"]
+    stability = state["stats"]["stability"]
+    try:
+        stats_message = f"""
+    **__{name}'s Stats Sheet__**
+    **Grade:** {grade_display}
+    **Age:** {age}
+    **Health:** {health}/100
+    **Injuries:** {injuries_display}
+    **Cursed Energy:** {ce}/{max_ce}
+    **Control:** {control}/100
+    **Stability:** {stability}/10
+    """
+    except Exception as e:
+        print(f"Exception: {e}")
+    return stats_message
+
 async def move_help(ctx):
     dm = await ctx.author.create_dm()
     await dm.send(mover)
@@ -77,3 +121,7 @@ async def play_help(ctx):
 async def register_help(ctx):
     dm = await ctx.author.create_dm()
     await dm.send(registerer)
+
+async def stats_help(ctx):
+    dm = await ctx.author.create_dm()
+    await dm.send(statser)
