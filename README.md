@@ -1,4 +1,5 @@
 <h2>Jujutsu Discord</h2>
+<p>Work in progress.</p>
 
 <h3>Purpose</h3>
 
