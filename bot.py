@@ -94,6 +94,23 @@ async def on_command_error(ctx, error):
 async def on_ready():
     print("Bot is now online.")
 
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.content.startswith('.'):
+        await bot.process_commands(message)
+        return
+    channel_id = message.channel.id
+    if channel_id not in active_sessions:
+        return
+    session = active_sessions[channel_id]
+    session["messages"].append({
+        "author": message.author.display_name,
+        "content": message.content
+    })
+    save_session(session, channel_id)
+
 # ====================================
 # COMMANDS
 # ====================================
@@ -167,7 +184,7 @@ async def move(ctx, *, player_input):
         state["world_state"]["current_location"] = location
         save_state(state)
 
-# ======== REGISTER =========
+# ======= REGISTER ========
 
 @bot.command()
 async def register(ctx, *, player_input=None):
@@ -256,7 +273,7 @@ async def stats(ctx, *, player_input=None):
         print(f"Message: {message}")
         await dm.send(message)
 
-# =========== HELP ==============
+# ========= HELP ==========
 
 @bot.command()
 async def help(ctx, *, player_input = None):
@@ -295,6 +312,9 @@ async def help(ctx, *, player_input = None):
             print(f"Error: {e}")
         await ctx.message.delete()
         return
+# ====================================
+# SESSION COMMANDS
+# ====================================    
 
 # ======== SESSION =========
 
@@ -334,6 +354,30 @@ async def session(ctx):
         await ctx.channel.send("Session started!")
         return
         
+# ============= GO ================
+
+@bot.command()
+async def go(session, ctx):
+    if isinstance(ctx.channel, discord.DMChannel):
+        await ctx.send("Please use this command in a session channel.")
+        return
+    if ctx.channel.id == Config.LOBBY_CHANNEL:
+        await ctx.channel.send("You can't send that here! Please go to the session channel and try again.")
+        return
+    messages = active_sessions["messages"]
+    channel_id = ctx.channel.id
+    session = load_session(channel_id)
+    waiting = await ctx.channel.send("Thinking...")
+    print("Processing turn...")
+    narration = await process_turn(session, messages)
+    split = split_message(narration, 2000)
+    await ctx.message.delete()
+    await waiting.edit(content=f"> {messages}")
+    for chunk in split:
+        await ctx.channel.send(chunk)
+    active_sessions["session_log"].append(narration)
+    save_session(session)
+
 # ====================================
 # DEBUG COMMANDS
 # ====================================    
