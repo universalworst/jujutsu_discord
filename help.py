@@ -77,6 +77,20 @@ These include:
 `Stability`
 """
 
+helper = """## List of commands
+* `play`: Used before each reply in solo roleplay sessions with the Narrator to ensure it reads your reply and gives a response.
+Proper use:
+> `.play Akira stares down at the curse as it hisses at him from its vulnerable position in the center of the factory floor.`
+
+* `move`: Used to move location channels. This command will shut off permissions to the channel you were in originally and grant permissions to the new channel. There is no need to worry about capitalization, dashes, or underscores.
+Proper use:
+> `.move shibuya` or `.move tokyo jujutsu tech`
+
+* `register`: Used to register a new character with the bot. For more detailed information on what you're asked by the bot, submit `.register help`. Otherwise, just send `.register` in a channel on the server or in a DM with the Narrator.
+
+* `stats`: Displays the player's stats for them to view. This feature is a work in progress.
+"""
+
 async def stat(state):
     name = state["identity"]["name"]
     grade = state["identity"]["grade"]
@@ -125,3 +139,13 @@ async def register_help(ctx):
 async def stats_help(ctx):
     dm = await ctx.author.create_dm()
     await dm.send(statser)
+
+async def help(ctx):
+    print("About to create DM")
+    dm = await ctx.author.create_dm()
+    print("About to send helper")
+    await dm.send(helper)
+
+async def help_default(ctx):
+    dm = await ctx.author.create_dm()
+    await dm.send(helper)

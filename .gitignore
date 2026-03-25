@@ -3,3 +3,4 @@ venv/
 saves/
 __pycache__
 save_archive/
+sessions/

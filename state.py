@@ -107,3 +107,43 @@ def calculate_base_stats(grade, personality_type, origin):
         "stability": stability,
         "max_stability": 10
     }
+
+# ===================================
+# SESSIONS
+# ===================================
+
+def default_session(channel_id):
+    return  {
+        channel_id: {
+            "messages": [],
+            "current_location": "",
+            "active_npcs": [],
+            "absent_npcs": [],
+            "session_log": [],
+            "players": {}  # discord_id: character info
+        }
+}
+
+def save_session(session, channel_id):
+    path = os.path.join(Config.SESSION_DIR, f"{channel_id}.json")
+    with open(path, "w") as f:
+        json.dump(session, f, indent=2)
+
+def load_session(channel_id):
+    path = os.path.join(Config.SESSION_DIR, f"{channel_id}.json")
+    if not os.path.exists(path):
+        return default_session(channel_id)
+    try:
+        with open(path) as f:
+            session = json.load(f)
+            return ensure_session_defaults(session)
+    except (json.JSONDecodeError, KeyError):
+        print(f"Warning: Save file for {channel_id} was corrupted. Starting fresh.")
+        return default_session(channel_id)
+    
+def ensure_session_defaults(session):
+    defaults = default_session(None)
+    for key, value in defaults.items():
+        if key not in session:
+            session[key] = value
+    return session

@@ -6,16 +6,22 @@ import os
 import discord
 from discord.ext import commands
 from config import Config
-from state import default_state, save_state, load_state, get_all_players, calculate_base_stats
+from state import default_state, save_state, load_state, get_all_players, calculate_base_stats, default_session, save_session, load_session
 from narration import process_turn
 from utils import split_message
 from relationships import seed_relationships
-from help import move_help, play_help, register_help, stats_help, stat
+from help import move_help, play_help, register_help, stats_help, stat, help, help_default
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix=".", intents=intents)
+bot = commands.Bot(command_prefix=".", intents=intents, help_command=None)
+
+# ====================================
+# ACTIVE SESSIONS
+# ====================================
+
+active_sessions = {}
 
 # ====================================
 # HELPER FUNCTIONS
@@ -250,6 +256,84 @@ async def stats(ctx, *, player_input=None):
         print(f"Message: {message}")
         await dm.send(message)
 
+# =========== HELP ==============
+
+@bot.command()
+async def help(ctx, *, player_input = None):
+    if player_input and player_input.lower() == "play":
+        try:
+            await play_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+    elif player_input and player_input.lower() == "move":
+        try:
+            await move_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+    elif player_input and player_input.lower() == "register":
+        try:
+            await register_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+    elif player_input and player_input.lower() == "stats":
+        try:
+            await stats_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+    else:
+        try:
+            await help_default(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+
+# ======== SESSION =========
+
+@bot.command()
+async def session(ctx):
+    channel_id = ctx.channel.id
+    message = ctx.message
+    if message.channel.category_id != Config.SESSION_CATEGORY:
+        await ctx.channel.send("You can't start a session here! Make sure your channel is in the correct category.")
+        return
+    else:
+        role = discord.utils.get(ctx.guild.roles, id=Config.PLAYER_ROLE_ID)
+        session = default_session(channel_id)
+        members_with_role = [m for m in ctx.channel.members if role in m.roles]
+        for member in members_with_role:
+            state = load_state(member.id)
+            if not state["identity"]["name"]:
+                continue
+            session["players"][member.id] = {
+                "name": state["identity"]["name"],
+                "grade": state["identity"]["grade"],
+                "backstory": state["identity"]["backstory"],
+                "technique": state["technique"]["technique_name"],
+                "core_effects": state["technique"]["core_effects"],
+                "power": state["technique"]["power"],
+                "max_cursed_energy": state["stats"]["max_cursed_energy"],
+                "cursed_energy": state["stats"]["cursed_energy"],
+                "health": state["stats"]["health"],
+                "injuries": [],
+                "control": state["stats"]["control"],
+                "stability": state["stats"]["stability"],
+                "known_npcs": state["world_state"]["known_npcs"],
+                "relationships": {}
+            }
+        active_sessions["channel_id"] = session
+        save_session(session, channel_id)
+        await ctx.channel.send("Session started!")
+        return
+        
 # ====================================
 # DEBUG COMMANDS
 # ====================================    

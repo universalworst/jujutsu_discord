@@ -28,6 +28,9 @@ class Config:
     SAVE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saves")
     os.makedirs(SAVE_DIR, exist_ok=True)
 
+    SESSION_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sessions")
+    os.makedirs(SESSION_DIR, exist_ok=True)
+
 
     ROLES = [
         "student",
@@ -192,8 +195,10 @@ class Config:
         "🟢 Jujutsu Society": 1483832496612442202,
         "🔵 Mission Sites": 1483837326319947839,
         "🟣 The Garden": 1483827015667945544,
+        "⚪ Session Channels": 1486056748216352960,
         "Logs": 1483841311864918121
     }
+    SESSION_CATEGORY = 1486056748216352960
 
     LOCATION_CHANNELS = {
         "shibuya": 1483680342140387349,
@@ -254,3 +259,9 @@ class Config:
         683029047672176711: "Xiomara",
         747569767325630506: "Day"
     }
+
+    SESSION_CHANNELS = {
+        "test_session": 1486169549538726009
+    }
+
+    PLAYER_ROLE_ID = 1484877207171108996

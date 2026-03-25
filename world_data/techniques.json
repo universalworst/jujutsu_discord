@@ -183,7 +183,7 @@
         "domain": "Unlimited Void",
         "users": "satoru_gojo"
     },
-    "little_miracles": {
+    "miracles": {
         "type": "innate",
         "core_effects": "for the price of forgetting small graces that happen to them each day, the user gains the opportunity to survive otherwise fatal blows",
         "limitations": ["limited miracles per day"],
