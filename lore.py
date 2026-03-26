@@ -65,3 +65,38 @@ Technique: {as_list(npc['technique'])}
     lore_block.append(location_block)
 
     return "\n".join(lore_block)
+
+def build_lore_block_session(session):
+    lore = load_all_lore()
+    lore_block = []
+
+    # ==============================
+    # NPC_BLOCK
+    # ==============================
+
+    npc_profiles = lore.get("npc_profiles")
+    locations = lore.get("locations")
+    active_npcs = session["active_npcs"]
+    current_location = session["current_location"]
+    active_npc_block = ""
+    if active_npcs:
+        profiles = ["== PRESENT NPCS =="]
+        for npc_id in active_npcs:
+            profile = npc_profiles.get(npc_id)
+            if profile:
+                profiles.append(json.dumps(profile, indent=2))
+        active_npc_block = "\n".join(profiles)
+    lore_block.append(active_npc_block)
+
+    # ==============================
+    # LOCATIONS_BLOCK
+    # ==============================
+    locs = []
+    loc = locations.get(current_location)
+    if loc:
+        locs.append("==CURRENT LOCATION==")
+        locs.append(json.dumps(loc, indent=2))
+    location_block = "\n".join(locs)
+    lore_block.append(location_block)
+
+    return "\n".join(lore_block)

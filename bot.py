@@ -7,12 +7,13 @@ import discord
 from discord.ext import commands
 from config import Config
 from state import default_state, save_state, load_state, get_all_players, calculate_base_stats, default_session, save_session, load_session
-from narration import process_turn
+from narration import process_turn, process_turn_session
 from utils import split_message
 from relationships import seed_relationships
 from help import move_help, play_help, register_help, stats_help, stat, help, help_default
 
 intents = discord.Intents.default()
+intents.members = True
 intents.message_content = True
 
 bot = commands.Bot(command_prefix=".", intents=intents, help_command=None)
@@ -102,14 +103,21 @@ async def on_message(message):
         await bot.process_commands(message)
         return
     channel_id = message.channel.id
-    if channel_id not in active_sessions:
-        return
-    session = active_sessions[channel_id]
-    session["messages"].append({
-        "author": message.author.display_name,
-        "content": message.content
-    })
-    save_session(session, channel_id)
+    path = os.path.join(Config.SESSION_DIR, f"{channel_id}.json")
+    if path:
+        session = load_session(channel_id)
+        is_active = session["is_active"]
+        if is_active:
+            session["messages"].append({
+            "author": message.author.display_name,
+            "content": message.content
+            })
+            print("Message recorded!")
+            save_session(session, channel_id)
+
+#    if channel_id not in active_sessions:
+#        return
+#    session = active_sessions[channel_id]
 
 # ====================================
 # COMMANDS
@@ -326,30 +334,36 @@ async def session(ctx):
         await ctx.channel.send("You can't start a session here! Make sure your channel is in the correct category.")
         return
     else:
-        role = discord.utils.get(ctx.guild.roles, id=Config.PLAYER_ROLE_ID)
         session = default_session(channel_id)
+        session["is_active"] = True
+        session["players"] = {}
+        role = discord.utils.get(ctx.guild.roles, id=Config.PLAYER_ROLE_ID)
         members_with_role = [m for m in ctx.channel.members if role in m.roles]
-        for member in members_with_role:
-            state = load_state(member.id)
-            if not state["identity"]["name"]:
-                continue
-            session["players"][member.id] = {
-                "name": state["identity"]["name"],
-                "grade": state["identity"]["grade"],
-                "backstory": state["identity"]["backstory"],
-                "technique": state["technique"]["technique_name"],
-                "core_effects": state["technique"]["core_effects"],
-                "power": state["technique"]["power"],
-                "max_cursed_energy": state["stats"]["max_cursed_energy"],
-                "cursed_energy": state["stats"]["cursed_energy"],
-                "health": state["stats"]["health"],
-                "injuries": [],
-                "control": state["stats"]["control"],
-                "stability": state["stats"]["stability"],
-                "known_npcs": state["world_state"]["known_npcs"],
-                "relationships": {}
-            }
-        active_sessions["channel_id"] = session
+        try:
+            for member in members_with_role:
+                state = load_state(member.id)
+                if not state["identity"]["name"]:
+                    continue
+                player_data = {
+                    "name": state["identity"]["name"],
+                    "grade": state["identity"]["grade"],
+                    "backstory": state["identity"]["backstory"],
+                    "technique": state["technique"]["technique_name"],
+                    "core_effects": state["technique"]["core_effects"],
+                    "power": state["technique"]["power"],
+                    "max_cursed_energy": state["stats"]["max_cursed_energy"],
+                    "cursed_energy": state["stats"]["cursed_energy"],
+                    "health": state["stats"]["health"],
+                    "injuries": [],
+                    "control": state["stats"]["control"],
+                    "stability": state["stats"]["stability"],
+                    "known_npcs": state["world_state"]["known_npcs"],
+                    "relationships": {}
+                }
+                session["players"][member.id] = player_data
+        except Exception as e:
+            print(f"Exception: {e}")
+        active_sessions[channel_id] = session
         save_session(session, channel_id)
         await ctx.channel.send("Session started!")
         return
@@ -357,26 +371,48 @@ async def session(ctx):
 # ============= GO ================
 
 @bot.command()
-async def go(session, ctx):
+async def go(ctx):
+    print("Command received.")
     if isinstance(ctx.channel, discord.DMChannel):
         await ctx.send("Please use this command in a session channel.")
         return
     if ctx.channel.id == Config.LOBBY_CHANNEL:
         await ctx.channel.send("You can't send that here! Please go to the session channel and try again.")
         return
-    messages = active_sessions["messages"]
     channel_id = ctx.channel.id
     session = load_session(channel_id)
+    print("Session loaded. (bot.py)")
+    messages = session["messages"]
     waiting = await ctx.channel.send("Thinking...")
     print("Processing turn...")
-    narration = await process_turn(session, messages)
+    narration = await process_turn_session(session, messages)
+    print("Turn processed. (bot.py)")
     split = split_message(narration, 2000)
+    print("Split complete. (bot.py)")
     await ctx.message.delete()
-    await waiting.edit(content=f"> {messages}")
-    for chunk in split:
-        await ctx.channel.send(chunk)
-    active_sessions["session_log"].append(narration)
+    print("Command deleted (bot.py)")
+    for i, chunk in enumerate(split):
+        if i == 0:
+            await waiting.edit(content=chunk)
+        else:
+            await ctx.channel.send(chunk)
+        print("Narration sent. (bot.py)")
+    for msg in messages:
+        session["session_log"].append({
+            "author": msg["author"],
+            "content": msg["content"],
+            "npcs_present": session["active_npcs"].copy()
+        })
+        print("Session appended: Messages (narration.py)")
+    session["session_log"].append({
+        "narration": narration
+    })
+    print("Active session updated. (bot.py)")
+    messages = []
+    session["messages"] = messages
+    print("Messages cleared. About to save...")
     save_session(session)
+    print("Saved.")
 
 # ====================================
 # DEBUG COMMANDS
@@ -386,5 +422,13 @@ async def go(session, ctx):
 async def testcalc(ctx):
     result = calculate_base_stats("grade_3", "disciplined", "clan")
     await ctx.send(str(result))
+
+@bot.command()
+async def sessioncheck(session):
+    channel = session["channel_id"]
+    if active_sessions:
+        print(f"Session active in {channel}")
+    else:
+        print("No active session.")
 
 bot.run(Config.TOKEN)

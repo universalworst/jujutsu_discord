@@ -256,3 +256,146 @@ Rules:
 
     except json.JSONDecodeError:
         print("Warning: summarizer returned malformed JSON")
+
+# SESSIONS
+
+def apply_relationship_updates_session(session, updates):
+
+    valid_types = set(Config.RELATIONSHIP_TYPES)
+    discord_id = session["players"]["player_id"]
+    
+    for discord_id in session["players"]:
+        relationships = discord_id.get("relationships", {})
+        print("Updating relationships (relationships.py)")
+        for npc_id, update in updates.items():
+            known_npcs = discord_id.get("known_npcs")
+            if npc_id not in relationships:
+                relationships[npc_id] = default_relationship_entry()
+
+            rel = relationships[npc_id]
+
+            if npc_id not in known_npcs:
+                known_npcs.append(npc_id)
+
+            if update.get("type"):
+                validated_types = [t for t in update["type"] if t in valid_types]
+                if validated_types:
+                    rel["type"] = update_relationship_types(rel.get("type", ["unknown"]), validated_types)
+
+            rel["trust"] = max(0, min(100, rel.get("trust", 50) + update.get("trust_delta", 0)))
+            rel["respect"] = max(0, min(100, rel.get("respect", 50) + update.get("respect_delta", 0)))
+            rel["affection"] = max(0, min(100, rel.get("affection", 30) + update.get("affection_delta", 0)))
+            rel["tension"] = max(0, min(100, rel.get("tension", 20) + update.get("tension_delta", 0)))
+
+            if update.get("emotional_tone"):
+                rel["emotional_tone"] = update["emotional_tone"]
+
+            if update.get("new_history"):
+                rel["shared_history"].append(update["new_history"])
+
+            resolved = update.get("resolved_threads", [])
+            rel["unresolved_threads"] = [
+                t for t in rel.get("unresolved_threads", [])
+                if t not in resolved
+            ]
+
+        for thread in update.get("new_threads", []):
+            if thread not in rel["unresolved_threads"]:
+                rel["unresolved_threads"].append(thread)
+
+    session["players"]["player_id"]["relationships"] = relationships
+
+async def summarize_and_update_relationships_session(session, narration):
+
+    print("Gathering logs to summarize... (relationships.py)")
+    try:
+        logs_to_summarize = session["messages"].append(narration)
+        if not logs_to_summarize:
+            return
+    except Exception as e:
+        print(f"Exception: {e}")
+    log_text = ""
+    for entry in logs_to_summarize:
+        log_text += f"author: {entry['author']}\n"
+        log_text += f"content: {entry['content']}\n"
+        if entry.get("npcs_present"):
+            log_text += f"NPCs Present: {entry['npcs_present']}\n"
+
+    relationships = session["player_id"].get("relationships", {})
+    active_npc_ids = list(set(
+        npc
+        for entry in logs_to_summarize
+        for npc in entry.get("npcs_present", [])
+    ))
+
+    current_relationships = {
+        npc_id: relationships[npc_id]
+        for npc_id in active_npc_ids
+        if npc_id in relationships
+    }
+    print("Creating prompt for relationship summary...")
+    prompt = f"""
+You are analyzing a chunk of roleplay logs from a Jujutsu Kaisen narrative RPG.
+
+LOGS:
+{log_text}
+
+CURRENT RELATIONSHIP DATA FOR ACTIVE NPCS:
+{json.dumps(current_relationships, indent=2)}
+
+VALID RELATIONSHIP TYPES: {Config.RELATIONSHIP_TYPES}
+
+Return ONLY a JSON object with no explanation or markdown. For relationships between Players, swap "npc_id" with "name"
+{{
+    "summary": {{
+        "location": "primary location",
+        "narrative_summary": "2-3 sentence summary of events",
+        "decisions": ["significant player character decisions"],
+        "npc_interactions": {{
+            "npc_id": "1-2 sentence summary of interaction"
+        }},
+        "emotional_beats": ["significant emotional moments"],
+        "unresolved_threads": ["anything left unresolved"]
+    }},
+    "relationship_updates": {{
+        "npc_id": {{
+            "type": ["updated relationship types"],
+            "trust_delta": 0,
+            "respect_delta": 0,
+            "affection_delta": 0,
+            "tension_delta": 0,
+            "emotional_tone": "updated tone",
+            "new_history": "one sentence describing what happened worth logging",
+            "resolved_threads": ["any threads now resolved"],
+            "new_threads": ["any new unresolved threads"]
+        }}
+    }}
+}}
+
+Rules:
+- Only include NPCs who actually appeared in the logs in relationship_updates, as well as Player characters present in the scene.
+- trust_delta, respect_delta, affection_delta, tension_delta should be integers between -20 and +20
+- Only log relationship_updates if something meaningfully changed
+- Keep track of relationship dynamics between Player characters! Include these in the player relationships too!
+- resolved_threads should contain exact strings from the existing unresolved_threads list
+"""
+    print("Prompt generated.")
+    response = await client.chat.completions.create(
+        model=Config.MODEL_NAME,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.3,
+        max_tokens=2500
+    )
+
+    try:
+        content = response.choices[0].message.content.strip()
+        data = parse_llm_json(content)
+
+        summary = data.get("summary", {})
+        session["summaries"].append(summary)
+
+        updates = data.get("relationship_updates", {})
+        apply_relationship_updates(session, updates)
+        print("Applied updates.")
+    except json.JSONDecodeError:
+        print("Warning: summarizer returned malformed JSON")

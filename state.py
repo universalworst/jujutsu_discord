@@ -114,14 +114,15 @@ def calculate_base_stats(grade, personality_type, origin):
 
 def default_session(channel_id):
     return  {
-        channel_id: {
-            "messages": [],
-            "current_location": "",
-            "active_npcs": [],
-            "absent_npcs": [],
-            "session_log": [],
-            "players": {}  # discord_id: character info
-        }
+        "channel_id": channel_id,
+        "is_active": False,
+        "messages": [],
+        "current_location": "",
+        "active_npcs": [],
+        "absent_npcs": [],
+        "session_log": [],
+        "summaries": [],
+        "players": {}  
 }
 
 def save_session(session, channel_id):

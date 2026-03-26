@@ -1,9 +1,9 @@
 from config import Config
 from openai import AsyncOpenAI
-from prompt import build_messages
+from prompt import build_messages, build_session_messages
 from data import load_all_lore
-from scene_tracker import detect_scene, update_scene
-from relationships import summarize_and_update_relationships
+from scene_tracker import detect_scene, update_scene, detect_scene_session, update_scene_session
+from relationships import summarize_and_update_relationships, summarize_and_update_relationships_session
 from state import save_state, save_session
 
 client = AsyncOpenAI(
@@ -39,34 +39,48 @@ async def process_turn(state, player_input):
     save_state(state)
     return narration
 
-async def generate_narration(session, messages):
-    messages = build_messages(session, messages)
+# ========== SESSION NARRATION ===========
+
+async def generate_narration_session(session, messages):
+    content = build_session_messages(session, messages)
 
     response = await client.chat.completions.create(
         model=Config.MODEL_NAME,
-        messages=messages,
+        messages=content,
         temperature=Config.TEMPERATURE,
         max_tokens=Config.MAX_TOKENS
     )
 
     return response.choices[0].message.content
 
-async def process_turn(session, messages):
+async def process_turn_session(session, messages):
     lore = load_all_lore()
-    narration = await generate_narration(session, messages)
-    result = await detect_scene(session, narration, lore)
-    discord_id = session["messages"].get(discord_id)
-    if result:
-        update_scene(session, result)
-    for discord_id in messages:
+    channel_id = session["channel_id"]
+    narration = await generate_narration_session(session, messages)
+    print("Narration generated. (narration.py)")
+    result = await detect_scene_session(session, narration, lore)
+    print("Scene detected. (narration.py)")
+    print("TYPE BEFORE UPDATE:", type(result))
+    try:
+        if result:
+            update_scene_session(session, result)
+            print("Scene updated. (narration.py)")
+    except Exception as e:
+        print(f"Exception: {e} (narration.py)")
+    for msg in messages:
         session["session_log"].append({
-            discord_id: messages,
+            "author": msg["author"],
+            "content": msg["content"],
             "npcs_present": session["active_npcs"].copy()
         })
+        print("Session appended: Messages (narration.py)")
     session["session_log"].append({
         "narration": narration
     })
-    #if len(session["session_log"]) % 5 == 0:
-    #    await summarize_and_update_relationships(state)
-    save_session(session)
+    print("Session appended: narration")
+    print("Updating relationships...")
+    await summarize_and_update_relationships_session(session, narration)
+    print("Relationships summarized and updated (narration.py)")
+    save_session(session, channel_id)
+    print("Session saved (narration.py)")
     return narration
