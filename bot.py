@@ -384,7 +384,7 @@ async def go(ctx):
     print("Session loaded. (bot.py)")
     messages = session["messages"]
     waiting = await ctx.channel.send("Thinking...")
-    print("Processing turn...")
+    print("Processing turn... (bot.py)")
     narration = await process_turn_session(session, messages)
     print("Turn processed. (bot.py)")
     split = split_message(narration, 2000)
@@ -397,22 +397,6 @@ async def go(ctx):
         else:
             await ctx.channel.send(chunk)
         print("Narration sent. (bot.py)")
-    for msg in messages:
-        session["session_log"].append({
-            "author": msg["author"],
-            "content": msg["content"],
-            "npcs_present": session["active_npcs"].copy()
-        })
-        print("Session appended: Messages (narration.py)")
-    session["session_log"].append({
-        "narration": narration
-    })
-    print("Active session updated. (bot.py)")
-    messages = []
-    session["messages"] = messages
-    print("Messages cleared. About to save...")
-    save_session(session)
-    print("Saved.")
 
 # ====================================
 # DEBUG COMMANDS

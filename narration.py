@@ -42,6 +42,7 @@ async def process_turn(state, player_input):
 # ========== SESSION NARRATION ===========
 
 async def generate_narration_session(session, messages):
+    print("Entered generate_narration_session (narration.py)")
     content = build_session_messages(session, messages)
 
     response = await client.chat.completions.create(
@@ -54,26 +55,29 @@ async def generate_narration_session(session, messages):
     return response.choices[0].message.content
 
 async def process_turn_session(session, messages):
+    print("Entered process_turn_session (narration.py)")
     lore = load_all_lore()
     channel_id = session["channel_id"]
+    print("Generating narration... (narration.py)")
     narration = await generate_narration_session(session, messages)
     print("Narration generated. (narration.py)")
     result = await detect_scene_session(session, narration, lore)
     print("Scene detected. (narration.py)")
-    print("TYPE BEFORE UPDATE:", type(result))
+    if result:
+        update_scene_session(session, result)
+        print("Scene updated. (narration.py)")
     try:
-        if result:
-            update_scene_session(session, result)
-            print("Scene updated. (narration.py)")
+        for msg in messages:
+            print(f"Messages to append: {messages[:50]}")
+            session["session_log"].append({
+                "author": msg["author"],
+                "content": msg["content"],
+                "npcs_present": session["active_npcs"].copy()
+            })
+            print("Session appended: Messages (narration.py)")
     except Exception as e:
         print(f"Exception: {e} (narration.py)")
-    for msg in messages:
-        session["session_log"].append({
-            "author": msg["author"],
-            "content": msg["content"],
-            "npcs_present": session["active_npcs"].copy()
-        })
-        print("Session appended: Messages (narration.py)")
+    print(f"About to append narration: {narration[:50]}")
     session["session_log"].append({
         "narration": narration
     })
@@ -81,6 +85,7 @@ async def process_turn_session(session, messages):
     print("Updating relationships...")
     await summarize_and_update_relationships_session(session, narration)
     print("Relationships summarized and updated (narration.py)")
+    session["messages"] = []
     save_session(session, channel_id)
     print("Session saved (narration.py)")
     return narration

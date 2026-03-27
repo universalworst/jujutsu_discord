@@ -309,7 +309,8 @@ async def summarize_and_update_relationships_session(session, narration):
 
     print("Gathering logs to summarize... (relationships.py)")
     try:
-        logs_to_summarize = session["messages"].append(narration)
+        logs_start = session["messages"]
+        logs_to_summarize = logs_start.append(narration)
         if not logs_to_summarize:
             return
     except Exception as e:
@@ -379,7 +380,7 @@ Rules:
 - Keep track of relationship dynamics between Player characters! Include these in the player relationships too!
 - resolved_threads should contain exact strings from the existing unresolved_threads list
 """
-    print("Prompt generated.")
+    print("Prompt generated. (relationships.py)")
     response = await client.chat.completions.create(
         model=Config.MODEL_NAME,
         messages=[{"role": "user", "content": prompt}],
@@ -396,6 +397,7 @@ Rules:
 
         updates = data.get("relationship_updates", {})
         apply_relationship_updates(session, updates)
+        print(f"{updates}")
         print("Applied updates.")
     except json.JSONDecodeError:
         print("Warning: summarizer returned malformed JSON")

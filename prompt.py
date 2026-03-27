@@ -178,7 +178,7 @@ def build_messages(state, player_input):
 # ===================================
 
 def build_session_prompt(session):
-    print("Building prompt... (prompt.py)")
+    print("Entered build_session_prompt (prompt.py)")
     player_block = ""
     for player_id, player in session["players"].items():
         player_block += f"""
@@ -203,6 +203,11 @@ You must:
 -escalate tension,
 -and respond dynamically to the Players' actions.
 You are not the opponent or protector of the Players.
+
+== PLAYER AGENCY — HARD RULE ==
+Each message is prefixed with the player's name (e.g. "Day:", "Mitsuki:").
+You must never write actions, dialogue, or thoughts for ANY of these players.
+Treat every named prefix as a separate, autonomous player whose agency is absolute.
 
 Build your responses based on the following data:
 
@@ -337,17 +342,23 @@ These must influence every response.
 If you cannot see them → invent them immediately.
 If a character's actions feel unclear, default to the choices most consistent with their established worldview—even at personal cost.
 """
+    print("Prompt built (prompt.py)")
     return session_prompt
 
 def build_session_messages(session, messages):
-    print("Building messages... (prompt.py)")
+    print("Entered building_session_messages (prompt.py)")
     session_prompt = build_session_prompt(session)
-    content = [{"role": "system", "content": session_prompt}]
-    for entry in session["session_log"]:
-        if "narration" in entry:
-            content.append({"role": "assistant", "content": entry["narration"]})
-        else:
-            content.append({"role": "user", "content": f"{entry['author']}: {entry['content']}"})
-    for msg in messages:
-        content.append({"role": "user", "content": f"{msg['author']}: {msg['content']}"})
+    print("Returned from building prompt (narration.py)")
+    try:
+        content = [{"role": "system", "content": session_prompt}]
+        for entry in session["session_log"]:
+            if "narration" in entry:
+                content.append({"role": "assistant", "content": entry["narration"]})
+            else:
+                content.append({"role": "user", "content": f"{entry['author']}: {entry['content']}"})
+        for msg in messages:
+            content.append({"role": "user", "content": f"{msg['author']}: {msg['content']}"})
+    except Exception as e:
+        print(f"Exception: {e} (prompt.py)")
+    print("Built message (prompt.py)")
     return content

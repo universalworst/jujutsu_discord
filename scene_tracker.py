@@ -133,7 +133,6 @@ Rules:
         return None
     
 def update_scene_session(session, result):
-    print("TYPE INSIDE UPDATE:", type(result))
     if not isinstance(result, dict):
         raise TypeError(f"Expected dict, got {type(result)}")
     session["active_npcs"] = result.get("active_npcs", session["active_npcs"])
