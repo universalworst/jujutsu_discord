@@ -398,6 +398,28 @@ async def go(ctx):
             await ctx.channel.send(chunk)
         print("Narration sent. (bot.py)")
 
+async def end(ctx):
+    if isinstance(ctx.channel, discord.DMChannel):
+        await ctx.send("Please use this command in a session channel.")
+        return
+    if ctx.channel.id == Config.LOBBY_CHANNEL:
+        await ctx.channel.send("You can't send that here! Please go to the session channel and try again.")
+        return
+    channel_id = ctx.channel.id
+    if os.path.join(Config.SESSION_DIR, f"{channel_id}.json"):
+        session = load_session(channel_id)
+        if session["is_active"]:
+            session["is_active"] = False
+            save_session(session, channel_id)
+            await ctx.channel.send("Session ended.")
+            return
+        else:
+            await ctx.channel.send("No active session found for this channel.")
+            return
+    else:
+        await ctx.channel.send("No session found for this channel.")
+        return
+
 # ====================================
 # DEBUG COMMANDS
 # ====================================    
@@ -406,13 +428,5 @@ async def go(ctx):
 async def testcalc(ctx):
     result = calculate_base_stats("grade_3", "disciplined", "clan")
     await ctx.send(str(result))
-
-@bot.command()
-async def sessioncheck(session):
-    channel = session["channel_id"]
-    if active_sessions:
-        print(f"Session active in {channel}")
-    else:
-        print("No active session.")
 
 bot.run(Config.TOKEN)

@@ -148,3 +148,23 @@ def ensure_session_defaults(session):
         if key not in session:
             session[key] = value
     return session
+
+def convert_session_to_state(session):
+    """Convert session data to a player state format for AI processing"""
+    for player_id, player_data in session["players"].items():
+        max_cursed_energy = player_data.get("max_cursed_energy")
+        control = player_data.get("control")
+        stability = player_data.get("stability")
+        new_known_npcs = player_data.get("known_npcs")
+        discord_id = int(player_id)
+        state = load_state(discord_id)
+        state["stats"]["max_cursed_energy"] = max_cursed_energy
+        state["stats"]["control"] = control
+        state["stats"]["stability"] = stability
+        known_npcs = state["world_state"]["known_npcs"]
+        for npc_id in state["world_state"]["known_npcs"]:
+            if npc_id in new_known_npcs:
+                if npc_id not in known_npcs:
+                    known_npcs.append(npc_id)
+        state["world_state"]["known_npcs"] = known_npcs
+        save_state(state)
