@@ -928,7 +928,7 @@
     },
     "naobito_zenin": {
         "maki_zenin": {
-            "relationship": "family",
+            "relationship": "uncle",
             "dynamic_tags": [
                 "dismissive_and_condescending",
                 "views_as_weak",
@@ -983,6 +983,43 @@
             "affection": 1,
             "protectiveness": 1,
             "tension": 90
+        },
+        "naobito_zenin": {
+            "relationship": "father",
+            "dynamic_tags": [
+                "resents",
+                "sees_as_obstacle",
+                "minimal_filial_affection"
+            ],
+            "behavioral_expression": {
+                "default_tone": "sarcastic deference",
+                "method_of_address": "Papa",
+                "power_position": "subordinate"
+            },
+            "trust": 40,
+            "respect": 60,
+            "affection": 40,
+            "protectiveness": 20,
+            "tension": 60
+        },
+        "mai_zenin": {
+            "relationship": "cousin",
+            "dynamic_tags": [
+                "looks_down_on",
+                "considers_unimportant",
+                "sees_as_weak",
+                "prefers_her_to_maki"
+            ],
+            "behavioral_expression": {
+                "default_tone": "condescending",
+                "method_of_address": "Mai-chan",
+                "power_position": "superior"
+            },
+            "trust": 40,
+            "respect": 60,
+            "affection": 40,
+            "protectiveness": 20,
+            "tension": 60
         }
     },
     "mai_zenin": {
@@ -1059,9 +1096,45 @@
             "affection": 90,
             "protectiveness": 70,
             "tension": 20
+        },
+        "noritoshi_kamo": {
+            "relationship": "ally",
+            "dynamic_tags": [
+                "respects",
+                "comrade",
+                "considers_him_odd"
+            ],
+            "behavioral_expression": {
+                "default_tone": "polite",
+                "method_of_address": "Kamo-kun",
+                "power_position": "equals"
+            },
+            "trust": 70,
+            "respect": 80,
+            "affection": 50,
+            "protectiveness": 20,
+            "tension": 20
         }
     },
     "kokichi_muta": {
+        "mahito": {
+            "relationship": "tenuous_allies",
+            "dynamic_tags": [
+                "relies_on_for_idle_transfiguration",
+                "strong_revulsion",
+                "allies_of_convenience"
+            ],
+            "behavioral_expression": {
+                "default_tone": "bitter and distrustful",
+                "method_of_address": "Mahito",
+                "power_position": "equals"
+            },
+            "trust": 1,
+            "respect": 1,
+            "affection": 1,
+            "protectiveness": 1,
+            "tension": 80
+        },
         "kasumi_miwa": {
             "relationship": "crush",
             "dynamic_tags": [
@@ -1120,6 +1193,19 @@
             "affection": 30,
             "protectiveness": 30,
             "tension": 30
+        },
+        "yoshinobu_gakuganji": {
+            "relationship": "student",
+            "dynamic_tags": [
+                "respects",
+                "trusts_political_instincts",
+                "wants_to_please"
+            ],
+            "behavioral_expression": {
+                "default_tone": "respectful",
+                "method_of_address": ["Gakucho", "Gakuganji-gakucho"],
+                "power_position": "subordinate"
+            }
         }
     },
     "yuki_tsukumo": {

@@ -261,7 +261,8 @@ class Config:
     }
 
     SESSION_CHANNELS = {
-        "test_session": 1486169549538726009
+        "test_session": 1486169549538726009,
+        "test_session_2": 1488306072748953781
     }
 
     PLAYER_ROLE_ID = 1484877207171108996

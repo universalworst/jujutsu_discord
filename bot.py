@@ -398,6 +398,7 @@ async def go(ctx):
             await ctx.channel.send(chunk)
         print("Narration sent. (bot.py)")
 
+@bot.command()
 async def end(ctx):
     if isinstance(ctx.channel, discord.DMChannel):
         await ctx.send("Please use this command in a session channel.")
@@ -405,13 +406,17 @@ async def end(ctx):
     if ctx.channel.id == Config.LOBBY_CHANNEL:
         await ctx.channel.send("You can't send that here! Please go to the session channel and try again.")
         return
+    print("Session ending")
     channel_id = ctx.channel.id
+    print("Ending session...")
     if os.path.join(Config.SESSION_DIR, f"{channel_id}.json"):
         session = load_session(channel_id)
         if session["is_active"]:
+            print("Switching session to is_active = False")
             session["is_active"] = False
             save_session(session, channel_id)
             await ctx.channel.send("Session ended.")
+            print("Printed ending message")
             return
         else:
             await ctx.channel.send("No active session found for this channel.")
