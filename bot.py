@@ -424,6 +424,215 @@ async def end(ctx):
     else:
         await ctx.channel.send("No session found for this channel.")
         return
+    
+# ====================================
+# MECHANICAL COMMANDS
+# ==================================== 
+
+@bot.command()
+async def set(ctx, *, player_input):
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author
+    if member not in members_with_role:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    print("Input splitting")
+    parts = player_input.split()
+    stat = parts[0]
+    amt = parts[1]
+    user = parts[2]
+    print("Getting discord_id")
+    discord_id = int(user.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SAVE_DIR, f"{discord_id}.json")):
+        print("discord_id is a json")
+        state = load_state(discord_id)
+        try:
+            int(amt)
+            if stat == "ce":
+                print("Setting ce")
+                state["stats"]["cursed_energy"] = int(amt)
+                save_state(state)
+                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["cursed_energy"]}")
+                return
+            elif stat == "maxce":
+                print("Setting maxce")
+                state["stats"]["max_cursed_energy"] = int(amt)
+                save_state(state)
+                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["max_cursed_energy"]}")
+                return
+            elif stat == "control":
+                print("Setting control")
+                state["stats"]["control"] = int(amt)
+                save_state(state)
+                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["control"]}")
+                return
+            elif stat == "health":
+                print("Setting health")
+                state["stats"]["health"] = int(amt)
+                save_state(state)
+                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["health"]}")
+                return
+            else:
+                await ctx.channel.send("Input error. Your argument was invalid.")
+        except ValueError:
+            if stat == "injury":
+                if state["stats"]["injuries"]:
+                    state["stats"]["injuries"].append(amt)
+                else:
+                    state["stats"]["injuries"] = amt
+                save_state(state)
+                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["injuries"]}")
+                return
+            else:
+                await ctx.channel.send("Input error. Your argument was invalid.")
+    else:
+        await ctx.channel.send("No save file exists for this player ID.")
+
+@bot.command()
+async def change(ctx, *, player_input):
+    if ctx.author.id != Config.ADMIN_ROLE_ID:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    parts = player_input.split()
+    stat = parts[0]
+    amt = parts[1]
+    user = parts[2]
+    discord_id = int(user.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SAVE_DIR, f"{discord_id}.json")):
+        state = load_state(discord_id)
+        try:
+            int(amt)
+            if stat == "ce":
+                ce = state["stats"]["cursed_energy"]
+                new_ce = ce + int(amt)
+                state["stats"]["cursed_energy"] = new_ce
+                save_state(state)
+                await ctx.channel.send(f"State updated: CE: {new_ce}")
+            elif stat == "maxce":
+                maxce = state["stats"]["max_cursed_energy"]
+                new_max = maxce + int(amt)
+                state["stats"]["cursed_energy"] = new_max
+                save_state(state)
+                await ctx.channel.send(f"State updated: Max CE: {new_max}")
+            elif stat == "control":
+                ctrl = state["stats"]["control"]
+                new_ctrl = ctrl + int(amt)
+                state["stats"]["control"] = new_ctrl
+                save_state(state)
+                await ctx.channel.send(f"State updated: Control: {new_ctrl}")
+            elif stat == "stability":
+                stab = state["stats"]["stability"]
+                new_stab = stab + int(amt)
+                state["stats"]["stability"] = new_stab
+                save_state(state)
+                await ctx.channel.send(f"State updated: Stability: {new_stab}")
+            elif stat == "health":
+                health = state["stats"]["health"]
+                new_health = health + int(amt)
+                state["stats"]["health"] = new_health
+                save_state(state)
+                await ctx.channel.send(f"State updated: Health: {new_health}")
+        except Exception as e:
+            print(f"Error: {e}")
+    else:
+        await ctx.channel.send("No save file exists for this player ID.")
+
+@bot.command()
+async def session_set(ctx, *, player_input):
+    if ctx.author.id != Config.ADMIN_ROLE_ID:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    parts = player_input.split()
+    stat = parts[0]
+    amt = parts[1]
+    user = parts[2]
+    channel = parts[3]
+    discord_id = int(user.strip("<@>"))
+    channel_id = int(channel.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SESSION_DIR, f"{channel_id}.json")):
+        session = load_session(channel_id)
+        for discord_id in session["players"].items():
+            try:
+                int(amt)
+                if stat == "ce":
+                    session["players"][discord_id]["cursed_energy"] = int(amt)
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Cursed energy: {amt}")
+                elif stat == "maxce":
+                    session["players"][discord_id]["max_cursed_energy"] = int(amt)
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Max CE: {amt}")
+                elif stat == "control":
+                    session["players"][discord_id]["control"] = int(amt)
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Control: {amt}")
+                elif stat == "stability":
+                    session["players"][discord_id]["stability"] = int(amt)
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated:")
+                elif stat == "health":
+                    session["players"][discord_id]["health"] = int(amt)
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Health: {amt}")
+            except KeyError:
+                if stat == "injury":
+                    if session["players"][discord_id]["injuries"]:
+                        session["players"][discord_id]["injuries"].append(amt)
+                    else:
+                        session["players"][discord_id]["injuries"] = amt
+                    await ctx.channel.send(f"Session updated: Injury added: {amt}")
+
+@bot.command()
+async def session_change(ctx, *, player_input):
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author.id
+    if member not in members_with_role:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    parts = player_input.split()
+    stat = parts[0]
+    amt = parts[1]
+    user = parts[2]
+    channel = parts[3]
+    discord_id = int(user.strip("<@>"))
+    channel_id = int(channel.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SESSION_DIR, f"{channel_id}.json")):
+        session = load_session(channel_id)
+        for discord_id in session["players"].items():
+            try:
+                int(amt)
+                if stat == "ce":
+                    ce = session["players"][discord_id]["cursed_energy"]
+                    new_ce = ce + int(amt)
+                    session["players"][discord_id]["cursed_energy"] = new_ce
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Cursed energy: {new_ce}")
+                elif stat == "maxce":
+                    maxce = session["players"][discord_id]["max_cursed_energy"]
+                    new_max = maxce + int(amt)
+                    session["players"][discord_id]["max_cursed_energy"] = new_max
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Max CE: {new_max}")
+                elif stat == "control":
+                    ctrl = session["players"][discord_id]["control"]
+                    new_ctrl = ctrl + int(amt)
+                    session["players"][discord_id]["control"] = new_ctrl
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Control: {new_ctrl}")
+                elif stat == "stability":
+                    stab = session["players"][discord_id]["stability"]
+                    new_stab = stab + int(amt)
+                elif stat == "health":
+                    health = session["players"][discord_id]["health"]
+                    new_health = health + int(amt)
+                    session["players"][discord_id]["health"] = new_health
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Session updated: Control: {new_health}")
+            except Exception as e:
+                print(f"Exception: {e}")
+
 
 # ====================================
 # DEBUG COMMANDS
