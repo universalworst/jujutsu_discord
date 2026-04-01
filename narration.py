@@ -68,7 +68,6 @@ async def process_turn_session(session, messages):
         print("Scene updated. (narration.py)")
     try:
         for msg in messages:
-            print(f"Messages to append: {messages[:50]}")
             session["session_log"].append({
                 "author": msg["author"],
                 "content": msg["content"],
@@ -77,7 +76,6 @@ async def process_turn_session(session, messages):
             print("Session appended: Messages (narration.py)")
     except Exception as e:
         print(f"Exception: {e} (narration.py)")
-    print(f"About to append narration: {narration[:50]}")
     session["session_log"].append({
         "narration": narration
     })

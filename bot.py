@@ -479,6 +479,13 @@ async def set(ctx, *, player_input):
             if stat == "injury":
                 if state["stats"]["injuries"]:
                     state["stats"]["injuries"].append(amt)
+                elif stat == "location":
+                    print("Setting location")
+                    old_location = state["world_state"]["current_location"]
+                    for old_location in Config.LOCATION_CHANNELS.items():
+                        channel_id = Config.LOCATION_CHANNELS(old_location).id
+                        await move_player(Config.SERVER_ID, channel_id, old_location, amt)
+                        await ctx.channel.send(f"Moved player from {old_location} to {amt}")
                 else:
                     state["stats"]["injuries"] = amt
                 save_state(state)

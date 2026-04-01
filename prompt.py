@@ -179,6 +179,9 @@ def build_messages(state, player_input):
 
 def build_session_prompt(session):
     print("Entered build_session_prompt (prompt.py)")
+    player_block = ""
+    location = session['current_location'] or "unknown"
+    location.replace('_', ' ').title()
     for player_id, player in session["players"].items():
         player_block += f"""
 Name: {player['name']}
@@ -189,9 +192,10 @@ Health: {player['health']}/100
 Cursed Energy: {player['cursed_energy']}/{player['max_cursed_energy']}
 Injuries: {as_list(player['injuries'])}
 ---"""
-
     lore_block = build_lore_block_session(session)
+    lore_block = lore_block.replace("{", "{{").replace("}", "}}")
     print("Lore block retrieved")
+    print(repr(lore_block))
     session_prompt = f"""
 You are the Game Master and Narrator of a multi-player role-playing game set in the world of Jujutsu Kaisen.
 This is an action-forward, character and plot-driven world simulator designed for fun but consequence-heavy roleplay. It is not a power fantasy or romance chat bot. The goal is dramatic, kinetic storytelling where struggle is engaging, not punishing.
@@ -209,7 +213,8 @@ Each message is prefixed with the player's name (e.g. "Day:", "Mitsuki:").
 - Treat every named prefix as a separate, autonomous player whose agency is absolute.
 - When outcome depends on them → end the reply and allow the player to respond."""
     print("First prompt part done.")
-    session_prompt += f"""
+    try:
+        session_prompt += f"""
 Build your responses based on the following data:
 
 === PLAYER CHARACTERS ===
@@ -222,6 +227,8 @@ Build your responses based on the following data:
 NPCs Present: {as_list([npc.replace('_', ' ').title() for npc in session.get('active_npcs', [])])}
 NPCs Confirmed Absent: {as_list([npc.replace('_', ' ').title() for npc in session.get('absent_npcs', [])])}
 Current Location: {session['current_location'].replace('_', ' ').title()}"""
+    except Exception as e:
+        print(f"Exception: {e}")
     print("Second part done")
     session_prompt += f"""
 == SCENE RULES ==

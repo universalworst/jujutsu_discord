@@ -544,7 +544,7 @@
         "description": [
         ],
         "curse_density": 1,
-        "atmosphere": "",
+        "atmosphere": "expansive, peaceful, steeped in tradition",
         "notable_features": [
         ],
         "connected_locations": [],
@@ -564,9 +564,7 @@
         ],
         "curse_density": 2,
         "atmosphere": "oppressive, severe, violent, tense",
-        "notable_features": [
-            ""
-        ],
+        "notable_features": [],
         "connected_locations": [],
         "frequented_by": ["zenin_clan"],
         "keywords": ["zenin", "big three"],
@@ -577,14 +575,10 @@
         "tier": "landmark",
         "location_type": "clan_estate",
         "district": null,
-        "description": [
-            ""
-        ],
+        "description": [],
         "curse_density": 1,
         "atmosphere": "",
-        "notable_features": [
-            ""
-        ],
+        "notable_features": [],
         "connected_locations": [],
         "frequented_by": [],
         "keywords": ["kamo", "big three"],
