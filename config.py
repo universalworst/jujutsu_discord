@@ -93,6 +93,7 @@ class Config:
         "grade_4",
         "grade_3",
         "grade_2",
+        "semi_grade_1"
         "grade_1",
         "special_grade"
     ]
@@ -129,7 +130,7 @@ class Config:
         "grade_2":       {"ce": (85, 110),  "control": (45, 70), "stability_base": 6},
         "semi_grade_1":  {"ce": (90, 120),  "control": (55, 75), "stability_base": 6},
         "grade_1":       {"ce": (100, 130), "control": (65, 90), "stability_base": 7},
-        "special_grade": {"ce": (125, 160), "control": (80, 100),"stability_base": 8},
+        "special_grade": {"ce": (125, 180), "control": (80, 100),"stability_base": 8},
     }
     GRADE_CONVERSION = {
         "none": 0,
@@ -145,7 +146,7 @@ class Config:
     ORIGIN_MODIFIERS = {
         "clan":      {"ce_mod": 5,  "control_mod": 5},
         "student":   {"ce_mod": -5, "control_mod": -5},
-        "awakened":  {"ce_mod": 0,  "control_mod": -10},
+        "awakened":  {"ce_mod": 5,  "control_mod": -10},
         "independent": {"ce_mod": 0, "control_mod": 0},
     }
 
@@ -167,19 +168,59 @@ class Config:
         "eat":        0.05,  # 5% restore
     }
 
-    ACTIVE_REGEN_KEYWORDS = {
-        "sleep":      ["sleep", "slept", "rest for the night", "go to bed", "pass out"],
-        "meditate":   ["meditate", "clear my mind", "centre myself", "center myself", "focus my energy"],
-        "rest":       ["rest", "sit down", "take a break", "recover", "catch my breath"],
-        "breathwork": ["breathe", "breathing", "exhale", "inhale", "calm down"],
-        "eat":        ["eat", "drink", "food", "meal", "snack"],
-    }
+#    ACTIVE_REGEN_KEYWORDS = {
+#        "sleep":      ["goes to sleep", "falls asleep", "dreamless sleep", "rest for the night", "goes to bed", "go to bed", "pass out"],
+#        "meditate":   ["meditate", "clear my mind", "centre myself", "center myself", "focus my energy"],
+#        "rest":       ["rest", "sit down", "take a break", "recover", "catch my breath"],
+#        "breathwork": ["breathe", "breathing", "exhale", "inhale", "calm down"],
+#        "eat":        ["eat", "drink", "food", "meal", "snack"],
+#    }
     PRESSURE_MULTIPLIERS = {
         "none": 0,
         "minor": 0.05,
         "moderate": 0.10,
         "major": 0.20,
         "domain_expansion": 0.60,
+    }
+
+    # ====================================
+    # INJURY
+    # ====================================
+
+    BODY_PARTS = {
+        "head":     [("fracture", 50), ("burn", 20), ("concussion", 20), ("cursed_wound", 50)],
+        "eye":      [("cut", 20), ("cursed_wound", 50)],
+        "nose":     [("fracture", 25)],
+        "jaw":      [("fracture", 35)],
+        "back":     [("fracture", 65), ("pulled_muscle", 20), ("cursed_wound", 50)],
+        "collar":   [("fracture", 35)],
+        "shoulder": [("fracture", 40), ("pulled_muscle", 15)],
+        "lungs":    [("poison", 55), ("stab", 50)],
+        "arm":      [("fracture", 35), ("cut", 10), ("stab", 20), ("burn", 18), ("pulled_muscle", 10)],
+        "elbow":    [("fracture", 40), ("cut", 10), ("sprain", 15)],
+        "wrist":    [("fracture", 30), ("sprain", 15)],
+        "hand":     [("fracture", 25), ("cut", 5), ("stab", 20), ("burn", 20), ("cursed_wound", 40)],
+        "abdomen":  [("cut", 12), ("stab", 35), ("cursed_wound", 40)],
+        "stomach":  [("poisoning", 40), ("stab", 55)],
+        "pelvis":   [("fracture", 70), ("stab", 40), ("cursed_wound", 50)],
+        "thigh":    [("fracture", 65), ("cut", 12), ("stab", 30), ("burn", 30), ("pulled_muscle", 12), ("cursed_wound", 40)],
+        "knee":     [("cut", 12), ("burn", 25), ("sprain", 25), ("cursed_wound", 40)],
+        "shin":     [("fracture", 55, "severe"), ("cut", 12), ("burn", 25), ("cursed_wound", 40)],
+        "ankle":    [("fracture", 40), ("sprain", 20), ("cursed_wound", 40)],
+        "foot":     [("fracture", 30), ("cut", 5), ("burn", 15), ("sprain", 15), ("stab", 20), ("cursed_wound", 40)],
+    }
+
+    INJURY_HEAL_RATES = {
+        "fracture":     "very_slow",
+        "cut":          "moderate",
+        "stab":         "slow",
+        "lesion":       "slow",
+        "burn":         "slow",
+        "sprain":       "moderate",
+        "pulled_muscle":"moderate",
+        "cursed_wound": "none",
+        "poisoning":    "slow",
+        "concussion":   "slow",
     }
 
     # ====================================
@@ -198,6 +239,7 @@ class Config:
         "⚪ Session Channels": 1486056748216352960,
         "Logs": 1483841311864918121
     }
+
     SESSION_CATEGORY = 1486056748216352960
 
     LOCATION_CHANNELS = {
@@ -249,7 +291,8 @@ class Config:
     LOG_CHANNELS = {
         605781662390943745: 1483841404038942760,
         683029047672176711: 1483841425647866038,
-        747569767325630506: 1485346940362428647
+        747569767325630506: 1485346940362428647,
+        767274196849131550: 1489661947468185780
     }
 
     LOBBY_CHANNEL = 1483657482105651202
@@ -257,7 +300,8 @@ class Config:
     PLAYERS = {
         605781662390943745: "Mitsuki",
         683029047672176711: "Xiomara",
-        747569767325630506: "Day"
+        747569767325630506: "Day",
+        767274196849131550: "Akira"
     }
 
     SESSION_CHANNELS = {

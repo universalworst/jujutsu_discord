@@ -77,6 +77,33 @@ These include:
 `Stability`
 """
 
+goer = """This command is used to instigate a narrator response duringn a group roleplay session within one of the Session channels. After everyone in the group has given responses they're satisfied with, someone sends `.go` in he channel, at which point the bot builds a response based off of internal data, player character data, and the data included in the messages submitted.
+In order to use `.go`, you must first register a **session** in one of the server's Session Channels using the `.session` command."""
+
+sessioner = """This is a command used to begin a group roleplay. To do this:
+* Enter the command `.session` in a channel within the Session Channels category in the JJK: Underground server.
+* Please note, all player characters you wish to be involved in 
+* Prompt the bot to begin a starter for you by giving a description of what you want to roleplay, or begin playing the scenario yourself. These messages may be sent without any commands.
+* Whenever you want the bot to contribute, either after laying out a scenario or after all party members have finished their own replies, simply send the `.go` command in the session channel.
+* In the examples below, the crossed-out lines represent lines that are deleted from the channel by the bot.
+
+__**Examples:**__
+
+> ~~Day: `.session`~~
+> Narrator: Session started!
+> ~~Day: `.go`~~
+> Narrator: [Creates a starter based on the player characters present.]
+
+> ~~Akira: `.session`~~
+> Narrator: Session started!
+> Mitsuki: [Roleplay starter.]
+> Akira: [Extremely witty response.]
+> Mitsuki: [Deadpan reaction.]
+> ~~Mitsuki: `.go`~~
+> ~~Narrator: Thinking...~~
+> Narrator: [Response to the three relevant messages.]
+"""
+
 helper = """## List of commands
 * `play`: Used before each reply in solo roleplay sessions with the Narrator to ensure it reads your reply and gives a response.
 Proper use:
@@ -86,9 +113,13 @@ Proper use:
 Proper use:
 > `.move shibuya` or `.move tokyo jujutsu tech`
 
-* `register`: Used to register a new character with the bot. For more detailed information on what you're asked by the bot, submit `.register help`. Otherwise, just send `.register` in a channel on the server or in a DM with the Narrator.
+* `go`: Used to request a narrator/NPC response in a group roleplay session, done in one of the Session Channels on the JJK Underground server. To start such a session, use the `.session` command.
 
-* `stats`: Displays the player's stats for them to view. This feature is a work in progress.
+* `register`: Used to register a new character with the bot. For more detailed information on what you're asked by the bot, submit `.register help`. Otherwise, just send `.register` in a channel from the server or in a DM with the Narrator.
+
+* `session`: Used to begin a group roleplay session in one of the Session channels. Roleplay with other players there, and whenever you want the narrator to interject, use the `.go` command.
+
+* `stats`: Displays the player's stats for them to view.
 """
 
 async def stat(state):
@@ -140,6 +171,14 @@ async def stats_help(ctx):
     dm = await ctx.author.create_dm()
     await dm.send(statser)
 
+async def session_help(ctx):
+    dm = await ctx.author.create_dm()
+    await dm.send(sessioner)
+
+async def go_help(ctx):
+    dm = await ctx.author.create_dm()
+    await dm.send(goer)
+   
 async def help(ctx):
     print("About to create DM")
     dm = await ctx.author.create_dm()

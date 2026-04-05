@@ -838,7 +838,7 @@
         "relationship_bias": [
 
         ],
-        "notes": ""
+        "notes": "Toge only speaks through rice ball ingredients. His vocabulary includes: 'Tuna', 'tuna mayo', 'salmon', 'kelp', 'bonito flakes', 'mustard leaf'. He only speaks in normal words during combat or other highly serious situations."
     },
     "panda": {
         "display_name": "Panda",
@@ -1077,7 +1077,7 @@
             "dislikes_politics",
             "avoids_conflict"
         ],
-        "notes": ""
+        "notes": "Reverse cursed technique practitioner. Former smoker. Current alcoholic, though she hides it well. Stifles emotions; has limited emotional availability for others."
     },
     "kiyotaka_ijichi": {
         "display_name": "Kiyotaka Ijichi",
@@ -2992,6 +2992,8 @@
         ],
         "personality": {
             "core_traits": [
+                "friendly and warm",
+                "very calm"
             ],
             "behavioral_tells": {
                 "default": []
@@ -3004,7 +3006,7 @@
             "aura_impression": "dimming passion after ten years of life as a political prisoner"
         },
         "appearance": {
-            "traits": [],
+            "traits": ["short, stocky build", "greying black hair cut to shoulder-length", "dark brown eyes", "wrinkles starting to form"],
             "outfit": []
         },
         "technique": "solar_flare",
@@ -3040,6 +3042,7 @@
                 "default": []
             },
             "archetypes": [
+                "idealist corrupted",
                 "brooding genius"
             ],
             "conflict_style": "avoidant and defensive",
@@ -3073,9 +3076,15 @@
             "garden"
         ],
         "personality": {
-            "core_traits": [],
+            "core_traits": [
+                "Bright and bubbly",
+                "Outgoing",
+                "Naturally trusting of others"
+            ],
             "behavioral_tells": {
-                "default": []
+                "default": [
+                    "leans in close and touches the shoulder of whoever she's speaking with"
+                ]
             },
             "archetypes": [],
             "conflict_style": "",
@@ -3083,7 +3092,7 @@
             "aura_impression": ""
         },
         "appearance": {
-            "traits": [],
+            "traits": ["lean and somewhat short", "brown hair tied back in a loose ponytail", "hazel eyes"],
             "outfit": []
         },
         "technique": "",
@@ -3099,7 +3108,7 @@
     },
     "teddy_smirnov": {
         "display_name": "Teddy Smirnov",
-        "aliases": ["Teddy", "Smirnov"],
+        "aliases": ["Teddy", "Smirnov", "teddy", "smirnov"],
         "pronouns": "he/him",
         "age": 52,
         "role": "non_sorcerer",
@@ -3115,16 +3124,22 @@
                 "loves gardening"
             ],
             "behavioral_tells": {
-                "default": []
+                "default": [
+                    "often looks to his wife for approval"
+                ]
             },
-            "archetypes": [],
+            "archetypes": [
+                "gentle giant"
+            ],
             "conflict_style": "",
-            "humor_style": "",
-            "aura_impression": ""
+            "humor_style": "dad humor",
+            "aura_impression": "good-natured and no idea that he's in way over his head"
         },
         "appearance": {
-            "traits": [],
-            "outfit": []
+            "traits": [
+                "tall and broad", "bushy greying mustache", "receding, greying hair"
+            ],
+            "outfit": ["cargo shorts", "button-up shirts", "wears glasses"]
         },
         "technique": "None",
         "combat": {
@@ -3245,7 +3260,9 @@
                 "open-minded"
             ],
             "behavioral_tells": {
-                "default": []
+                "default": [
+                    "intense eye contact"
+                ]
             },
             "archetypes": [
                 "eccentric idealist"

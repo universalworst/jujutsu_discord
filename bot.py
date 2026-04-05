@@ -4,13 +4,14 @@
 
 import os
 import discord
+import random
 from discord.ext import commands
 from config import Config
 from state import default_state, save_state, load_state, get_all_players, calculate_base_stats, default_session, save_session, load_session
 from narration import process_turn, process_turn_session
 from utils import split_message
 from relationships import seed_relationships
-from help import move_help, play_help, register_help, stats_help, stat, help, help_default
+from help import move_help, play_help, register_help, go_help, stats_help, stat, help, help_default, session_help
 
 intents = discord.Intents.default()
 intents.members = True
@@ -115,9 +116,6 @@ async def on_message(message):
             print("Message recorded!")
             save_session(session, channel_id)
 
-#    if channel_id not in active_sessions:
-#        return
-#    session = active_sessions[channel_id]
 
 # ====================================
 # COMMANDS
@@ -212,12 +210,12 @@ async def register(ctx, *, player_input=None):
             await ctx.send("You already have a registered character.")
             return
         dm = await ctx.author.create_dm()
-        await dm.send("Thank you for registering your character with Jujutsu Kaisen Underground.")
+        await dm.send("Thank you for registering your character with Jujutsu Kaisen Underground. If you wish to cancel registration at any point, simply send `.cancel`.")
         def check(message):
             return message.author == ctx.author and message.channel == dm
         try:
             name = await ask(bot, dm, "What is your character's name?", check)
-            grade = await ask_validated(bot, dm, "What is their grade? Please type one of the following:\n* Grade 4\n* Grade 3\n* Grade 2\n* Grade 1\n* Special Grade", check, Config.GRADES, "You must type out one of the following exactly:\n* Grade 4\n* Grade 3\n* Grade 2\n* Grade 1\n* Special Grade")
+            grade = await ask_validated(bot, dm, "What is their grade? Please type one of the following:\n* Grade 4\n* Grade 3\n* Grade 2\n* Semi-Grade 1\n* Grade 1\n* Special Grade", check, Config.GRADES, "You must type out one of the following exactly:\n* Grade 4\n* Grade 3\n* Grade 2\n* Semi-Grade 1\n* Grade 1\n* Special Grade")
             age = await ask_integer(bot, dm, "How old are they? Please respond with a whole number.", check, "You must send a numerical value for your character's age.")
             origin = await ask_validated(bot, dm, "Which of the following best describes how your character came about their powers? (Note: 'Clan' here refers to clan membership or heredity; in other words, they grew up around jujutsu and are familiar with it. Independent refers to a character who has been aware of their powers since childhood, but did not grow up in a clan. Awakened characters are older teenagers or adults who suddenly manifest a technique. Student refers to younger sorcerers who are still mastering their powers.)\n* Clan\n* Independent\n* Awakened\n* Student", check, Config.ORIGINS, "You must type out one of the following exactly:\n* Clan\n* Independent\n* Awakened\n* Student")
             technique_name_raw = await ask(bot, dm, "What is your character's technique called?", check)
@@ -225,16 +223,16 @@ async def register(ctx, *, player_input=None):
             core_effects = await ask(bot, dm, "Describe what your character's technique does.", check)
             limitations = await ask(bot, dm, "What are this technique's drawbacks?", check)
             power = await ask_integer(bot, dm, "On a scale from 1-100, how powerful is this technique in terms of its potential to deal damage?", check, "You must send a numerical value between 1 and 100.")
-            personality_type = await ask_validated(bot, dm, "Which of the following personality types best fits your character?\n* Disciplined\n* Reserved\n* Inpulsive\n* Aggressive\n* Analytical\n* Peaceful", check, Config.PERSONALITIES, "Please respond with one of the listed personality types:\n* Disciplined\n* Reserved\n* Inpulsive\n* Aggressive\n* Analytical\n* Peaceful")
+            personality_type = await ask_validated(bot, dm, "Which of the following personality types best fits your character?\n* Disciplined\n* Reserved\n* Impulsive\n* Aggressive\n* Analytical\n* Peaceful", check, Config.PERSONALITIES, "Please respond with one of the listed personality types:\n* Disciplined\n* Reserved\n* Inpulsive\n* Aggressive\n* Analytical\n* Peaceful")
             personality = await ask(bot, dm, "Describe your character's personality.", check)
             appearance = await ask(bot, dm, "Describe your character's appearance.", check)
             backstory = await ask(bot, dm, "Describe your character's backstory.", check)
-            seed_info = await ask(bot, dm, "What canon characters does your character know, if any? Describe their relationships in one or two sentences.", check)
+            seed_info = await ask(bot, dm, "What canon character(s) does your character know, if any? Describe their relationships in one or two sentences.", check)
         except RegistrationCancelled:
             await dm.send("Registration cancelled.")
             return
         await dm.send("Congratulations, you have finished registering. You will be able to play shortly.")
-        #await dm.send("For a list of commands and brief explanations of how to use them, send `.help` here.")
+        await dm.send("For a list of commands and brief explanations of how to use them, send `.help` here.")
         try:
             state = default_state(name, discord_id)
             state["identity"]["grade"] = grade
@@ -248,6 +246,11 @@ async def register(ctx, *, player_input=None):
             state["technique"]["core_effects"] = core_effects
             state["technique"]["limitations"] = limitations
             state["technique"]["power"] = power
+            log_channel = await guild.create_text_channel(
+                name=f"{name.lower()}-log",
+                category=guild.get_channel(Config.CATEGORIES["Logs"])
+            )
+            state["identity"]["log_channel_id"] = log_channel.id
             state["stats"].update(calculate_base_stats(grade, personality_type, origin))
             await seed_relationships(state, seed_info)
             print(f"{state['world_state']['relationships']}")
@@ -313,6 +316,20 @@ async def help(ctx, *, player_input = None):
             print(f"Error: {e}")
         await ctx.message.delete()
         return
+    elif player_input and player_input.lower() == "go":
+        try:
+            await go_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
+    elif player_input and player_input.lower() == "session":
+        try:
+            await session_help(ctx)
+        except Exception as e:
+            print(f"Error: {e}")
+        await ctx.message.delete()
+        return
     else:
         try:
             await help_default(ctx)
@@ -327,9 +344,15 @@ async def help(ctx, *, player_input = None):
 # ======== SESSION =========
 
 @bot.command()
-async def session(ctx):
+async def session(ctx, *, player_input = None):
     channel_id = ctx.channel.id
     message = ctx.message
+    if player_input and player_input.lower() == "help":
+        try:
+            await session_help(ctx)
+        except Exception as e:
+            print(e)
+        await ctx.message.delete()
     if message.channel.category_id != Config.SESSION_CATEGORY:
         await ctx.channel.send("You can't start a session here! Make sure your channel is in the correct category.")
         return
@@ -354,11 +377,11 @@ async def session(ctx):
                     "max_cursed_energy": state["stats"]["max_cursed_energy"],
                     "cursed_energy": state["stats"]["cursed_energy"],
                     "health": state["stats"]["health"],
-                    "injuries": [],
+                    "injuries": {},
                     "control": state["stats"]["control"],
                     "stability": state["stats"]["stability"],
                     "known_npcs": state["world_state"]["known_npcs"],
-                    "relationships": {}
+                    "relationships": state["world_state"]["relationships"]
                 }
                 session["players"][member.id] = player_data
         except Exception as e:
@@ -371,8 +394,14 @@ async def session(ctx):
 # ============= GO ================
 
 @bot.command()
-async def go(ctx):
+async def go(ctx, *, player_input):
     print("Command received.")
+    if player_input and player_input.lower() == "help":
+        try:
+            await session_help(ctx)
+        except Exception as e:
+            print(e)
+        await ctx.message.delete()
     if isinstance(ctx.channel, discord.DMChannel):
         await ctx.send("Please use this command in a session channel.")
         return
@@ -424,7 +453,7 @@ async def end(ctx):
     else:
         await ctx.channel.send("No session found for this channel.")
         return
-    
+
 # ====================================
 # MECHANICAL COMMANDS
 # ==================================== 
@@ -453,25 +482,25 @@ async def set(ctx, *, player_input):
                 print("Setting ce")
                 state["stats"]["cursed_energy"] = int(amt)
                 save_state(state)
-                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["cursed_energy"]}")
+                await ctx.channel.send(f"State updated: CE: {state["stats"]["cursed_energy"]}")
                 return
             elif stat == "maxce":
                 print("Setting maxce")
                 state["stats"]["max_cursed_energy"] = int(amt)
                 save_state(state)
-                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["max_cursed_energy"]}")
+                await ctx.channel.send(f"State updated: Max CE: {state["stats"]["max_cursed_energy"]}")
                 return
             elif stat == "control":
                 print("Setting control")
                 state["stats"]["control"] = int(amt)
                 save_state(state)
-                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["control"]}")
+                await ctx.channel.send(f"State updated: Control: {state["stats"]["control"]}")
                 return
             elif stat == "health":
                 print("Setting health")
                 state["stats"]["health"] = int(amt)
                 save_state(state)
-                await ctx.channel.send(f"State updated: Injuries: {state["stats"]["health"]}")
+                await ctx.channel.send(f"State updated: Health: {state["stats"]["health"]}")
                 return
             else:
                 await ctx.channel.send("Input error. Your argument was invalid.")
@@ -498,7 +527,10 @@ async def set(ctx, *, player_input):
 
 @bot.command()
 async def change(ctx, *, player_input):
-    if ctx.author.id != Config.ADMIN_ROLE_ID:
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author.id
+    if member not in members_with_role:
         await ctx.channel.send("Only admins are permitted to use this command.")
         return
     parts = player_input.split()
@@ -546,8 +578,111 @@ async def change(ctx, *, player_input):
         await ctx.channel.send("No save file exists for this player ID.")
 
 @bot.command()
+async def inflict(ctx, *, player_input):
+    print("Inflicting...")
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author
+    if member not in members_with_role:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    parts = player_input.split()
+    body = parts[0]
+    injury = parts[1]
+    user = parts[2]
+    discord_id = int(user.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SAVE_DIR, f"{discord_id}.json")):
+        state = load_state(discord_id)
+        injuries = state["stats"]["injuries"]
+        for item in Config.BODY_PARTS[body]:
+            if item[0] == injury:
+                handicap = item[1]
+                injuries.append({
+                    body: {
+                        "injury": injury,
+                        "handicap": handicap
+                    }
+                })
+                state["stats"]["injuries"] = injuries
+                save_state(state)
+                await ctx.channel.send(f"Inflicted: {user}'s {body} received '{injury}'. Handicap {handicap}")
+                return
+        else:
+            await ctx.channel.send("Body part not found.")
+            return
+    else:
+        await ctx.channel.send("Player not found.")
+
+@bot.command()
+async def cureall(ctx, *, player_input):
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author
+    if member not in members_with_role:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    user = player_input
+    discord_id = int(user.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SAVE_DIR, f"{discord_id}.json")):
+        state = load_state(discord_id)
+        state["stats"]["injuries"] = {}
+        save_state(state)
+        await ctx.channel.send(f"All {user}'s injuries are healed.")
+        return
+    else:
+        await ctx.channel.send("Player not found.")
+
+@bot.command()
+async def session_inflict(ctx, *, player_input):
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author
+    if member not in members_with_role:
+        await ctx.channel.send("Only admins are permitted to use this command.")
+        return
+    parts = player_input.split()
+    body = parts[0]
+    injury = parts[1]
+    user = parts[2]
+    channel = parts[3]
+    discord_id = int(user.strip("<@>"))
+    channel_id = int(channel.strip("<@>"))
+    if os.path.exists(os.path.join(Config.SESSION_DIR, f"{channel_id}.json")):
+        session = load_session(channel_id)
+        if discord_id in session["players"].items():
+            injuries = session["players"][discord_id]["injuries"]
+            for item in Config.BODY_PARTS[body]:
+                if item[0] == injury:
+                    handicap = item[1]
+                    injuries.append({
+                        body: {
+                            "injury": injury,
+                            "handicap": handicap
+                        }
+                    })
+                    session["players"][discord_id]["injuries"] = injuries
+                    save_session(channel_id)
+                    await ctx.channel.send(f"Inflicted: {user}'s {body} received '{injury}'. Handicap {handicap}")
+                    return
+                else:
+                    await ctx.channel.send("Injury/body part combination not found.")
+                    return
+            else:
+                await ctx.channel.send("Body part not found.")
+                return
+        else:
+            await ctx.channel.send("Player not found.")
+            return
+    else:
+        await ctx.channel.send("Session not found.")
+
+    
+@bot.command()
 async def session_set(ctx, *, player_input):
-    if ctx.author.id != Config.ADMIN_ROLE_ID:
+    role = discord.utils.get(ctx.guild.roles, id=Config.ADMIN_ROLE_ID)
+    members_with_role = [m for m in ctx.channel.members if role in m.roles]
+    member = ctx.author.id
+    if member not in members_with_role:
         await ctx.channel.send("Only admins are permitted to use this command.")
         return
     parts = player_input.split()
@@ -639,7 +774,6 @@ async def session_change(ctx, *, player_input):
                     await ctx.channel.send(f"Session updated: Control: {new_health}")
             except Exception as e:
                 print(f"Exception: {e}")
-
 
 # ====================================
 # DEBUG COMMANDS
